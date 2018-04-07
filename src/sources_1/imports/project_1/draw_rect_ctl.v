@@ -26,6 +26,7 @@ module draw_rect_ctl(
     input wire [11:0] xpos,
     input wire [11:0] ypos,
     input wire vsync,
+    input wire [7:0] data,
     output reg [11:0] xpos_out,
     output reg [11:0] ypos_out
     );
@@ -42,8 +43,14 @@ module draw_rect_ctl(
     reg [10:0] acceleration = 981;
     
     
-    
+    reg [7:0] waiter;
 
+    initial
+        begin 
+        ypos_out <= ypos;
+        xpos_out <= xpos;
+        
+        end
     
     always @(posedge clk)
         begin
@@ -64,7 +71,7 @@ module draw_rect_ctl(
         
         end 
     
-    
+   /* 
     always @(posedge left_button)
     fork
         if(bt)
@@ -73,9 +80,24 @@ module draw_rect_ctl(
             bt <= 1;
        
     join
-    
+    */
     always @(posedge en)
-        
+ 
+            if(waiter >= 60)
+                begin 
+                    waiter <= 0;
+                    if (data == 8'h72) 
+                        ypos_out <= ypos_out - 1;
+                    else if (data == 8'h75)
+                        ypos_out <= ypos_out +1;
+                end
+             else
+                waiter <= waiter +1;
+
+
+
+      
+        /*
         if(bt)
             begin
                 if(!rev)
@@ -126,7 +148,7 @@ module draw_rect_ctl(
                 
             end
         
-
+*/
     
     
     

@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Sat Apr  7 16:45:50 2018
-| Host             : DESKTOP-CCD6AHT running 64-bit major release  (build 9200)
+| Tool Version     : Vivado v.2017.4.1 (win64) Build 2117270 Tue Jan 30 15:32:00 MST 2018
+| Date             : Sun Apr  8 00:06:11 2018
+| Host             : LAPTOP-G7PT2HG2 running 64-bit major release  (build 9200)
 | Command          : report_power -file vga_example_power_routed.rpt -pb vga_example_power_summary_routed.pb -rpx vga_example_power_routed.rpx
 | Design           : vga_example
 | Device           : xc7a35tcpg236-1
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.192        |
+| Total On-Chip Power (W)  | 0.186        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.120        |
+| Dynamic (W)              | 0.114        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 84.0         |
-| Junction Temperature (C) | 26.0         |
+| Max Ambient (C)          | 84.1         |
+| Junction Temperature (C) | 25.9         |
 | Confidence Level         | Medium       |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,20 +52,18 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.003 |        6 |       --- |             --- |
-| Slice Logic             |     0.003 |     1216 |       --- |             --- |
-|   LUT as Logic          |     0.003 |      543 |     20800 |            2.61 |
-|   CARRY4                |    <0.001 |       77 |      8150 |            0.94 |
-|   Register              |    <0.001 |      432 |     41600 |            1.04 |
-|   F7/F8 Muxes           |    <0.001 |       12 |     32600 |            0.04 |
-|   LUT as Shift Register |    <0.001 |        1 |      9600 |            0.01 |
-|   BUFG                  |    <0.001 |        1 |        32 |            3.13 |
+| Clocks                  |     0.002 |        6 |       --- |             --- |
+| Slice Logic             |    <0.001 |      453 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |      164 |     20800 |            0.79 |
+|   Register              |    <0.001 |      187 |     41600 |            0.45 |
+|   CARRY4                |    <0.001 |       31 |      8150 |            0.38 |
+|   LUT as Shift Register |    <0.001 |        3 |      9600 |            0.03 |
 |   Others                |     0.000 |       20 |       --- |             --- |
-| Signals                 |     0.002 |      888 |       --- |             --- |
+| Signals                 |    <0.001 |      295 |       --- |             --- |
 | MMCM                    |     0.106 |        1 |         5 |           20.00 |
-| I/O                     |     0.005 |       18 |       106 |           16.98 |
+| I/O                     |     0.006 |       18 |       106 |           16.98 |
 | Static Power            |     0.072 |          |           |                 |
-| Total                   |     0.192 |          |           |                 |
+| Total                   |     0.186 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.019 |       0.010 |      0.010 |
+| Vccint    |       1.000 |     0.012 |       0.003 |      0.010 |
 | Vccaux    |       1.800 |     0.071 |       0.059 |      0.013 |
-| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
+| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -144,21 +142,18 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-----------------------+-----------+
-| Name                  | Power (W) |
-+-----------------------+-----------+
-| vga_example           |     0.120 |
-|   My_rect_ctl         |     0.002 |
-|   myClk               |     0.107 |
-|     inst              |     0.107 |
-|   myCoursor           |    <0.001 |
-|   myMouse             |     0.005 |
-|     Inst_Ps2Interface |     0.002 |
-|   my_background       |    <0.001 |
-|   my_rect             |    <0.001 |
-|   my_timing           |    <0.001 |
-|   ps2_clk_IOBUF_inst  |     0.000 |
-|   ps2_data_IOBUF_inst |     0.000 |
-+-----------------------+-----------+
++-----------------+-----------+
+| Name            | Power (W) |
++-----------------+-----------+
+| vga_example     |     0.114 |
+|   My_rect_ctl   |    <0.001 |
+|   myClk         |     0.107 |
+|     inst        |     0.107 |
+|   myCoursor     |    <0.001 |
+|   my_background |    <0.001 |
+|   my_keyboard   |    <0.001 |
+|   my_rect       |    <0.001 |
+|   my_timing     |    <0.001 |
++-----------------+-----------+
 
 

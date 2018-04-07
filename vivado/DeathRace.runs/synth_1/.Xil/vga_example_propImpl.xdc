@@ -1,5 +1,5 @@
-set_property SRC_FILE_INFO {cfile:c:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc rfile:../../../../../../../Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc id:1 order:EARLY scoped_inst:myClk/inst} [current_design]
-set_property SRC_FILE_INFO {cfile:C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/constrs_1/imports/project_1/vga_example.xdc rfile:../../../../../../../Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/constrs_1/imports/project_1/vga_example.xdc id:2} [current_design]
+set_property SRC_FILE_INFO {cfile:c:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc rfile:../../../../src/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc id:1 order:EARLY scoped_inst:myClk/inst} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc rfile:../../../../src/constrs_1/imports/project_1/vga_example.xdc id:2} [current_design]
 set_property src_info {type:SCOPED_XDC file:1 line:57 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.1
 set_property src_info {type:XDC file:2 line:2 export:INPUT save:INPUT read:READ} [current_design]

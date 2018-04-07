@@ -3,9 +3,9 @@
     with args -log vga_example.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source vga_example.tcl
 
 
-****** Vivado v2017.4 (64-bit)
-  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
-  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+****** Vivado v2017.4.1 (64-bit)
+  **** SW Build 2117270 on Tue Jan 30 15:32:00 MST 2018
+  **** IP Build 2095745 on Tue Jan 30 17:13:15 MST 2018
     ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 
 source vga_example.tcl -notrace
@@ -14,20 +14,20 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10872 
-WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:16]
+INFO: Helper process launched with PID 5316 
+WARNING: [Synth 8-2644] root scope declaration is not allowed in verilog 95/2K mode [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:16]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 414.398 ; gain = 109.477
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 366.563 ; gain = 110.379
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'vga_example' [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:19]
-INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:44]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:44]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [c:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v:71]
-INFO: [Synth 8-638] synthesizing module 'clk_wiz_0_clk_wiz' [c:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:69]
-INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [c:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:127]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [c:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:127]
-INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [c:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:130]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [c:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:130]
+INFO: [Synth 8-638] synthesizing module 'vga_example' [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:19]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:44]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:44]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0' [c:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0.v:71]
+INFO: [Synth 8-638] synthesizing module 'clk_wiz_0_clk_wiz' [c:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:69]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [c:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:127]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [c:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:127]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [c:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:130]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [c:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:130]
 INFO: [Synth 8-638] synthesizing module 'IBUF' [D:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:19468]
 	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
 	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
@@ -94,8 +94,12 @@ INFO: [Synth 8-638] synthesizing module 'BUFGCE' [D:/Xilinx/Vivado/2017.4/script
 INFO: [Synth 8-256] done synthesizing module 'BUFGCE' (4#1) [D:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:617]
 INFO: [Synth 8-638] synthesizing module 'BUFH' [D:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:806]
 INFO: [Synth 8-256] done synthesizing module 'BUFH' (5#1) [D:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:806]
-INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0_clk_wiz' (6#1) [c:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:69]
-INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (7#1) [c:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.v:71]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0_clk_wiz' (6#1) [c:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:69]
+INFO: [Synth 8-256] done synthesizing module 'clk_wiz_0' (7#1) [c:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0.v:71]
+INFO: [Synth 8-638] synthesizing module 'Keyboard' [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/Klawiatura_ps2.v:23]
+WARNING: [Synth 8-6014] Unused sequential element scan_err_reg was removed.  [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/Klawiatura_ps2.v:91]
+WARNING: [Synth 8-6014] Unused sequential element CODEWORD_reg was removed.  [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/Klawiatura_ps2.v:124]
+INFO: [Synth 8-256] done synthesizing module 'Keyboard' (8#1) [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/Klawiatura_ps2.v:23]
 INFO: [Synth 8-638] synthesizing module 'ODDR' [D:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
 	Parameter DDR_CLK_EDGE bound to: OPPOSITE_EDGE - type: string 
 	Parameter INIT bound to: 1'b0 
@@ -103,55 +107,82 @@ INFO: [Synth 8-638] synthesizing module 'ODDR' [D:/Xilinx/Vivado/2017.4/scripts/
 	Parameter IS_D1_INVERTED bound to: 1'b0 
 	Parameter IS_D2_INVERTED bound to: 1'b0 
 	Parameter SRTYPE bound to: SYNC - type: string 
-INFO: [Synth 8-256] done synthesizing module 'ODDR' (8#1) [D:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
-INFO: [Synth 8-638] synthesizing module 'MouseDisplay' [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseDisplay.vhd:138]
-WARNING: [Synth 8-614] signal 'xpos_nxt' is read in the process but is not in the sensitivity list [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseDisplay.vhd:222]
-WARNING: [Synth 8-614] signal 'ypos_nxt' is read in the process but is not in the sensitivity list [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseDisplay.vhd:222]
-WARNING: [Synth 8-614] signal 'mousepixel' is read in the process but is not in the sensitivity list [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseDisplay.vhd:222]
-INFO: [Synth 8-256] done synthesizing module 'MouseDisplay' (9#1) [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseDisplay.vhd:138]
-WARNING: [Synth 8-350] instance 'myCoursor' of module 'MouseDisplay' requires 22 connections, but only 17 given [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:116]
-INFO: [Synth 8-638] synthesizing module 'draw_rect_ctl' [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/draw_rect_ctl.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ODDR' (9#1) [D:/Xilinx/Vivado/2017.4/scripts/rt/data/unisim_comp.v:30648]
+INFO: [Synth 8-638] synthesizing module 'MouseDisplay' [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/MouseDisplay.vhd:138]
+WARNING: [Synth 8-614] signal 'xpos_nxt' is read in the process but is not in the sensitivity list [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/MouseDisplay.vhd:222]
+WARNING: [Synth 8-614] signal 'ypos_nxt' is read in the process but is not in the sensitivity list [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/MouseDisplay.vhd:222]
+WARNING: [Synth 8-614] signal 'mousepixel' is read in the process but is not in the sensitivity list [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/MouseDisplay.vhd:222]
+INFO: [Synth 8-256] done synthesizing module 'MouseDisplay' (10#1) [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/MouseDisplay.vhd:138]
+WARNING: [Synth 8-350] instance 'myCoursor' of module 'MouseDisplay' requires 22 connections, but only 17 given [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+INFO: [Synth 8-638] synthesizing module 'draw_rect_ctl' [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect_ctl.v:23]
 	Parameter accel bound to: 3 - type: integer 
-WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/draw_rect_ctl.v:69]
-WARNING: [Synth 8-6014] Unused sequential element Time_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/draw_rect_ctl.v:55]
-INFO: [Synth 8-4471] merging register 'ypos_int_reg[11:0]' into 'ypos_out_reg[11:0]' [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/draw_rect_ctl.v:87]
-WARNING: [Synth 8-6014] Unused sequential element ypos_int_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/draw_rect_ctl.v:87]
-INFO: [Synth 8-256] done synthesizing module 'draw_rect_ctl' (10#1) [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/draw_rect_ctl.v:23]
-INFO: [Synth 8-638] synthesizing module 'MouseCtl' [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseCtl.vhd:207]
-	Parameter SYSCLK_FREQUENCY_HZ bound to: 100000000 - type: integer 
-	Parameter CHECK_PERIOD_MS bound to: 500 - type: integer 
-	Parameter TIMEOUT_PERIOD_MS bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'Ps2Interface' declared at 'C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/Ps2Interface.vhd:152' bound to instance 'Inst_Ps2Interface' of component 'Ps2Interface' [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseCtl.vhd:369]
-INFO: [Synth 8-638] synthesizing module 'Ps2Interface' [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/Ps2Interface.vhd:180]
-INFO: [Synth 8-256] done synthesizing module 'Ps2Interface' (11#1) [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/Ps2Interface.vhd:180]
-WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseCtl.vhd:450]
-WARNING: [Synth 8-6014] Unused sequential element x_inter_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseCtl.vhd:456]
-WARNING: [Synth 8-6014] Unused sequential element inc_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseCtl.vhd:514]
-WARNING: [Synth 8-6014] Unused sequential element y_inter_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseCtl.vhd:520]
-INFO: [Synth 8-256] done synthesizing module 'MouseCtl' (12#1) [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseCtl.vhd:207]
-WARNING: [Synth 8-350] instance 'myMouse' of module 'MouseCtl' requires 16 connections, but only 6 given [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:151]
-INFO: [Synth 8-638] synthesizing module 'vga_timing' [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_timing.v:13]
-INFO: [Synth 8-256] done synthesizing module 'vga_timing' (13#1) [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_timing.v:13]
-INFO: [Synth 8-638] synthesizing module 'draw_background' [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/draw_background.v:23]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect_ctl.v:50]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect_ctl.v:51]
+WARNING: [Synth 8-6014] Unused sequential element Time_reg was removed.  [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect_ctl.v:62]
+WARNING: [Synth 8-3848] Net xpos_out in module/entity draw_rect_ctl does not have driver. [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect_ctl.v:30]
+INFO: [Synth 8-256] done synthesizing module 'draw_rect_ctl' (11#1) [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect_ctl.v:23]
+WARNING: [Synth 8-350] instance 'My_rect_ctl' of module 'draw_rect_ctl' requires 8 connections, but only 7 given [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:147]
+INFO: [Synth 8-638] synthesizing module 'vga_timing' [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_timing.v:13]
+INFO: [Synth 8-256] done synthesizing module 'vga_timing' (12#1) [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_timing.v:13]
+INFO: [Synth 8-638] synthesizing module 'draw_background' [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_background.v:23]
 	Parameter x_rect bound to: 10 - type: integer 
 	Parameter y_rect bound to: 90 - type: integer 
 	Parameter width bound to: 780 - type: integer 
 	Parameter height bound to: 500 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'draw_background' (14#1) [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/draw_background.v:23]
-INFO: [Synth 8-638] synthesizing module 'draw_rect' [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/draw_rect.v:23]
+INFO: [Synth 8-256] done synthesizing module 'draw_background' (13#1) [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_background.v:23]
+INFO: [Synth 8-638] synthesizing module 'draw_rect' [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect.v:23]
 	Parameter width bound to: 48 - type: integer 
 	Parameter height bound to: 64 - type: integer 
 	Parameter color bound to: 12'b111100000000 
 	Parameter color2 bound to: 12'b000000001111 
-WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/draw_rect.v:67]
-WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/draw_rect.v:80]
-INFO: [Synth 8-256] done synthesizing module 'draw_rect' (15#1) [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/draw_rect.v:23]
-WARNING: [Synth 8-350] instance 'my_rect' of module 'draw_rect' requires 20 connections, but only 15 given [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:189]
-WARNING: [Synth 8-3848] Net vblnk_rect in module/entity vga_example does not have driver. [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:109]
-WARNING: [Synth 8-3848] Net hblnk_rect in module/entity vga_example does not have driver. [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:109]
-INFO: [Synth 8-256] done synthesizing module 'vga_example' (16#1) [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:19]
+WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect.v:67]
+WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect.v:80]
+INFO: [Synth 8-256] done synthesizing module 'draw_rect' (14#1) [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect.v:23]
+WARNING: [Synth 8-350] instance 'my_rect' of module 'draw_rect' requires 20 connections, but only 15 given [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:200]
+WARNING: [Synth 8-3848] Net xpos in module/entity vga_example does not have driver. [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:122]
+WARNING: [Synth 8-3848] Net ypos in module/entity vga_example does not have driver. [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:122]
+WARNING: [Synth 8-3848] Net vblnk_rect in module/entity vga_example does not have driver. [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:119]
+WARNING: [Synth 8-3848] Net hblnk_rect in module/entity vga_example does not have driver. [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:119]
+INFO: [Synth 8-256] done synthesizing module 'vga_example' (15#1) [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:19]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos_out[11]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos_out[10]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos_out[9]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos_out[8]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos_out[7]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos_out[6]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos_out[5]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos_out[4]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos_out[3]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos_out[2]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos_out[1]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos_out[0]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port left_button
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos[11]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos[10]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos[9]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos[8]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos[7]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos[6]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos[5]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos[4]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos[3]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos[2]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos[1]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port xpos[0]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port ypos[11]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port ypos[10]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port ypos[9]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port ypos[8]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port ypos[7]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port ypos[6]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port ypos[5]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port ypos[4]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port ypos[3]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port ypos[2]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port ypos[1]
+WARNING: [Synth 8-3331] design draw_rect_ctl has unconnected port ypos[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 456.578 ; gain = 151.656
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 400.566 ; gain = 144.383
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -160,40 +191,47 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin myCoursor:vblank to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:116]
-WARNING: [Synth 8-3295] tying undriven pin myCoursor:hblank to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:116]
-WARNING: [Synth 8-3295] tying undriven pin myMouse:rst to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:151]
-WARNING: [Synth 8-3295] tying undriven pin myMouse:value[11] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:151]
-WARNING: [Synth 8-3295] tying undriven pin myMouse:value[10] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:151]
-WARNING: [Synth 8-3295] tying undriven pin myMouse:value[9] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:151]
-WARNING: [Synth 8-3295] tying undriven pin myMouse:value[8] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:151]
-WARNING: [Synth 8-3295] tying undriven pin myMouse:value[7] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:151]
-WARNING: [Synth 8-3295] tying undriven pin myMouse:value[6] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:151]
-WARNING: [Synth 8-3295] tying undriven pin myMouse:value[5] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:151]
-WARNING: [Synth 8-3295] tying undriven pin myMouse:value[4] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:151]
-WARNING: [Synth 8-3295] tying undriven pin myMouse:value[3] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:151]
-WARNING: [Synth 8-3295] tying undriven pin myMouse:value[2] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:151]
-WARNING: [Synth 8-3295] tying undriven pin myMouse:value[1] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:151]
-WARNING: [Synth 8-3295] tying undriven pin myMouse:value[0] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:151]
-WARNING: [Synth 8-3295] tying undriven pin myMouse:setx to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:151]
-WARNING: [Synth 8-3295] tying undriven pin myMouse:sety to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:151]
-WARNING: [Synth 8-3295] tying undriven pin myMouse:setmax_x to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:151]
-WARNING: [Synth 8-3295] tying undriven pin myMouse:setmax_y to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:151]
-WARNING: [Synth 8-3295] tying undriven pin my_rect:left to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:189]
-WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[11] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:189]
-WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[10] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:189]
-WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[9] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:189]
-WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[8] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:189]
-WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[7] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:189]
-WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[6] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:189]
-WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[5] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:189]
-WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[4] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:189]
-WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[3] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:189]
-WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[2] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:189]
-WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[1] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:189]
-WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[0] to constant 0 [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/vga_example.v:189]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:xpos[11] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:xpos[10] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:xpos[9] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:xpos[8] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:xpos[7] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:xpos[6] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:xpos[5] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:xpos[4] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:xpos[3] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:xpos[2] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:xpos[1] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:xpos[0] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:ypos[11] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:ypos[10] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:ypos[9] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:ypos[8] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:ypos[7] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:ypos[6] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:ypos[5] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:ypos[4] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:ypos[3] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:ypos[2] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:ypos[1] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:ypos[0] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:vblank to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin myCoursor:hblank to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:126]
+WARNING: [Synth 8-3295] tying undriven pin my_rect:left to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:200]
+WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[11] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:200]
+WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[10] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:200]
+WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[9] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:200]
+WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[8] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:200]
+WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[7] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:200]
+WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[6] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:200]
+WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[5] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:200]
+WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[4] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:200]
+WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[3] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:200]
+WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[2] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:200]
+WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[1] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:200]
+WARNING: [Synth 8-3295] tying undriven pin my_rect:rgb_rom[0] to constant 0 [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v:200]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 456.578 ; gain = 151.656
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 400.566 ; gain = 144.383
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -202,195 +240,65 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'myClk/inst'
-Finished Parsing XDC File [c:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'myClk/inst'
-Parsing XDC File [c:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'myClk/inst'
-Finished Parsing XDC File [c:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'myClk/inst'
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_example_propImpl.xdc].
+Parsing XDC File [c:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'myClk/inst'
+Finished Parsing XDC File [c:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'myClk/inst'
+Parsing XDC File [c:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'myClk/inst'
+Finished Parsing XDC File [c:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'myClk/inst'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [c:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_example_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/vga_example_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 INFO: [Timing 38-2] Deriving generated clocks
-Parsing XDC File [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/constrs_1/imports/project_1/vga_example.xdc]
-Finished Parsing XDC File [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/constrs_1/imports/project_1/vga_example.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/constrs_1/imports/project_1/vga_example.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_example_propImpl.xdc].
+Parsing XDC File [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc]
+Finished Parsing XDC File [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_example_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/vga_example_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [C:/Users/pauli/OneDrive/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [C:/Users/pauli/OneDrive/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.runs/synth_1/dont_touch.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/pauli/OneDrive/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_example_propImpl.xdc].
+Parsing XDC File [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.runs/synth_1/dont_touch.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.runs/synth_1/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/vga_example_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/vga_example_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [c:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'myClk/inst'
-Finished Parsing XDC File [c:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'myClk/inst'
+Parsing XDC File [c:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'myClk/inst'
+Finished Parsing XDC File [c:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0_late.xdc] for cell 'myClk/inst'
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   BUFGCE => BUFGCTRL: 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 800.879 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 745.082 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 800.879 ; gain = 495.957
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 745.082 ; gain = 488.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 800.879 ; gain = 495.957
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 745.082 ; gain = 488.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for myClk/inst. (constraint file  C:/Users/pauli/OneDrive/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.runs/synth_1/dont_touch.xdc, line 10).
+Applied set_property DONT_TOUCH = true for myClk/inst. (constraint file  C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.runs/synth_1/dont_touch.xdc, line 10).
 Applied set_property DONT_TOUCH = true for myClk. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 800.879 ; gain = 495.957
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 745.082 ; gain = 488.898
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseDisplay.vhd:225]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseDisplay.vhd:226]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseDisplay.vhd:225]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseDisplay.vhd:226]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseDisplay.vhd:225]
-INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseDisplay.vhd:226]
-INFO: [Synth 8-5546] ROM "Speed0" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Ps2Interface'
-INFO: [Synth 8-5546] ROM "reset_bit_count" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "busy" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "read_data" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "load_tx_data" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "ps2_clk_h" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "delay_100us_counter_enable" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "delay_20us_counter_enable" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "delay_63clk_counter_enable" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-WARNING: [Synth 8-6014] Unused sequential element clk_count_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/Ps2Interface.vhd:362]
-WARNING: [Synth 8-6014] Unused sequential element data_count_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/Ps2Interface.vhd:386]
-WARNING: [Synth 8-6014] Unused sequential element delay_100us_count_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/Ps2Interface.vhd:697]
-WARNING: [Synth 8-6014] Unused sequential element delay_20us_count_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/Ps2Interface.vhd:721]
-WARNING: [Synth 8-6014] Unused sequential element delay_63clk_count_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/Ps2Interface.vhd:745]
-WARNING: [Synth 8-6014] Unused sequential element bit_count_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/Ps2Interface.vhd:484]
-INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'MouseCtl'
-INFO: [Synth 8-5545] ROM "periodic_check_tick" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "timeout" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "reset_periodic_check_cnt" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5546] ROM "new_event" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "TRIG_ARR" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-6014] Unused sequential element DOWNCOUNTER_reg was removed.  [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/Klawiatura_ps2.v:66]
+WARNING: [Synth 8-6014] Unused sequential element count_reading_reg was removed.  [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/Klawiatura_ps2.v:79]
+WARNING: [Synth 8-6014] Unused sequential element COUNT_reg was removed.  [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/Klawiatura_ps2.v:93]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/MouseDisplay.vhd:225]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/MouseDisplay.vhd:226]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/MouseDisplay.vhd:225]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/MouseDisplay.vhd:226]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/MouseDisplay.vhd:225]
+INFO: [Synth 8-41] '_-' operator could not be merged with '+' operator due to loss of accuracy [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/MouseDisplay.vhd:226]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect_ctl.v:89]
+WARNING: [Synth 8-6014] Unused sequential element waiter_reg was removed.  [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect_ctl.v:86]
+WARNING: [Synth 8-6014] Unused sequential element ypos_out_reg was removed.  [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect_ctl.v:90]
 INFO: [Synth 8-5546] ROM "hblnk" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "hsync" won't be mapped to RAM because it is too sparse
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                    idle |                            00000 |                            00000
-            rx_down_edge |                            00001 |                            00011
-                rx_clk_l |                            00010 |                            00010
-                rx_clk_h |                            00011 |                            00001
-         rx_error_parity |                            00100 |                            00100
-           rx_data_ready |                            00101 |                            00101
-          tx_force_clk_l |                            00110 |                            00110
-      tx_bring_data_down |                            00111 |                            00111
-          tx_release_clk |                            01000 |                            01000
- tx_first_wait_down_edge |                            01001 |                            01001
-                tx_clk_l |                            01010 |                            01010
-         tx_wait_up_edge |                            01011 |                            01011
-tx_wait_up_edge_before_ack |                            01100 |                            01101
-             tx_wait_ack |                            01101 |                            01110
-         tx_received_ack |                            01110 |                            01111
-         tx_error_no_ack |                            01111 |                            10000
-                tx_clk_h |                            10000 |                            01100
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'Ps2Interface'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                   reset |                           000000 |                           000000
-          reset_wait_ack |                           000001 |                           000001
-reset_wait_bat_completion |                           000010 |                           000010
-           reset_wait_id |                           000011 |                           000011
-reset_set_sample_rate_200 |                           000100 |                           000100
-reset_set_sample_rate_200_wait_ack |                           000101 |                           000101
-reset_send_sample_rate_200 |                           000110 |                           000110
-reset_send_sample_rate_200_wait_ack |                           000111 |                           000111
-reset_set_sample_rate_100 |                           001000 |                           001000
-reset_set_sample_rate_100_wait_ack |                           001001 |                           001001
-reset_send_sample_rate_100 |                           001010 |                           001010
-reset_send_sample_rate_100_wait_ack |                           001011 |                           001011
-reset_set_sample_rate_80 |                           001100 |                           001100
-reset_set_sample_rate_80_wait_ack |                           001101 |                           001101
-reset_send_sample_rate_80 |                           001110 |                           001110
-reset_send_sample_rate_80_wait_ack |                           001111 |                           001111
-           reset_read_id |                           010000 |                           010000
-  reset_read_id_wait_ack |                           010001 |                           010001
-   reset_read_id_wait_id |                           010010 |                           010010
-    reset_set_resolution |                           010011 |                           010011
-reset_set_resolution_wait_ack |                           010100 |                           010100
-   reset_send_resolution |                           010101 |                           010101
-reset_send_resolution_wait_ack |                           010110 |                           010110
-reset_set_sample_rate_40 |                           010111 |                           010111
-reset_set_sample_rate_40_wait_ack |                           011000 |                           011000
-reset_send_sample_rate_40 |                           011001 |                           011001
-reset_send_sample_rate_40_wait_ack |                           011010 |                           011010
-  reset_enable_reporting |                           011011 |                           011011
-reset_enable_reporting_wait_ack |                           011100 |                           011100
-             read_byte_1 |                           011101 |                           011101
-             read_byte_2 |                           011110 |                           011110
-             read_byte_3 |                           011111 |                           011111
-             read_byte_4 |                           100000 |                           100000
-          mark_new_event |                           100001 |                           100100
-           check_read_id |                           100010 |                           100001
-  check_read_id_wait_ack |                           100011 |                           100010
-   check_read_id_wait_id |                           100100 |                           100011
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'MouseCtl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 800.879 ; gain = 495.957
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 745.082 ; gain = 488.898
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -403,43 +311,27 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     26 Bit       Adders := 1     
-	   2 Input     24 Bit       Adders := 1     
 	   3 Input     14 Bit       Adders := 2     
 	   3 Input     13 Bit       Adders := 2     
-	   2 Input     13 Bit       Adders := 1     
-	   2 Input     12 Bit       Adders := 7     
-	   3 Input     12 Bit       Adders := 1     
-	   2 Input     11 Bit       Adders := 6     
+	   2 Input     12 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 2     
 	   2 Input      8 Bit       Adders := 1     
-	   2 Input      7 Bit       Adders := 1     
 	   3 Input      6 Bit       Adders := 2     
+	   2 Input      4 Bit       Adders := 1     
 	   3 Input      4 Bit       Adders := 2     
-	   2 Input      4 Bit       Adders := 3     
 +---Registers : 
-	               26 Bit    Registers := 1     
-	               24 Bit    Registers := 1     
-	               12 Bit    Registers := 13    
-	               11 Bit    Registers := 11    
-	                8 Bit    Registers := 6     
-	                7 Bit    Registers := 1     
-	                4 Bit    Registers := 10    
-	                1 Bit    Registers := 56    
+	               12 Bit    Registers := 4     
+	               11 Bit    Registers := 9     
+	                8 Bit    Registers := 4     
+	                4 Bit    Registers := 7     
+	                1 Bit    Registers := 24    
 +---Muxes : 
-	   2 Input     26 Bit        Muxes := 1     
-	   2 Input     24 Bit        Muxes := 1     
-	   2 Input     12 Bit        Muxes := 25    
-	   2 Input     11 Bit        Muxes := 7     
-	   2 Input      9 Bit        Muxes := 2     
-	  37 Input      8 Bit        Muxes := 3     
-	 107 Input      6 Bit        Muxes := 1     
-	  36 Input      5 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 3     
-	  37 Input      4 Bit        Muxes := 1     
+	   2 Input     12 Bit        Muxes := 4     
+	   2 Input     11 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 4     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 26    
-	  17 Input      1 Bit        Muxes := 6     
-	  37 Input      1 Bit        Muxes := 22    
+	   2 Input      1 Bit        Muxes := 9     
+	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -456,6 +348,18 @@ Module clk_wiz_0_clk_wiz
 Detailed RTL Component Info : 
 +---Registers : 
 	                8 Bit    Registers := 2     
+Module Keyboard 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
 Module MouseDisplay 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -471,60 +375,14 @@ Detailed RTL Component Info :
 Module draw_rect_ctl 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     13 Bit       Adders := 1     
-	   2 Input     12 Bit       Adders := 1     
-	   3 Input     12 Bit       Adders := 1     
-	   2 Input     11 Bit       Adders := 3     
-+---Registers : 
-	               12 Bit    Registers := 3     
-	               11 Bit    Registers := 1     
-	                1 Bit    Registers := 4     
-+---Muxes : 
-	   2 Input     12 Bit        Muxes := 11    
-	   2 Input     11 Bit        Muxes := 4     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-Module Ps2Interface 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     11 Bit       Adders := 1     
-	   2 Input      7 Bit       Adders := 1     
-	   2 Input      4 Bit       Adders := 3     
-+---Registers : 
-	               11 Bit    Registers := 2     
-	                8 Bit    Registers := 1     
-	                7 Bit    Registers := 1     
-	                4 Bit    Registers := 3     
-	                1 Bit    Registers := 17    
-+---Muxes : 
-	   2 Input     11 Bit        Muxes := 1     
-	  36 Input      5 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 9     
-	  17 Input      1 Bit        Muxes := 6     
-Module MouseCtl 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     26 Bit       Adders := 1     
-	   2 Input     24 Bit       Adders := 1     
-	   2 Input     12 Bit       Adders := 4     
 	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
-	               26 Bit    Registers := 1     
-	               24 Bit    Registers := 1     
-	               12 Bit    Registers := 6     
-	                8 Bit    Registers := 3     
-	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 17    
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     26 Bit        Muxes := 1     
-	   2 Input     24 Bit        Muxes := 1     
-	   2 Input     12 Bit        Muxes := 10    
-	   2 Input      9 Bit        Muxes := 2     
-	  37 Input      8 Bit        Muxes := 3     
-	 107 Input      6 Bit        Muxes := 1     
-	  37 Input      4 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 5     
-	  37 Input      1 Bit        Muxes := 22    
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
 Module vga_timing 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -569,30 +427,20 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element myCoursor/vblank_out_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseDisplay.vhd:253]
-WARNING: [Synth 8-6014] Unused sequential element myCoursor/hblank_out_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseDisplay.vhd:252]
-WARNING: [Synth 8-6014] Unused sequential element myCoursor/hcount_out_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseDisplay.vhd:254]
-WARNING: [Synth 8-6014] Unused sequential element myCoursor/vcount_out_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseDisplay.vhd:255]
-WARNING: [Synth 8-6014] Unused sequential element myMouse/zpos_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseCtl.vhd:1006]
-WARNING: [Synth 8-6014] Unused sequential element myMouse/middle_down_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseCtl.vhd:420]
-WARNING: [Synth 8-6014] Unused sequential element myMouse/middle_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseCtl.vhd:420]
-WARNING: [Synth 8-6014] Unused sequential element myMouse/right_down_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseCtl.vhd:422]
-WARNING: [Synth 8-6014] Unused sequential element myMouse/right_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseCtl.vhd:422]
-WARNING: [Synth 8-6014] Unused sequential element myMouse/new_event_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/MouseCtl.vhd:605]
-WARNING: [Synth 8-6014] Unused sequential element my_rect/vblnk_out_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/draw_rect.v:71]
-WARNING: [Synth 8-6014] Unused sequential element my_rect/hblnk_out_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/draw_rect.v:70]
-INFO: [Synth 8-5546] ROM "My_rect_ctl/Speed0" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-6014] Unused sequential element myCoursor/vblank_out_reg was removed.  [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/MouseDisplay.vhd:253]
+WARNING: [Synth 8-6014] Unused sequential element myCoursor/hblank_out_reg was removed.  [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/MouseDisplay.vhd:252]
+WARNING: [Synth 8-6014] Unused sequential element myCoursor/hcount_out_reg was removed.  [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/MouseDisplay.vhd:254]
+WARNING: [Synth 8-6014] Unused sequential element myCoursor/vcount_out_reg was removed.  [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/MouseDisplay.vhd:255]
+WARNING: [Synth 8-6014] Unused sequential element my_rect/vblnk_out_reg was removed.  [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect.v:71]
+WARNING: [Synth 8-6014] Unused sequential element my_rect/hblnk_out_reg was removed.  [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect.v:70]
 INFO: [Synth 8-5546] ROM "p_0_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "myMouse/periodic_check_tick" won't be mapped to RAM because address size (26) is larger than maximum supported(25)
-INFO: [Synth 8-5546] ROM "myMouse/timeout" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "my_timing/hblnk" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "my_timing/hsync" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-6014] Unused sequential element myMouse/Inst_Ps2Interface/data_count_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/Ps2Interface.vhd:386]
-WARNING: [Synth 8-6014] Unused sequential element myMouse/Inst_Ps2Interface/clk_count_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/Ps2Interface.vhd:362]
-WARNING: [Synth 8-6014] Unused sequential element myMouse/Inst_Ps2Interface/bit_count_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/Ps2Interface.vhd:484]
-WARNING: [Synth 8-6014] Unused sequential element myMouse/Inst_Ps2Interface/delay_100us_count_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/Ps2Interface.vhd:697]
-WARNING: [Synth 8-6014] Unused sequential element myMouse/Inst_Ps2Interface/delay_20us_count_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/Ps2Interface.vhd:721]
-WARNING: [Synth 8-6014] Unused sequential element myMouse/Inst_Ps2Interface/delay_63clk_count_reg was removed.  [C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/imports/project_1/Ps2Interface.vhd:745]
+WARNING: [Synth 8-6014] Unused sequential element my_keyboard/DOWNCOUNTER_reg was removed.  [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/Klawiatura_ps2.v:66]
+WARNING: [Synth 8-6014] Unused sequential element my_keyboard/count_reading_reg was removed.  [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/Klawiatura_ps2.v:79]
+WARNING: [Synth 8-6014] Unused sequential element my_keyboard/COUNT_reg was removed.  [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/Klawiatura_ps2.v:93]
+WARNING: [Synth 8-6014] Unused sequential element My_rect_ctl/waiter_reg was removed.  [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect_ctl.v:86]
+WARNING: [Synth 8-6014] Unused sequential element My_rect_ctl/ypos_out_reg was removed.  [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect_ctl.v:90]
 INFO: [Synth 8-3886] merging instance 'my_background/rgb_out_reg[0]' (FDR) to 'my_background/rgb_out_reg[1]'
 INFO: [Synth 8-3886] merging instance 'my_background/rgb_out_reg[1]' (FDR) to 'my_background/rgb_out_reg[2]'
 INFO: [Synth 8-3886] merging instance 'my_background/rgb_out_reg[2]' (FDR) to 'my_background/rgb_out_reg[3]'
@@ -637,8 +485,9 @@ INFO: [Synth 8-3886] merging instance 'g_reg[3]' (FD) to 'r_reg[2]'
 INFO: [Synth 8-3886] merging instance 'r_reg[0]' (FD) to 'r_reg[2]'
 INFO: [Synth 8-3886] merging instance 'r_reg[1]' (FD) to 'r_reg[2]'
 INFO: [Synth 8-3886] merging instance 'r_reg[2]' (FD) to 'r_reg[3]'
+WARNING: [Synth 8-3332] Sequential element (my_keyboard/scan_code_reg[0]) is unused and will be removed from module vga_example.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 800.879 ; gain = 495.957
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 745.082 ; gain = 488.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -665,13 +514,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 800.879 ; gain = 495.957
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 745.082 ; gain = 488.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 814.973 ; gain = 510.051
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 755.000 ; gain = 498.816
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -682,32 +531,45 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (myMouse/x_max_reg[11]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/x_max_reg[10]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/x_max_reg[9]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/x_max_reg[8]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/x_max_reg[7]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/x_max_reg[6]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/x_max_reg[5]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/x_max_reg[4]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/x_max_reg[3]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/x_max_reg[2]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/x_max_reg[1]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/x_max_reg[0]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/y_max_reg[11]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/y_max_reg[10]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/y_max_reg[9]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/y_max_reg[8]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/y_max_reg[7]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/y_max_reg[6]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/y_max_reg[5]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/y_max_reg[4]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/y_max_reg[3]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/y_max_reg[2]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/y_max_reg[1]) is unused and will be removed from module vga_example.
-WARNING: [Synth 8-3332] Sequential element (myMouse/y_max_reg[0]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/xpos_nxt_reg[11]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/xpos_nxt_reg[10]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/xpos_nxt_reg[9]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/xpos_nxt_reg[8]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/xpos_nxt_reg[7]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/xpos_nxt_reg[6]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/xpos_nxt_reg[5]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/xpos_nxt_reg[4]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/xpos_nxt_reg[3]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/xpos_nxt_reg[2]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/xpos_nxt_reg[1]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/xpos_nxt_reg[0]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/ypos_nxt_reg[11]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/ypos_nxt_reg[10]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/ypos_nxt_reg[9]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/ypos_nxt_reg[8]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/ypos_nxt_reg[7]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/ypos_nxt_reg[6]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/ypos_nxt_reg[5]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/ypos_nxt_reg[4]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/ypos_nxt_reg[3]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/ypos_nxt_reg[2]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/ypos_nxt_reg[1]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (myCoursor/ypos_nxt_reg[0]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (my_rect/x_pos_reg[11]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (my_rect/x_pos_reg[10]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (my_rect/x_pos_reg[9]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (my_rect/x_pos_reg[8]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (my_rect/x_pos_reg[7]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (my_rect/x_pos_reg[6]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (my_rect/x_pos_reg[5]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (my_rect/x_pos_reg[4]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (my_rect/x_pos_reg[3]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (my_rect/x_pos_reg[2]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (my_rect/x_pos_reg[1]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (my_rect/x_pos_reg[0]) is unused and will be removed from module vga_example.
+WARNING: [Synth 8-3332] Sequential element (My_rect_ctl/waiter_reg[7]) is unused and will be removed from module vga_example.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 823.801 ; gain = 518.879
+Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 757.555 ; gain = 501.371
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -727,12 +589,11 @@ Finished Flattening Before IO Insertion
 ---------------------------------------------------------------------------------
 Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5365] Flop myMouse/Inst_Ps2Interface/ps2_clk_h_reg is being inverted and renamed to myMouse/Inst_Ps2Interface/ps2_clk_h_reg_inv.
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 823.801 ; gain = 518.879
+Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 757.555 ; gain = 501.371
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -745,7 +606,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 823.801 ; gain = 518.879
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 757.555 ; gain = 501.371
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -757,36 +618,38 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 823.801 ; gain = 518.879
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 757.555 ; gain = 501.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 823.801 ; gain = 518.879
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 757.555 ; gain = 501.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 823.801 ; gain = 518.879
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 757.555 ; gain = 501.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 823.801 ; gain = 518.879
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 757.555 ; gain = 501.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+------------+----------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name | RTL Name | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+------------+----------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|vga_example | hs_reg   | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
-+------------+----------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++------------+------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                     | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|vga_example | my_keyboard/scan_code_reg[8] | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|vga_example | vs_reg                       | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|vga_example | hs_reg                       | 4      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
@@ -805,64 +668,59 @@ Report Cell Usage:
 +------+-----------+------+
 |      |Cell       |Count |
 +------+-----------+------+
-|1     |BUFG       |     2|
+|1     |BUFG       |     1|
 |2     |BUFGCE     |     2|
 |3     |BUFH       |     2|
-|4     |CARRY4     |    77|
-|5     |LUT1       |    37|
-|6     |LUT2       |   192|
-|7     |LUT3       |    81|
-|8     |LUT4       |   132|
-|9     |LUT5       |   101|
-|10    |LUT6       |   133|
+|4     |CARRY4     |    33|
+|5     |LUT1       |    33|
+|6     |LUT2       |    65|
+|7     |LUT3       |    18|
+|8     |LUT4       |    31|
+|9     |LUT5       |    34|
+|10    |LUT6       |    35|
 |11    |MMCME2_ADV |     1|
-|12    |MUXF7      |    11|
-|13    |MUXF8      |     1|
-|14    |ODDR       |     1|
-|15    |SRL16E     |     1|
-|16    |FDCE       |    16|
-|17    |FDRE       |   405|
-|18    |IBUF       |     1|
-|19    |IOBUF      |     2|
-|20    |OBUF       |    15|
+|12    |ODDR       |     1|
+|13    |SRL16E     |     3|
+|14    |FDCE       |    16|
+|15    |FDRE       |   160|
+|16    |IBUF       |     3|
+|17    |OBUF       |    15|
 +------+-----------+------+
 
 Report Instance Areas: 
-+------+----------------------+------------------+------+
-|      |Instance              |Module            |Cells |
-+------+----------------------+------------------+------+
-|1     |top                   |                  |  1213|
-|2     |  myClk               |clk_wiz_0         |    23|
-|3     |    inst              |clk_wiz_0_clk_wiz |    23|
-|4     |  My_rect_ctl         |draw_rect_ctl     |   191|
-|5     |  myCoursor           |MouseDisplay      |    64|
-|6     |  myMouse             |MouseCtl          |   626|
-|7     |    Inst_Ps2Interface |Ps2Interface      |   282|
-|8     |  my_background       |draw_background   |    66|
-|9     |  my_rect             |draw_rect         |   130|
-|10    |  my_timing           |vga_timing        |    91|
-+------+----------------------+------------------+------+
++------+----------------+------------------+------+
+|      |Instance        |Module            |Cells |
++------+----------------+------------------+------+
+|1     |top             |                  |   453|
+|2     |  myClk         |clk_wiz_0         |    23|
+|3     |    inst        |clk_wiz_0_clk_wiz |    23|
+|4     |  My_rect_ctl   |draw_rect_ctl     |    35|
+|5     |  myCoursor     |MouseDisplay      |    24|
+|6     |  my_background |draw_background   |    67|
+|7     |  my_keyboard   |Keyboard          |    87|
+|8     |  my_rect       |draw_rect         |   103|
+|9     |  my_timing     |vga_timing        |    93|
++------+----------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 823.801 ; gain = 518.879
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 757.555 ; gain = 501.371
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 48 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:32 . Memory (MB): peak = 823.801 ; gain = 174.578
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 823.801 ; gain = 518.879
+Synthesis finished with 0 errors, 0 critical warnings and 54 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 757.555 ; gain = 156.855
+Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 757.555 ; gain = 501.371
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 96 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 40 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 4 instances were transformed.
+  A total of 2 instances were transformed.
   BUFGCE => BUFGCTRL: 2 instances
-  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-185 Infos, 98 Warnings, 0 Critical Warnings and 0 Errors encountered.
+110 Infos, 149 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 823.801 ; gain = 530.344
-INFO: [Common 17-1381] The checkpoint 'C:/Users/pauli/OneDrive/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.runs/synth_1/vga_example.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 758.070 ; gain = 513.355
+INFO: [Common 17-1381] The checkpoint 'C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.runs/synth_1/vga_example.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file vga_example_utilization_synth.rpt -pb vga_example_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 823.801 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sat Apr  7 16:44:44 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 758.070 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun Apr  8 00:04:55 2018...

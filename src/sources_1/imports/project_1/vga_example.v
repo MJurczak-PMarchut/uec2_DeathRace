@@ -79,6 +79,8 @@ module vga_example (
   // not functionally required for this design to work.
 */
 
+wire [7:0] data;
+
 clk_wiz_0 myClk(
     .clk_out1(pclk100),
     .clk_in1(clk),
@@ -87,6 +89,14 @@ clk_wiz_0 myClk(
     .reset(1'b0)
 );
 
+Keyboard my_keyboard(
+
+    .CLK(pclk100),
+    .PS2_CLK(ps2_clk),
+    .PS2_DATA(ps2_data),
+    .LED(data)
+
+);
 
 
 
@@ -140,14 +150,15 @@ draw_rect_ctl My_rect_ctl(
     .ypos(ypos),
     .ypos_out(ypos_out),
     .xpos_out(xpos_out),
-    .left_button(left),
-    .vsync(vsync)
+  //  .left_button(left),
+    .vsync(vsync),
+    .data(data)
 
 
 );
 
 
-  
+  /*
   MouseCtl myMouse(
     .clk(pclk100),
     .ps2_clk(ps2_clk),
@@ -156,7 +167,7 @@ draw_rect_ctl My_rect_ctl(
     .ypos(ypos),
     .left(left)
   );
-
+*/
   vga_timing my_timing (
     .vcount(vcount),
     .vsync(vsync),
