@@ -1,0 +1,100 @@
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
+| Date         : Sat Apr  7 16:45:23 2018
+| Host         : DESKTOP-CCD6AHT running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file vga_example_control_sets_placed.rpt
+| Design       : vga_example
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    29 |
+| Unused register locations in slices containing registers |    80 |
++----------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             193 |           85 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              72 |           19 |
+| Yes          | No                    | No                     |             131 |           42 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              36 |           11 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------+--------------------------------------------------------+--------------------------------------------------------+------------------+----------------+
+|              Clock Signal             |                      Enable Signal                     |                    Set/Reset Signal                    | Slice Load Count | Bel Load Count |
++---------------------------------------+--------------------------------------------------------+--------------------------------------------------------+------------------+----------------+
+|  myMouse/left                         |                                                        |                                                        |                1 |              1 |
+|  myClk/inst/clk_out1                  |                                                        | myMouse/Inst_Ps2Interface/clk_inter0                   |                1 |              4 |
+|  myClk/inst/clk_out1                  |                                                        | myMouse/Inst_Ps2Interface/data_inter0                  |                1 |              4 |
+|  myClk/inst/clk_out1                  |                                                        | myMouse/Inst_Ps2Interface/state[4]                     |                3 |              4 |
+|  myClk/inst/clk_out1                  | myMouse/Inst_Ps2Interface/shift_frame                  | myMouse/Inst_Ps2Interface/reset_bit_count              |                1 |              4 |
+|  myClk/inst/clk_out1                  | myMouse/Inst_Ps2Interface/y_sign_reg_0                 |                                                        |                1 |              5 |
+|  myClk/inst/clk_out1                  | myMouse/Inst_Ps2Interface/delay_63clk_count[6]_i_2_n_0 | myMouse/Inst_Ps2Interface/delay_63clk_count[6]_i_1_n_0 |                2 |              7 |
+|  myClk/inst/clk_out1                  | myMouse/Inst_Ps2Interface/load_rx_data                 |                                                        |                1 |              8 |
+|  myClk/inst/clk_out1                  | myMouse/Inst_Ps2Interface/x_inc_reg[0]                 |                                                        |                2 |              8 |
+|  myClk/inst/clk_out1                  | myMouse/Inst_Ps2Interface/y_inc_reg[0]                 |                                                        |                3 |              8 |
+|  myClk/inst/clk_out1                  | myMouse/write_data                                     |                                                        |                3 |              8 |
+|  myClk/inst/clk_out2_clk_wiz_0_en_clk |                                                        |                                                        |                1 |              8 |
+|  myClk/inst/clk_out1_clk_wiz_0_en_clk |                                                        |                                                        |                1 |              8 |
+|  myClk/inst/clk_out1                  | myMouse/Inst_Ps2Interface/frame[9]_i_1_n_0             |                                                        |                2 |             10 |
+|  ypos_out_reg[11]_i_2_n_0             |                                                        | My_rect_ctl/acceleration_ratio[11]_i_1_n_0             |                3 |             10 |
+|  myClk/inst/clk_out1                  | myMouse/Inst_Ps2Interface/delay_20us_count[10]_i_2_n_0 | myMouse/Inst_Ps2Interface/delay_20us_count[10]_i_1_n_0 |                4 |             11 |
+|  ypos_out_reg[11]_i_2_n_0             | My_rect_ctl/Speed[10]_i_1_n_0                          |                                                        |                4 |             11 |
+|  myClk/inst/clk_out1                  | myMouse/y_new_reg_n_0                                  |                                                        |                3 |             12 |
+|  myClk/inst/clk_out1                  | myMouse/x_new_reg_n_0                                  |                                                        |                3 |             12 |
+|  ypos_out_reg[11]_i_2_n_0             | My_rect_ctl/bt_i_1_n_0                                 |                                                        |                4 |             12 |
+|  myClk/inst/clk_out2                  | my_timing/hblnk_0                                      |                                                        |                7 |             13 |
+|  myClk/inst/clk_out1                  | myMouse/Inst_Ps2Interface/delay_100us_count[0]_i_2_n_0 | myMouse/Inst_Ps2Interface/delay_100us_count[0]_i_1_n_0 |                4 |             14 |
+|  ypos_out_reg[11]_i_2_n_0             |                                                        |                                                        |               10 |             15 |
+|  myClk/inst/clk_out1                  |                                                        | myMouse/reset_timeout_cnt                              |                5 |             24 |
+|  myClk/inst/clk_out2                  | my_background/E[0]                                     |                                                        |                9 |             24 |
+| ~my_rect/CLK                          |                                                        |                                                        |                8 |             24 |
+|  myClk/inst/clk_out1                  |                                                        | myMouse/reset_periodic_check_cnt                       |                6 |             26 |
+|  myClk/inst/clk_out1                  |                                                        |                                                        |               28 |             56 |
+|  myClk/inst/clk_out2                  |                                                        |                                                        |               37 |             82 |
++---------------------------------------+--------------------------------------------------------+--------------------------------------------------------+------------------+----------------+
+
+
++--------+-----------------------+
+| Fanout | Number of ControlSets |
++--------+-----------------------+
+| 1      |                     1 |
+| 4      |                     4 |
+| 5      |                     1 |
+| 7      |                     1 |
+| 8      |                     6 |
+| 10     |                     2 |
+| 11     |                     2 |
+| 12     |                     3 |
+| 13     |                     1 |
+| 14     |                     1 |
+| 15     |                     1 |
+| 16+    |                     6 |
++--------+-----------------------+
+
+

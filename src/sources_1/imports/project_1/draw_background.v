@@ -59,7 +59,7 @@ module draw_background(
         begin
             if ((((hcount_in >= x_rect) && (hcount_in < (x_rect + width)))&& ((vcount_in >= y_rect) && (vcount_in < (y_rect + height)))) && ((hblnk_in == 0)&&(vblnk_in == 0)))
                     if ((((hcount_in >= x_rect+5) && (hcount_in < (x_rect + width-5)))&& ((vcount_in >= y_rect+5) && (vcount_in < (y_rect + height-5)))) && ((hblnk_in == 0)&&(vblnk_in == 0)))
-                        if(((hcount_in >= x_rect + 50) && (hcount_in <= x_rect + 55)) || ((hcount_in >= (x_rect + width - 55)) && (hcount_in < (x_rect + width - 50)))) rgb_out <= 12'hf_f_f;
+                        if(((hcount_in >= x_rect + 50) && (hcount_in < x_rect + 52)) || ((hcount_in > (x_rect + width - 52)) && (hcount_in <= (x_rect + width - 50)))) rgb_out <= 12'hf_f_f;
                         else rgb_out <= 12'b0_0_0;                
                      else rgb_out <= 12'hf_f_f;
         //        if(left == 0) rgb_next <= rgb_rom; else rgb_next <= color2;
