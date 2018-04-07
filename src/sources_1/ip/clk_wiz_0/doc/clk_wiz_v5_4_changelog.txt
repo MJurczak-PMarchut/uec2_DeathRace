@@ -1,3 +1,8 @@
+2017.4:
+ * Version 5.4 (Rev. 3)
+ * Bug Fix: Internal GUI issues are fixed for COMPENSATION mode as INTERNAL
+ * Bug Fix: Fixed issue in dynamic reconfiguration of fractional values of M in MMCME3, MMCME4 CR-991054
+
 2017.3:
  * Version 5.4 (Rev. 2)
  * General: Internal GUI changes. No effect on the customer design. Added support for aspartan7 devices

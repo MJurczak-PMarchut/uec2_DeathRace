@@ -1,25 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Product Version: Vivado v2017.3 (64-bit)              -->
+<!-- Product Version: Vivado v2017.4 (64-bit)              -->
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="32" Path="C:/Users/OMEN/Desktop/MJurczak-PMarchut_Gra/DeathRace/DeathRace.xpr">
+<Project Version="7" Minor="35" Path="C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="215d4e425973499091427d5470255b4e"/>
+    <Option Name="Id" Val="c0404405a75747e5ba041b0cb81701d7"/>
     <Option Name="Part" Val="xc7a35tcpg236-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
     <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
     <Option Name="CompiledLibDirQuesta" Val="$PCACHEDIR/compile_simlib/questa"/>
     <Option Name="CompiledLibDirIES" Val="$PCACHEDIR/compile_simlib/ies"/>
-    <Option Name="CompiledLibDirXcelium" Val="$PCACHEDIR/compile_simlib/xcelium"/>
+    <Option Name="CompiledLibDirXcelium" Val="$PPRDIR/../../../../../../../../Desktop/MJurczak-PMarchut_Gra/DeathRace/DeathRace.cache/compile_simlib/xcelium"/>
     <Option Name="CompiledLibDirVCS" Val="$PCACHEDIR/compile_simlib/vcs"/>
     <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
     <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
     <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="ProjectType" Val="Default"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
@@ -37,13 +38,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="1"/>
-    <Option Name="WTModelSimExportSim" Val="1"/>
-    <Option Name="WTQuestaExportSim" Val="1"/>
-    <Option Name="WTIesExportSim" Val="1"/>
-    <Option Name="WTVcsExportSim" Val="1"/>
-    <Option Name="WTRivieraExportSim" Val="1"/>
-    <Option Name="WTActivehdlExportSim" Val="1"/>
+    <Option Name="WTXSimExportSim" Val="2"/>
+    <Option Name="WTModelSimExportSim" Val="2"/>
+    <Option Name="WTQuestaExportSim" Val="2"/>
+    <Option Name="WTIesExportSim" Val="2"/>
+    <Option Name="WTVcsExportSim" Val="2"/>
+    <Option Name="WTRivieraExportSim" Val="2"/>
+    <Option Name="WTActivehdlExportSim" Val="2"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -56,7 +57,7 @@
       <Filter Type="Srcs"/>
       <File Path="$PSRCDIR/sources_1/ip/clk_wiz_0/clk_wiz_0.xci">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../project_1/clk_wiz_0/clk_wiz_0.xci"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Desktop/MJurczak-PMarchut_Gra/project_1/clk_wiz_0/clk_wiz_0.xci"/>
           <Attr Name="ImportTime" Val="1521029018"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -65,7 +66,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/project_1/draw_background.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../project_1/draw_background.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Desktop/MJurczak-PMarchut_Gra/project_1/draw_background.v"/>
           <Attr Name="ImportTime" Val="1521028505"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -74,7 +75,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/project_1/draw_rect.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../project_1/draw_rect.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Desktop/MJurczak-PMarchut_Gra/project_1/draw_rect.v"/>
           <Attr Name="ImportTime" Val="1522241936"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -83,7 +84,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/project_1/draw_rect_ctl.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../project_1/draw_rect_ctl.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Desktop/MJurczak-PMarchut_Gra/project_1/draw_rect_ctl.v"/>
           <Attr Name="ImportTime" Val="1523002710"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -92,7 +93,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/project_1/vga_timing.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../project_1/vga_timing.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Desktop/MJurczak-PMarchut_Gra/project_1/vga_timing.v"/>
           <Attr Name="ImportTime" Val="1521028373"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -101,7 +102,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/project_1/MouseCtl.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../project_1/MouseCtl.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Desktop/MJurczak-PMarchut_Gra/project_1/MouseCtl.vhd"/>
           <Attr Name="ImportTime" Val="1521035159"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -109,7 +110,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/project_1/MouseDisplay.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../project_1/MouseDisplay.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Desktop/MJurczak-PMarchut_Gra/project_1/MouseDisplay.vhd"/>
           <Attr Name="ImportTime" Val="1522248420"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -117,7 +118,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/project_1/Ps2Interface.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../project_1/Ps2Interface.vhd"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Desktop/MJurczak-PMarchut_Gra/project_1/Ps2Interface.vhd"/>
           <Attr Name="ImportTime" Val="1521027550"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -125,7 +126,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/project_1/verilog_macro_bus.vh">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../project_1/verilog_macro_bus.vh"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Desktop/MJurczak-PMarchut_Gra/project_1/verilog_macro_bus.vh"/>
           <Attr Name="ImportTime" Val="1521038603"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -133,7 +134,7 @@
       </File>
       <File Path="$PSRCDIR/sources_1/imports/project_1/vga_example.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../project_1/vga_example.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Desktop/MJurczak-PMarchut_Gra/project_1/vga_example.v"/>
           <Attr Name="ImportTime" Val="1522949782"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -143,13 +144,14 @@
       <File Path="$PSRCDIR/sources_1/imports/project_1/tiff_writer.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../project_1/tiff_writer.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Desktop/MJurczak-PMarchut_Gra/project_1/tiff_writer.v"/>
           <Attr Name="ImportTime" Val="1520274470"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/archive_project_summary.txt"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="vga_example"/>
@@ -160,7 +162,7 @@
       <Filter Type="Constrs"/>
       <File Path="$PSRCDIR/constrs_1/imports/project_1/vga_example.xdc">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../project_1/vga_example.xdc"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Desktop/MJurczak-PMarchut_Gra/project_1/vga_example.xdc"/>
           <Attr Name="ImportTime" Val="1521031940"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -172,9 +174,9 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/imports/project_1/testbench.v">
+      <File Path="$PSRCDIR/sim_1/imports/project_1/testbench.v">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../project_1/testbench.v"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../../Desktop/MJurczak-PMarchut_Gra/project_1/testbench.v"/>
           <Attr Name="ImportTime" Val="1520796476"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -211,23 +213,16 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="10">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2017">
-        <ReportConfig Name="synth_1_synth_report_utilization_0" Spec="report_utilization" RunStep="synth_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="synth_1_synth_synthesis_report_0" Spec="" RunStep="synth_design">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-      </ReportStrategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2017"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a35tcpg236-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
         <Step Id="init_design"/>
@@ -240,95 +235,8 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2017">
-        <ReportConfig Name="impl_1_init_report_timing_summary_0" Spec="report_timing_summary" RunStep="init_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_opt_report_drc_0" Spec="report_drc" RunStep="opt_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="power_opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_place_report_io_0" Spec="report_io" RunStep="place_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_place_report_utilization_0" Spec="report_utilization" RunStep="place_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_place_report_control_sets_0" Spec="report_control_sets" RunStep="place_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_place_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_place_report_incremental_reuse_1" Spec="report_incremental_reuse" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_place_report_timing_summary_0" Spec="report_timing_summary" RunStep="place_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_post_place_power_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_place_power_opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="phys_opt_design" Version="1" Minor="0" IsDisabled="true">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_route_report_drc_0" Spec="report_drc" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_route_report_methodology_0" Spec="report_methodology" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_route_report_power_0" Spec="report_power" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_route_report_route_status_0" Spec="report_route_status" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="pb" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_route_report_timing_summary_0" Spec="report_timing_summary" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_route_report_incremental_reuse_0" Spec="report_incremental_reuse" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_route_report_clock_utilization_0" Spec="report_clock_utilization" RunStep="route_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_route_implementation_log_0" Spec="" RunStep="route_design">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_post_route_phys_opt_report_timing_summary_0" Spec="report_timing_summary" RunStep="post_route_phys_opt_design" Version="1" Minor="0">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-          <ReportConfigOutputOption Name="rpx" Type="string" Value=""/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_bitstream_report_webtalk_0" Spec="" RunStep="write_bitstream">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-        <ReportConfig Name="impl_1_bitstream_implementation_log_0" Spec="" RunStep="write_bitstream">
-          <ReportConfigOption Name="dummy_option" Type="string"/>
-        </ReportConfig>
-      </ReportStrategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2017"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
   </Runs>

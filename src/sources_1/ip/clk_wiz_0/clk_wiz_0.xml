@@ -815,7 +815,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.CLKFB_IN_D" xilinx:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))!=&quot;FDBK_AUTO&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;))) or ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;))) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_CLKFB_IN_SIGNALING&apos;))=&quot;DIFF&quot;)))">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.CLKFB_IN_D" xilinx:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))!=&quot;FDBK_AUTO&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;))) or ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;)) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_MMCM_COMPENSATION&apos;))!=&quot;INTERNAL&quot;))) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_CLKFB_IN_SIGNALING&apos;))=&quot;DIFF&quot;) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_MMCM_COMPENSATION&apos;))!=&quot;INTERNAL&quot;))))">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -868,7 +868,7 @@
       <spirit:vendorExtensions>
         <xilinx:busInterfaceInfo>
           <xilinx:enablement>
-            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.CLKFB_OUT_D" xilinx:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))!=&quot;FDBK_AUTO&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;))) or ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;))) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_CLKFB_IN_SIGNALING&apos;))=&quot;DIFF&quot;)))">false</xilinx:isEnabled>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.CLKFB_OUT_D" xilinx:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))!=&quot;FDBK_AUTO&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;))) or ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;)) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_MMCM_COMPENSATION&apos;))!=&quot;INTERNAL&quot;))) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_CLKFB_IN_SIGNALING&apos;))=&quot;DIFF&quot;) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_MMCM_COMPENSATION&apos;))!=&quot;INTERNAL&quot;))))">false</xilinx:isEnabled>
           </xilinx:enablement>
         </xilinx:busInterfaceInfo>
       </spirit:vendorExtensions>
@@ -1144,7 +1144,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:feb6c7a2</spirit:value>
+            <spirit:value>7:6fb82963</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1159,11 +1159,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 14 12:03:40 UTC 2018</spirit:value>
+            <spirit:value>Sat Apr 07 12:13:18 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:94713731</spirit:value>
+            <spirit:value>7:ce1524df</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1177,11 +1177,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 14 12:03:41 UTC 2018</spirit:value>
+            <spirit:value>Sat Apr 07 12:13:45 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:94713731</spirit:value>
+            <spirit:value>7:ce1524df</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1195,11 +1195,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 14 12:03:41 UTC 2018</spirit:value>
+            <spirit:value>Sat Apr 07 12:13:46 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:94713731</spirit:value>
+            <spirit:value>7:ce1524df</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1213,11 +1213,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 14 12:03:41 UTC 2018</spirit:value>
+            <spirit:value>Sat Apr 07 12:13:45 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:ca955bc3</spirit:value>
+            <spirit:value>7:121d3eeb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1231,11 +1231,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 14 12:03:41 UTC 2018</spirit:value>
+            <spirit:value>Sat Apr 07 12:13:46 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:ca955bc3</spirit:value>
+            <spirit:value>7:121d3eeb</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1249,11 +1249,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 14 12:03:41 UTC 2018</spirit:value>
+            <spirit:value>Sat Apr 07 12:13:46 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:94713731</spirit:value>
+            <spirit:value>7:ce1524df</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1267,11 +1267,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Wed Mar 14 12:03:41 UTC 2018</spirit:value>
+            <spirit:value>Sat Apr 07 12:13:46 UTC 2018</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>7:94713731</spirit:value>
+            <spirit:value>7:ce1524df</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1828,7 +1828,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.clkfb_in_p" xilinx:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))!=&quot;FDBK_AUTO&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;))) or ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;))) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_CLKFB_IN_SIGNALING&apos;))=&quot;DIFF&quot;)))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.clkfb_in_p" xilinx:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))!=&quot;FDBK_AUTO&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;))) or ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;)) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_MMCM_COMPENSATION&apos;))!=&quot;INTERNAL&quot;))) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_CLKFB_IN_SIGNALING&apos;))=&quot;DIFF&quot;) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_MMCM_COMPENSATION&apos;))!=&quot;INTERNAL&quot;))))">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -1851,7 +1851,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.clkfb_in_n" xilinx:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))!=&quot;FDBK_AUTO&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;))) or ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;))) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_CLKFB_IN_SIGNALING&apos;))=&quot;DIFF&quot;)))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.clkfb_in_n" xilinx:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))!=&quot;FDBK_AUTO&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;))) or ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;)) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_MMCM_COMPENSATION&apos;))!=&quot;INTERNAL&quot;))) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_CLKFB_IN_SIGNALING&apos;))=&quot;DIFF&quot;) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_MMCM_COMPENSATION&apos;))!=&quot;INTERNAL&quot;))))">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -1871,7 +1871,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.clkfb_out_p" xilinx:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))!=&quot;FDBK_AUTO&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;))) or ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;))) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_CLKFB_IN_SIGNALING&apos;))=&quot;DIFF&quot;)))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.clkfb_out_p" xilinx:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))!=&quot;FDBK_AUTO&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;))) or ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;)) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_MMCM_COMPENSATION&apos;))!=&quot;INTERNAL&quot;))) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_CLKFB_IN_SIGNALING&apos;))=&quot;DIFF&quot;) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_MMCM_COMPENSATION&apos;))!=&quot;INTERNAL&quot;))))">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -1891,7 +1891,7 @@
         <spirit:vendorExtensions>
           <xilinx:portInfo>
             <xilinx:enablement>
-              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.clkfb_out_n" xilinx:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))!=&quot;FDBK_AUTO&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;))) or ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;))) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_CLKFB_IN_SIGNALING&apos;))=&quot;DIFF&quot;)))">false</xilinx:isEnabled>
+              <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="PORT_ENABLEMENT.clkfb_out_n" xilinx:dependency="((((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))!=&quot;FDBK_AUTO&quot;) or (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;))) or ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;)) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_MMCM_COMPENSATION&apos;))!=&quot;INTERNAL&quot;))) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_USE_PHASE_ALIGNMENT&apos;))=1) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_FEEDBACK_SOURCE&apos;))=&quot;FDBK_AUTO_OFFCHIP&quot;) and (spirit:decode(id(&apos;MODELPARAM_VALUE.C_CLKFB_IN_SIGNALING&apos;))=&quot;DIFF&quot;) and ((spirit:decode(id(&apos;MODELPARAM_VALUE.C_MMCM_COMPENSATION&apos;))!=&quot;INTERNAL&quot;))))">false</xilinx:isEnabled>
             </xilinx:enablement>
           </xilinx:portInfo>
         </spirit:vendorExtensions>
@@ -3614,37 +3614,37 @@
         <spirit:name>mmcm_pll_drp_func_7s_mmcm.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>clk_wiz_v5_4_2</spirit:logicalName>
+        <spirit:logicalName>clk_wiz_v5_4_3</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>mmcm_pll_drp_func_7s_pll.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>clk_wiz_v5_4_2</spirit:logicalName>
+        <spirit:logicalName>clk_wiz_v5_4_3</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>mmcm_pll_drp_func_us_mmcm.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>clk_wiz_v5_4_2</spirit:logicalName>
+        <spirit:logicalName>clk_wiz_v5_4_3</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>mmcm_pll_drp_func_us_pll.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>clk_wiz_v5_4_2</spirit:logicalName>
+        <spirit:logicalName>clk_wiz_v5_4_3</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>mmcm_pll_drp_func_us_plus_pll.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>clk_wiz_v5_4_2</spirit:logicalName>
+        <spirit:logicalName>clk_wiz_v5_4_3</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>mmcm_pll_drp_func_us_plus_mmcm.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>clk_wiz_v5_4_2</spirit:logicalName>
+        <spirit:logicalName>clk_wiz_v5_4_3</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>clk_wiz_0_clk_wiz.v</spirit:name>
@@ -3665,42 +3665,42 @@
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>clk_wiz_v5_4_2</spirit:logicalName>
+        <spirit:logicalName>clk_wiz_v5_4_3</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>mmcm_pll_drp_func_7s_pll.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>clk_wiz_v5_4_2</spirit:logicalName>
+        <spirit:logicalName>clk_wiz_v5_4_3</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>mmcm_pll_drp_func_us_mmcm.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>clk_wiz_v5_4_2</spirit:logicalName>
+        <spirit:logicalName>clk_wiz_v5_4_3</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>mmcm_pll_drp_func_us_pll.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>clk_wiz_v5_4_2</spirit:logicalName>
+        <spirit:logicalName>clk_wiz_v5_4_3</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>mmcm_pll_drp_func_us_plus_pll.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>clk_wiz_v5_4_2</spirit:logicalName>
+        <spirit:logicalName>clk_wiz_v5_4_3</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>mmcm_pll_drp_func_us_plus_mmcm.vh</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
         <spirit:isIncludeFile>true</spirit:isIncludeFile>
-        <spirit:logicalName>clk_wiz_v5_4_2</spirit:logicalName>
+        <spirit:logicalName>clk_wiz_v5_4_3</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>clk_wiz_0_clk_wiz.v</spirit:name>
@@ -4795,7 +4795,7 @@
       <xilinx:xpmLibraries>
         <xilinx:xpmLibrary>XPM_CDC</xilinx:xpmLibrary>
       </xilinx:xpmLibraries>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
+      <xilinx:coreRevision>3</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.CLKOUT1_DRIVES" xilinx:valueSource="user"/>
         <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.CLKOUT2_DRIVES" xilinx:valueSource="user"/>
@@ -4816,10 +4816,10 @@
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
-      <xilinx:xilinxVersion>2017.3.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="2d0dcf22"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="2fc66dd0"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="f2d7b13e"/>
+      <xilinx:xilinxVersion>2017.4</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="47eccc34"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0eced063"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="4f3d3737"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="0f2f17dd"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="488ef609"/>
     </xilinx:packagingInfo>

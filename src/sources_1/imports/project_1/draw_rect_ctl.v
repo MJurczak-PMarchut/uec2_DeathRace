@@ -80,10 +80,10 @@ module draw_rect_ctl(
             begin
                 if(!rev)
                     begin
-                       ypos_out <= ypos_int + Speed*Time + (0.5)*acceleration ** Time;
+//                       ypos_out <= ypos_int + Speed*Time + (0.5)*acceleration ** Time;
                        
                        
-                       /*
+                       
                        ypos_out = ((ypos_int + Speed) < 536) ? (ypos_int + Speed) : 536;
                        acceleration_ratio = (acceleration_ratio != 0) ? acceleration_ratio - 1 : accel;
                        if(ypos_out < 536)
@@ -93,7 +93,7 @@ module draw_rect_ctl(
                             rev <= 1;
                             acceleration_ratio <= 1;
                          end
-                         */    
+                             
                     end
                  else
                     begin
@@ -101,7 +101,7 @@ module draw_rect_ctl(
                     
                     
                     
-                        /*
+                        
                         acceleration_ratio = (acceleration_ratio != 0) ? acceleration_ratio - 1 : accel - 1;
                         if(Speed > 0)
                           Speed = (acceleration_ratio == 0) ? Speed - 1  : Speed;
@@ -111,7 +111,7 @@ module draw_rect_ctl(
                                 acceleration_ratio <= accel;
                             end
                         ypos_out = (ypos_int <= 536) ? (ypos_int - Speed) : 536;
-                        */
+                        
                     end
                 ypos_int <= ypos_out;
             end
