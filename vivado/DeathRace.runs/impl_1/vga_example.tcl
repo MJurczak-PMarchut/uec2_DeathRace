@@ -60,23 +60,25 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {Synth 8-256} -limit 10000
+set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
+  set_param synth.incrementalSynthesisCache C:/Users/OMEN/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-19992-LAPTOP-G7PT2HG2/incrSyn
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/pauli/OneDrive/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.cache/wt [current_project]
-  set_property parent.project_path C:/Users/pauli/OneDrive/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.xpr [current_project]
-  set_property ip_output_repo C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.cache/wt [current_project]
+  set_property parent.project_path C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.xpr [current_project]
+  set_property ip_output_repo C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet C:/Users/pauli/OneDrive/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.runs/synth_1/vga_example.dcp
-  read_ip -quiet C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-  read_xdc C:/Users/pauli/OneDrive/Pulpit/DeathRace.xpr/DeathRace/DeathRace.srcs/constrs_1/imports/project_1/vga_example.xdc
+  add_files -quiet C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.runs/synth_1/vga_example.dcp
+  read_ip -quiet C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_xdc C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc
   link_design -top vga_example -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]

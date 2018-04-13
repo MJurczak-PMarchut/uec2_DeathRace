@@ -13,7 +13,8 @@
 
 `include "verilog_macro_bus.vh"
 
-wire [`VGA_BUS_SIZE - 1 : 0] VGA_BUS;
+wire [`VGA_BUS_SIZE - 1 : 0] vga_bus [3:-1];
+wire [`MOUSE_BUS_SIZE - 1 : 0] mouse_bus [1:0] ;
 
 
 module vga_example (
@@ -104,119 +105,68 @@ clk_wiz_0 myClk(
   // Instantiate the vga_timing module, which is
   // the module you are designing for this lab.
 
-  wire [10:0] vcount, hcount,vcount_draw,hcount_draw,vcount_rect,hcount_rect;
-  wire vsync, hsync, vsync_draw, hsync_draw, vsync_rect, hsync_rect,vsync_coursor,hsync_coursor;
-  wire vblnk, hblnk,vblnk_draw,hblnk_draw,vblnk_rect,hblnk_rect;
-  wire pclk_timing,pclk_draw,left;
-  wire [11:0] rgb_draw, rgb_rect,rgb_mouse,rgb_rom,address;
-  wire [11:0] ypos, xpos,ypos_out,xpos_out;
+  wire [11:0] rgb_rom,address;
   
   
   
-  MouseDisplay myCoursor(
-    .xpos(xpos),
-    .ypos(ypos),
-    .hblank(hblnk_rect),
-    .vblank(vblnk_rect),
-    .red_in(rgb_rect[3:0]),
-    .green_in(rgb_rect[7:4]),
-    .blue_in(rgb_rect[11:8]),
-    .red_out(rgb_mouse[3:0]),
-    .green_out(rgb_mouse[7:4]),
-    .blue_out(rgb_mouse[11:8]),
-    .pixel_clk(pclk),
-    .hcount(hcount_rect),
-    .vcount(vcount_rect),
-    .vsync_out(vsync_coursor),
-    .hsync_out(hsync_coursor),
-    .hsync_in(hsync_rect),
-    .vsync_in(vsync_rect)
+  MouseDisplayVeri myCoursor(
+    .pclk(pclk),
+    .mouse_in(mouse_bus[0]),
+    .vga_in(vga_bus[1]),
+    .vga_out(vga_bus[2])
   );
 
+    image_rom my_rom(
+        .clk(!pclk),
+        .address(address),
+        .rgb(rgb_rom)
+    
+    );
 
 draw_rect_ctl My_rect_ctl(  
     .clk(pclk),
-    .xpos(xpos),
-    .ypos(ypos),
-    .ypos_out(ypos_out),
-    .xpos_out(xpos_out),
-    .left_button(left),
-    .vsync(vsync)
-
-
+    .mouse_in(mouse_bus[0]),
+    .mouse_out(mouse_bus[1]),
+    .vsync(vga_bus[-1][35])
 );
 
-
-  
-  MouseCtl myMouse(
+  MouseCtlVeri myMouse(
     .clk(pclk100),
     .ps2_clk(ps2_clk),
     .ps2_data(ps2_data),
-    .xpos(xpos),
-    .ypos(ypos),
-    .left(left)
+    .mouse_out(mouse_bus[0])
   );
 
   vga_timing my_timing (
-    .vcount(vcount),
-    .vsync(vsync),
-    .vblnk(vblnk),
-    .hcount(hcount),
-    .hsync(hsync),
-    .hblnk(hblnk),
-    .pclk_out(pclk_timing),
+    .vga_out(vga_bus[-1]),
     .pclk(pclk)
   );
   
   draw_background my_background(
-    .hcount_in(hcount),
-    .vcount_in(vcount),
-    .hsync_in(hsync),
-    .hblnk_in(hblnk),
-    .vblnk_in(vblnk),
-    .vsync_in(vsync),
+    .vga_in(vga_bus[-1]),
     .pclk(pclk),
-    .vsync_out(vsync_draw),
-    .hsync_out(hsync_draw),
-    .rgb_out(rgb_draw),
-    .hcount_out(hcount_draw),
-    .vcount_out(vcount_draw),
-    .pclk_out(pclk_draw),
-    .hblnk_out(hblnk_draw),
-    .vblnk_out(vblnk_draw)
+    .vga_out(vga_bus[0])
     );
     
     draw_rect my_rect(
-        .xpos(xpos_out),
-//        .left(left),
-        .ypos(ypos_out),
-        .rgb_in(rgb_draw),
-        .hcount_in(hcount_draw),
-        .vcount_in(vcount_draw),
-        .hsync_in(hsync_draw),
-        .hblnk_in(hblnk_draw),
-        .vblnk_in(vblnk_draw),
-        .vsync_in(vsync_draw),
+        .mouse_in(mouse_bus[1]),
+        .vga_in(vga_bus[0]),
         .pclk(pclk),
-        .vsync_out(vsync_rect),
-        .hsync_out(hsync_rect),
-        .rgb_out(rgb_rect),
-        .hcount_out(hcount_rect),
-        .vcount_out(vcount_rect)
-//        .rgb_rom(rgb_rom),
-//        .address(address)
+        .vga_out(vga_bus[1]),
+        .rgb_rom(rgb_rom),
+        .address(address)
     );
-    
-
+       
+ `VGA_SPLIT_INPUT(vga_bus[1])
     
 
   // This is a simple test pattern generator.
   
   always @(posedge pclk)
   begin
-  vs <= vsync_coursor;
-  hs <= hsync_coursor;
-  {r,g,b} <= rgb_mouse;
+    vs <= vsync_in;
+    hs <= hsync_in;
+    {r,g,b} <= rgb_in;
   end
 
 endmodule

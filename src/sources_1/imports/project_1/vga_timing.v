@@ -11,42 +11,39 @@
 // using Verilog-2001 syntax.
 
 module vga_timing (
-  output reg [10:0] vcount = 0,
-  output reg vsync = 0,
-  output reg vblnk = 0,
-  output reg [10:0] hcount = 0,
-  output reg hsync,
-  output reg hblnk,
+  output wire [`VGA_BUS_SIZE-1:0] vga_out,
   input wire pclk,
   output wire pclk_out
   );
   
-  
+    `VGA_OUT_REG
+    `VGA_MERGE_AT_OUTPUT(vga_out)
+ 
   
   always @(posedge pclk) 
   begin 
-    if (hcount == 1055)
+    if (hcount_out == 1055)
         begin
-              hblnk = 0;
-              hcount = 0;
+              hblnk_out = 0;
+              hcount_out = 0;
             
-              if(vcount == 627) vcount = 0;
-              else vcount = vcount + 1;
+              if(vcount_out == 627) vcount_out = 0;
+              else vcount_out = vcount_out + 1;
               
-              if(vcount > 599) vblnk = 1'b1;
-              else vblnk = 1'b0;
+              if(vcount_out > 599) vblnk_out = 1'b1;
+              else vblnk_out = 1'b0;
              
-              if((vcount >= 600) & (vcount <= 603)) vsync = 1'b1;
-              else vsync = 1'b0;
+              if((vcount_out >= 600) & (vcount_out <= 603)) vsync_out = 1'b1;
+              else vsync_out = 1'b0;
         end
      else
         begin
-            hcount = hcount + 1;
-            if (hcount >= 800) hblnk = 1'b1;
-            else hblnk = 1'b0; 
+            hcount_out = hcount_out + 1;
+            if (hcount_out >= 800) hblnk_out = 1'b1;
+            else hblnk_out = 1'b0; 
             
-            if( (hcount >= 840) & ( hcount <= 968)) hsync = 1'b1;
-            else hsync = 1'b0;
+            if( (hcount_out >= 840) & ( hcount_out <= 968)) hsync_out = 1'b1;
+            else hsync_out = 1'b0;
         end 
         
         
