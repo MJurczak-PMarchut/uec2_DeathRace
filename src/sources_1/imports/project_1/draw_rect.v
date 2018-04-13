@@ -1,17 +1,17 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
-// Company:
+// Company: 
 // Engineer: 
 // 
 // Create Date: 11.03.2018 22:12:21
 // Design Name: 
 // Module Name: draw_rect
-// Project Name:
+// Project Name: 
 // Target Devices: 
 // Tool Versions: 
-// Description:
-//
-// Dependencies:
+// Description: 
+// 
+// Dependencies: 
 // 
 // Revision:
 // Revision 0.01 - File Created
@@ -21,24 +21,11 @@
 
 
 module draw_rect(
-    input wire [11:0] xpos,
-    input wire [11:0] ypos,
-    input wire [10:0] hcount_in,
-    input wire [10:0] vcount_in,
-    input wire hsync_in,
-    input wire hblnk_in,
-    input wire vblnk_in,
-    input wire vsync_in,
+    input wire [`MOUSE_BUS_SIZE-1:0] mouse_in,
+    input wire [`VGA_BUS_SIZE-1:0] vga_in,
+    output wire [`VGA_BUS_SIZE-1:0] vga_out,
     input wire pclk,
-    input wire left,
-    input wire [11:0] rgb_in,
-    output reg [10:0] hcount_out,
-    output reg [10:0] vcount_out,
-    output reg vsync_out,
-    output reg vblnk_out,
-    output reg hsync_out,
-    output reg hblnk_out,
-    output reg [11:0] rgb_out,
+    //input wire left,
     output wire [11:0] address,
     input wire [11:0] rgb_rom
     );
@@ -48,23 +35,29 @@ module draw_rect(
     localparam height = 64;
     localparam color = 12'hf_0_0;
     localparam color2 = 12'h0_0_f;
-
+    
     //wire [11:0] addres,rgb_rom;
-
+    `MOUSE_SPLIT_INPUT(mouse_in)
+    
+    
+    
+    `VGA_SPLIT_INPUT(vga_in)
+    `VGA_OUT_REG
+    `VGA_MERGE_AT_OUTPUT(vga_out)
     
     reg [11:0] x_pos, y_pos;
     reg [11:0] rgb_next;
-
-
+    
+    
     always @*
     begin
         if ((((hcount_in >= x_pos) && (hcount_in < (x_pos + width)))&& ((vcount_in >= y_pos) && (vcount_in < (y_pos + height)))) && ((hblnk_in == 0)&&(vblnk_in == 0)))
-        if(left == 0) rgb_next <= rgb_rom; else rgb_next <= color2;
+        if(left_in == 0) rgb_next <= rgb_rom; else rgb_next <= color2;
         else rgb_next <= rgb_in;
     end
-
+    
     always @(posedge pclk)
-    fork
+    fork 
         hsync_out <= hsync_in;
         vsync_out <= vsync_in;
         hblnk_out <= hblnk_in;
@@ -72,18 +65,17 @@ module draw_rect(
         hcount_out <= hcount_in;
         vcount_out <= vcount_in;
         rgb_out <= rgb_next;
-
+    
     join
-
+   
     always @(posedge pclk)
-    if(vsync_in)
+    if(vsync_in) 
         fork
-         x_pos <= xpos;
-         y_pos <= ypos;
+         x_pos <= xpos_in;
+         y_pos <= ypos_in;
         join
 
     assign  address[5:0] = hcount_in - x_pos;
-    assign  address[11:6] = vcount_in - y_pos;
-
+    assign  address[11:6] = vcount_in - y_pos;    
+    
 endmodule
-

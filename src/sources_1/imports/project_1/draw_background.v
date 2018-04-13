@@ -19,29 +19,19 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+`include "verilog_macro_bus.vh"
 
 module draw_background(
-    input wire [10:0] hcount_in,
-    input wire [10:0] vcount_in,
-    input wire hsync_in,
-    input wire hblnk_in,
-    input wire vblnk_in,
-    input wire vsync_in,
+    input wire [`VGA_BUS_SIZE-1:0] vga_in,
     input wire pclk,
-    output reg [10:0] hcount_out,
-    output reg [10:0] vcount_out,
-    output reg vsync_out,
-    output reg vblnk_out,
-    output reg hsync_out,
-    output reg hblnk_out,
-    output reg [11:0] rgb_out,
-    output wire pclk_out
+    output wire [`VGA_BUS_SIZE-1:0] vga_out
     );
   
-  localparam x_rect = 10;
-  localparam y_rect = 90;
-  localparam width = 780;
-  localparam height = 500;
+    `VGA_SPLIT_INPUT(vga_in)
+    `VGA_OUT_REG
+    `VGA_MERGE_AT_OUTPUT(vga_out)
+  
+  
   
   always @(posedge pclk)
   begin
@@ -51,24 +41,25 @@ module draw_background(
       vblnk_out <= vblnk_in;
       hcount_out <= hcount_in;
       vcount_out <= vcount_in;
-      
-      
-      
-     if ((hblnk_in == 1) || (vblnk_in == 1)) rgb_out <= 12'b0_0_0;
-    else
+      if ((hblnk_in == 1) || (vblnk_in == 1)) rgb_out <= 12'b0_0_0;
+      else
         begin
-            if ((((hcount_in >= x_rect) && (hcount_in < (x_rect + width)))&& ((vcount_in >= y_rect) && (vcount_in < (y_rect + height)))) && ((hblnk_in == 0)&&(vblnk_in == 0)))
-                    if ((((hcount_in >= x_rect+5) && (hcount_in < (x_rect + width-5)))&& ((vcount_in >= y_rect+5) && (vcount_in < (y_rect + height-5)))) && ((hblnk_in == 0)&&(vblnk_in == 0)))
-                        if(((hcount_in >= x_rect + 50) && (hcount_in < x_rect + 52)) || ((hcount_in > (x_rect + width - 52)) && (hcount_in <= (x_rect + width - 50)))) rgb_out <= 12'hf_f_f;
-                        else rgb_out <= 12'b0_0_0;                
-                     else rgb_out <= 12'hf_f_f;
-        //        if(left == 0) rgb_next <= rgb_rom; else rgb_next <= color2;
-             else rgb_out <= 12'b0_0_0;
+            if (vcount_in == 0) rgb_out <= 12'hf_f_0; 
+            else if (vcount_in == 599) rgb_out <= 12'hf_0_0;
+            else if (hcount_in == 0) rgb_out <= 12'h0_f_0;
+            else if (hcount_in == 799) rgb_out <= 12'h0_0_f;
+            //M
+            else if (((hcount_in >= 50 && hcount_in <= 55) && (vcount_in >= 10 & vcount_in <= 60)) || ((hcount_in >= 95 && hcount_in <= 100) && (vcount_in >= 10 && vcount_in <= 60))) rgb_out <= 12'hf_f_0; 
+            else if (((((hcount_in + vcount_in >= 105)  && ( hcount_in + vcount_in <= 110))  && (hcount_in >= 75)) || (((hcount_in - vcount_in <= 45) && ( hcount_in - vcount_in >= 40  ))) && (hcount_in <= 75) ) && (vcount_in >= 10 && vcount_in <= 35 )) rgb_out <= 12'hf_f_0;
+            //J
+            else if ((vcount_in >= 10 && vcount_in <= 15) && (hcount_in >= 140 && hcount_in <= 170))  rgb_out <= 12'hf_f_0;
+            else if ((vcount_in >= 10 && vcount_in <= 80) && (hcount_in >= 165 && hcount_in <=170))  rgb_out <= 12'hf_f_0;
+            else if ((vcount_in >= 75 && vcount_in <= 80) && (hcount_in >= 140 && hcount_in <= 170))  rgb_out <= 12'hf_f_0;
+            else if ((hcount_in + vcount_in >= 215 && hcount_in + vcount_in <= 220) && (vcount_in <= 80 && hcount_in <= 185))  rgb_out <= 12'hf_f_0;
+            else rgb_out <= 12'h8_8_8;
         end
-       
   end
 
-assign pclk_out = !pclk;
 endmodule
 
 
