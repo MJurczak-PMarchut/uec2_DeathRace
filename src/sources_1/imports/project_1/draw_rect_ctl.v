@@ -22,37 +22,51 @@
 
 module draw_rect_ctl(
     input wire clk,
-    input wire left_button,
-    input wire [11:0] xpos,
-    input wire [11:0] ypos,
-    input wire vsync,
-    output reg [11:0] xpos_out,
-    output reg [11:0] ypos_out
+    input wire rst,
+    input wire [`MOUSE_BUS_SIZE-1:0] mouse_in,
+    output wire [`MOUSE_BUS_SIZE-1:0] mouse_out,
+    input wire vsync
     );
     
-    localparam accel = 3;
+    
+    `MOUSE_SPLIT_INPUT(mouse_in)
+    `MOUSE_OUT_REG
+    `MOUSE_MERGE_AT_OUTPUT(mouse_out)
+    
+    localparam accel = 2;
     
     reg en,st,bt,start,rev;
     reg [10:0] Speed;
-    //reg [10:0] accel = 8;
-    reg [11:0] acceleration_ratio;
+    reg [10:0] acceleration_ratio;
+    reg [5:0] modifier;
     reg [11:0] xpos_next,ypos_next,ypos_int;
-    reg [24:0] point;
-    reg [16:0] Time; 
-    reg [10:0] acceleration = 981;
     
+    localparam IDLE = 0;
+    localparam FALLING = 1;
+    localparam BOUNCE = 2;
     
-    
-
-    
+    reg [3:0] state, next_state;
+/*    
+    always @(posedge rst)
+        begin
+            Speed <= 0;
+            acceleration_ratio <=0;
+            xpos_next <= 0;
+            ypos_next <= 0;
+            en <= 0;
+            st <= 0;
+            bt <= 0;
+            start <= 0;
+            rev <= 0;
+        end
+  */  
     always @(posedge clk)
         begin
             if ((vsync == 1) && (en == 1) )
                 begin
                 
                     en <= 0;
-                    st <= 1;
-                    Time <= Time + 1; 
+                    st <= 1; 
                 end
             else if ((vsync == 1) && (en == 0) && (st == 0))
                 en <= 1;
@@ -65,7 +79,7 @@ module draw_rect_ctl(
         end 
     
     
-    always @(posedge left_button)
+    always @(posedge left_in)
     fork
         if(bt)
             bt <= 0;
@@ -74,16 +88,15 @@ module draw_rect_ctl(
        
     join
     
-    always @(posedge en)
-        
+    always @(posedge clk)
+    if(en)
+    
         if(bt)
             begin
                 if(!rev)
                     begin
-//                       ypos_out <= ypos_int + Speed*Time + (0.5)*acceleration ** Time;
-                       
-                       
-                       
+                      // ypos_out <= ypos_int + Speed*Time + (0.5)*acceleration ** Time;
+                      
                        ypos_out = ((ypos_int + Speed) < 536) ? (ypos_int + Speed) : 536;
                        acceleration_ratio = (acceleration_ratio != 0) ? acceleration_ratio - 1 : accel;
                        if(ypos_out < 536)
@@ -98,10 +111,6 @@ module draw_rect_ctl(
                  else
                     begin
                     
-                    
-                    
-                    
-                        
                         acceleration_ratio = (acceleration_ratio != 0) ? acceleration_ratio - 1 : accel - 1;
                         if(Speed > 0)
                           Speed = (acceleration_ratio == 0) ? Speed - 1  : Speed;
@@ -117,9 +126,9 @@ module draw_rect_ctl(
             end
         else
             begin
-                ypos_out = ypos;
-                xpos_out = xpos;
-                ypos_int <= ypos;
+                ypos_out = ypos_in;
+                xpos_out = xpos_in;
+                ypos_int <= ypos_in;
                 Speed <= 0;
                 //accel <= 8;
                 acceleration_ratio <= accel;
