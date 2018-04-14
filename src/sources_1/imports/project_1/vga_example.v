@@ -112,23 +112,25 @@ clk_wiz_0 myClk(
   MouseDisplayVeri myCoursor(
     .pclk(pclk),
     .mouse_in(mouse_bus[0]),
-    .vga_in(vga_bus[1]),
-    .vga_out(vga_bus[2])
+    .vga_in(vga_bus[0]),
+    .vga_out(vga_bus[1])
   );
-
+/*
     image_rom my_rom(
         .clk(!pclk),
         .address(address),
         .rgb(rgb_rom)
     
     );
-
+    */
+/*
 draw_rect_ctl My_rect_ctl(  
     .clk(pclk),
     .mouse_in(mouse_bus[0]),
     .mouse_out(mouse_bus[1]),
     .vsync(vga_bus[-1][35])
 );
+*/
 
   MouseCtlVeri myMouse(
     .clk(pclk100),
@@ -147,7 +149,8 @@ draw_rect_ctl My_rect_ctl(
     .pclk(pclk),
     .vga_out(vga_bus[0])
     );
-    
+  
+  /*  
     draw_rect my_rect(
         .mouse_in(mouse_bus[1]),
         .vga_in(vga_bus[0]),
@@ -156,6 +159,7 @@ draw_rect_ctl My_rect_ctl(
         .rgb_rom(rgb_rom),
         .address(address)
     );
+    */
        
  `VGA_SPLIT_INPUT(vga_bus[1])
     
