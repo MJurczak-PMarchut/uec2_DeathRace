@@ -26,7 +26,8 @@ module vga_example (
   output reg [3:0] r,
   output reg [3:0] g,
   output reg [3:0] b,
-  output wire pclk_mirror
+  output wire pclk_mirror,
+  output wire [15:0] LED
   );
 
   // Converts 100 MHz clk into 40 MHz pclk.
@@ -109,12 +110,12 @@ clk_wiz_0 myClk(
   
   
   
-  MouseDisplayVeri myCoursor(
-    .pclk(pclk),
-    .mouse_in(mouse_bus[0]),
-    .vga_in(vga_bus[0]),
-    .vga_out(vga_bus[1])
-  );
+//  MouseDisplayVeri myCoursor(
+//    .pclk(pclk),
+//    .mouse_in(mouse_bus[0]),
+//    .vga_in(vga_bus[0]),
+//    .vga_out(vga_bus[1])
+//  );
 /*
     image_rom my_rom(
         .clk(!pclk),
@@ -132,12 +133,12 @@ draw_rect_ctl My_rect_ctl(
 );
 */
 
-  MouseCtlVeri myMouse(
-    .clk(pclk100),
-    .ps2_clk(ps2_clk),
-    .ps2_data(ps2_data),
-    .mouse_out(mouse_bus[0])
-  );
+//  MouseCtlVeri myMouse(
+//    .clk(pclk100),
+//    .ps2_clk(ps2_clk),
+//    .ps2_data(ps2_data),
+//    .mouse_out(mouse_bus[0])
+//  );
 
   vga_timing my_timing (
     .vga_out(vga_bus[-1]),
@@ -149,6 +150,17 @@ draw_rect_ctl My_rect_ctl(
     .pclk(pclk),
     .vga_out(vga_bus[0])
     );
+  
+  Keyboard my_keyboard(
+    .CLK(pclk100),
+    .PS2_CLK(ps2_clk),
+    .PS2_DATA(ps2_data),
+    .LED(LED[7:0])
+  
+  
+  );
+  
+  
   
   /*  
     draw_rect my_rect(

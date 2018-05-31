@@ -24,29 +24,29 @@ module Keyboard(
 	input CLK,	//board clock
    inout PS2_CLK,	//keyboard clock and data signals
    inout PS2_DATA,
-//	output reg scan_err,			//These can be used if the Keyboard module is used within a another module
-//	output reg [10:0] scan_code,
-//	output reg [3:0]COUNT,
-//	output reg TRIG_ARR,
-//	output reg [7:0]CODEWORD,
+   output reg scan_err,			//These can be used if the Keyboard module is used within a another module
+   output reg [10:0] scan_code,
+   output reg [3:0]COUNT,
+   output reg TRIG_ARR,
+   output reg [7:0]CODEWORD,
    output reg [7:0] LED	//8 LEDs
    );
 
 	wire [7:0] ARROW_UP = 8'h75;	//codes for arrows
 	wire [7:0] ARROW_DOWN = 8'h72;
-	//wire [7:0] ARROW_LEFT = 8'h6B;
-	//wire [7:0] ARROW_RIGHT = 8'h74;
-	//wire [7:0] EXTENDED = 8'hE0;	//codes 
-	//wire [7:0] RELEASED = 8'hF0;
+	wire [7:0] ARROW_LEFT = 8'h6B;
+	wire [7:0] ARROW_RIGHT = 8'h74;
+	wire [7:0] EXTENDED = 8'hE0;	//codes 
+	wire [7:0] RELEASED = 8'hF0;
 
 	reg read;				//this is 1 if still waits to receive more bits 
 	reg [11:0] count_reading;		//this is used to detect how much time passed since it received the previous codeword
 	reg PREVIOUS_STATE;			//used to check the previous state of the keyboard clock signal to know if it changed
-	reg scan_err;				//this becomes one if an error was received somewhere in the packet
-	reg [10:0] scan_code;			//this stores 11 received bits
-	reg [7:0] CODEWORD;			//this stores only the DATA codeword
-	reg TRIG_ARR;				//this is triggered when full 11 bits are received
-	reg [3:0]COUNT;				//tells how many bits were received until now (from 0 to 11)
+	//reg scan_err;				//this becomes one if an error was received somewhere in the packet
+	//reg [10:0] scan_code;			//this stores 11 received bits
+	//reg [7:0] CODEWORD;			//this stores only the DATA codeword
+	//reg TRIG_ARR;				//this is triggered when full 11 bits are received
+	//reg [3:0]COUNT;				//tells how many bits were received until now (from 0 to 11)
 	reg TRIGGER = 0;			//This acts as a 250 times slower than the board clock. 
 	reg [11:0]DOWNCOUNTER = 0;		//This is used together with TRIGGER - look the code
 

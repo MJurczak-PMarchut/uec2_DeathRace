@@ -1,0 +1,493 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Thu May 31 18:26:50 2018
+# Process ID: 7488
+# Current directory: C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.runs/synth_1
+# Command line: vivado.exe -log test_controller.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source test_controller.tcl
+# Log file: C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.runs/synth_1/test_controller.vds
+# Journal file: C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source test_controller.tcl -notrace
+Command: synth_design -top test_controller -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 5332 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 342.824 ; gain = 100.230
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'test_controller' [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/psx_test.sv:1]
+	Parameter INIT bound to: 32'sb00000000000000000000000000000001 
+	Parameter COUNT bound to: 2 - type: integer 
+	Parameter START_TX bound to: 3 - type: integer 
+	Parameter WAIT bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'controller_io' [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/psx_cont.sv:1]
+	Parameter IDLE bound to: 3'b000 
+	Parameter CLK_FALL bound to: 3'b001 
+	Parameter LOAD_TX bound to: 3'b010 
+	Parameter CLK_RISE bound to: 3'b011 
+	Parameter LOAD_RX bound to: 3'b100 
+	Parameter ACK_FALL bound to: 3'b101 
+	Parameter ACK_RISE bound to: 3'b110 
+	Parameter ERROR bound to: 3'b111 
+	Parameter ID_DIGITAL bound to: 8'b01000001 
+	Parameter ID_ANALOGR bound to: 8'b01110011 
+	Parameter ID_ANALOGG bound to: 8'b01010011 
+	Parameter TYPE_XX bound to: 4'b0001 
+	Parameter TYPE_DI bound to: 4'b0010 
+	Parameter TYPE_AR bound to: 4'b0100 
+	Parameter TYPE_AG bound to: 4'b1000 
+	Parameter START_COMM bound to: 8'b00000001 
+	Parameter DATA_REQUEST bound to: 8'b01000010 
+	Parameter DATA_READY bound to: 8'b01011010 
+	Parameter NO_DATA bound to: 8'b11111111 
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/psx_cont.sv:313]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/psx_cont.sv:356]
+INFO: [Synth 8-6155] done synthesizing module 'controller_io' (1#1) [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/psx_cont.sv:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/psx_test.sv:89]
+WARNING: [Synth 8-3848] Net LEDA in module/entity test_controller does not have driver. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/psx_test.sv:24]
+WARNING: [Synth 8-3848] Net rst in module/entity test_controller does not have driver. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/psx_test.sv:9]
+INFO: [Synth 8-6155] done synthesizing module 'test_controller' (2#1) [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/psx_test.sv:1]
+WARNING: [Synth 8-3331] design test_controller has unconnected port RESET
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 397.277 ; gain = 154.684
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin C1:rst to constant 0 [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/psx_test.sv:56]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 397.277 ; gain = 154.684
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 397.277 ; gain = 154.684
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc]
+WARNING: [Vivado 12-584] No ports matched 'pclk_mirror'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'pclk_mirror'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ps2_clk'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ps2_clk'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ps2_data'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ps2_data'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ps2_clk'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'ps2_data'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:121]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:121]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[8]'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:122]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:122]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:123]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:123]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[9]'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:124]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:124]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:125]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:125]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[10]'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:126]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:126]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:127]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:127]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[11]'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:128]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:128]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:129]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:129]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[12]'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:130]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:130]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:131]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:131]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[13]'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:132]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:132]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:133]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:133]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[14]'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:134]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:134]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:135]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:135]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'LED[15]'. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:136]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc:136]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/test_controller_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/test_controller_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 725.820 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 725.820 ; gain = 483.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 725.820 ; gain = 483.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 725.820 ; gain = 483.227
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module 'controller_io'
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "load_STRT" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "load_SLCT" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "load_L1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "load_L1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "load_RJOY" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "load_RJOY_X" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "load_RJOY_Y" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "load_LJOY_X" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "load_LJOY_Y" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "err_out" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "rst_count" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_c_clk" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_COMMAND" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'curr_state_reg' in module 'test_controller'
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "next_state" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    INIT |                               00 |                         00000001
+                   COUNT |                               01 |                         00000010
+                START_TX |                               10 |                         00000011
+                    WAIT |                               11 |                         00000100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'curr_state_reg' using encoding 'sequential' in module 'test_controller'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 725.820 ; gain = 483.227
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 6     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 20    
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   9 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 7     
+	   9 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	  10 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   9 Input      1 Bit        Muxes := 4     
+	  12 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 3     
+	  11 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 24    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module test_controller 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     16 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+Module controller_io 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 6     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 19    
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   9 Input      8 Bit        Muxes := 1     
+	   8 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
+	   3 Input      4 Bit        Muxes := 1     
+	   8 Input      4 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 7     
+	   9 Input      3 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   9 Input      1 Bit        Muxes := 4     
+	  12 Input      1 Bit        Muxes := 4     
+	   3 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 2     
+	  11 Input      1 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 24    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design test_controller has unconnected port RESET
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\C1/c_type_reg[0] )
+INFO: [Synth 8-3886] merging instance 'C1/tx_data_reg[7]' (FDCE) to 'C1/tx_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'C1/tx_data_reg[6]' (FDCE) to 'C1/tx_data_reg[1]'
+INFO: [Synth 8-3886] merging instance 'C1/tx_data_reg[5]' (FDCE) to 'C1/tx_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'C1/tx_data_reg[4]' (FDCE) to 'C1/tx_data_reg[2]'
+INFO: [Synth 8-3886] merging instance 'C1/tx_data_reg[3]' (FDCE) to 'C1/tx_data_reg[2]'
+WARNING: [Synth 8-3332] Sequential element (C1/c_type_reg[0]) is unused and will be removed from module test_controller.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 725.820 ; gain = 483.227
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 725.820 ; gain = 483.227
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 725.820 ; gain = 483.227
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 733.957 ; gain = 491.363
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 733.957 ; gain = 491.363
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 733.957 ; gain = 491.363
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 733.957 ; gain = 491.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 733.957 ; gain = 491.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 733.957 ; gain = 491.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 733.957 ; gain = 491.363
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     4|
+|3     |LUT1   |     2|
+|4     |LUT2   |    11|
+|5     |LUT3   |    31|
+|6     |LUT4   |    36|
+|7     |LUT5   |    32|
+|8     |LUT6   |    53|
+|9     |FDCE   |     9|
+|10    |FDRE   |    96|
+|11    |IBUF   |     8|
+|12    |OBUF   |    11|
++------+-------+------+
+
+Report Instance Areas: 
++------+---------+--------------+------+
+|      |Instance |Module        |Cells |
++------+---------+--------------+------+
+|1     |top      |              |   294|
+|2     |  C1     |controller_io |   228|
++------+---------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 733.957 ; gain = 491.363
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 733.957 ; gain = 162.820
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 733.957 ; gain = 491.363
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+53 Infos, 30 Warnings, 24 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 744.133 ; gain = 512.520
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.runs/synth_1/test_controller.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file test_controller_utilization_synth.rpt -pb test_controller_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 744.133 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu May 31 18:27:28 2018...

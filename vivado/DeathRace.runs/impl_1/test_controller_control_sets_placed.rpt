@@ -1,0 +1,88 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Thu May 31 18:28:05 2018
+| Host         : DESKTOP-N4TGOPP running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file test_controller_control_sets_placed.rpt
+| Design       : test_controller
+| Device       : xc7a35t
+--------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    19 |
+| Unused register locations in slices containing registers |    87 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            9 |
+|      4 |            1 |
+|      5 |            2 |
+|      8 |            5 |
+|      9 |            1 |
+|    16+ |            1 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              33 |           17 |
+| No           | No                    | Yes                    |               9 |            3 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              63 |           26 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------+--------------------------+------------------+------------------+----------------+
+|    Clock Signal    |       Enable Signal      | Set/Reset Signal | Slice Load Count | Bel Load Count |
++--------------------+--------------------------+------------------+------------------+----------------+
+|  C1/C_CLK_OUT_OBUF | C1/rx_data[1]_i_1_n_0    |                  |                1 |              1 |
+|  C1/C_CLK_OUT_OBUF | C1/rx_data[3]_i_1_n_0    |                  |                1 |              1 |
+|  C1/C_CLK_OUT_OBUF | C1/rx_data[6]_i_1_n_0    |                  |                1 |              1 |
+|  C1/C_CLK_OUT_OBUF | C1/rx_data[2]_i_1_n_0    |                  |                1 |              1 |
+|  C1/C_CLK_OUT_OBUF | C1/rx_data[7]_i_1_n_0    |                  |                1 |              1 |
+|  C1/C_CLK_OUT_OBUF | C1/rx_data[0]_i_1_n_0    |                  |                1 |              1 |
+|  C1/C_CLK_OUT_OBUF | C1/rx_data[5]_i_1_n_0    |                  |                1 |              1 |
+|  C1/C_CLK_OUT_OBUF | C1/rx_data[4]_i_1_n_0    |                  |                1 |              1 |
+|  clk_IBUF_BUFG     | C1/next_COMMAND          |                  |                1 |              1 |
+|  clk_IBUF_BUFG     | C1/curr_index[3]_i_1_n_0 |                  |                2 |              4 |
+|  clk_IBUF_BUFG     | C1/byte_no[4]_i_1_n_0    |                  |                3 |              5 |
+|  clk_IBUF_BUFG     | C1/load_STRT             |                  |                1 |              5 |
+|  clk_IBUF_BUFG     | C1/R2_out_i_1_n_0        |                  |                3 |              8 |
+|  clk_IBUF_BUFG     | C1/load_LJOY_X           |                  |                2 |              8 |
+|  clk_IBUF_BUFG     | C1/load_LJOY_Y           |                  |                2 |              8 |
+|  clk_IBUF_BUFG     | C1/load_RJOY_X           |                  |                2 |              8 |
+|  clk_IBUF_BUFG     | C1/load_RJOY_Y           |                  |                2 |              8 |
+|  clk_IBUF_BUFG     |                          | C1/rst_count     |                3 |              9 |
+|  clk_IBUF_BUFG     |                          |                  |               17 |             33 |
++--------------------+--------------------------+------------------+------------------+----------------+
+
+
