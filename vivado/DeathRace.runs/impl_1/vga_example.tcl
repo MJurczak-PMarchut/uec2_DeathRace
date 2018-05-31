@@ -60,25 +60,22 @@ proc step_failed { step } {
   close $ch
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param synth.incrementalSynthesisCache C:/Users/OMEN/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-19992-LAPTOP-G7PT2HG2/incrSyn
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.cache/wt [current_project]
-  set_property parent.project_path C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.xpr [current_project]
-  set_property ip_output_repo C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.cache/ip [current_project]
+  set_property webtalk.parent_dir C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.cache/wt [current_project]
+  set_property parent.project_path C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.xpr [current_project]
+  set_property ip_output_repo C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.runs/synth_1/vga_example.dcp
-  read_ip -quiet C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
-  read_xdc C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc
+  add_files -quiet C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.runs/synth_1/vga_example.dcp
+  read_ip -quiet C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_xdc C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc
   link_design -top vga_example -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
@@ -111,7 +108,9 @@ start_step place_design
 set ACTIVE_STEP place_design
 set rc [catch {
   create_msg_db place_design.pb
-  implement_debug_core 
+  if { [llength [get_debug_cores -quiet] ] > 0 }  { 
+    implement_debug_core 
+  } 
   place_design 
   write_checkpoint -force vga_example_placed.dcp
   create_report "impl_1_place_report_io_0" "report_io -file vga_example_io_placed.rpt"
@@ -137,9 +136,10 @@ set rc [catch {
   create_report "impl_1_route_report_methodology_0" "report_methodology -file vga_example_methodology_drc_routed.rpt -pb vga_example_methodology_drc_routed.pb -rpx vga_example_methodology_drc_routed.rpx"
   create_report "impl_1_route_report_power_0" "report_power -file vga_example_power_routed.rpt -pb vga_example_power_summary_routed.pb -rpx vga_example_power_routed.rpx"
   create_report "impl_1_route_report_route_status_0" "report_route_status -file vga_example_route_status.rpt -pb vga_example_route_status.pb"
-  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file vga_example_timing_summary_routed.rpt -rpx vga_example_timing_summary_routed.rpx -warn_on_violation "
+  create_report "impl_1_route_report_timing_summary_0" "report_timing_summary -max_paths 10 -file vga_example_timing_summary_routed.rpt -pb vga_example_timing_summary_routed.pb -rpx vga_example_timing_summary_routed.rpx -warn_on_violation "
   create_report "impl_1_route_report_incremental_reuse_0" "report_incremental_reuse -file vga_example_incremental_reuse_routed.rpt"
   create_report "impl_1_route_report_clock_utilization_0" "report_clock_utilization -file vga_example_clock_utilization_routed.rpt"
+  create_report "impl_1_route_report_bus_skew_0" "report_bus_skew -warn_on_violation -file route_report_bus_skew_0.rpt -rpx route_report_bus_skew_0.rpx"
   close_msg_db -file route_design.pb
 } RESULT]
 if {$rc} {

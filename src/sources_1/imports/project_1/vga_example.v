@@ -144,7 +144,7 @@ draw_rect_ctl My_rect_ctl(
     .pclk(pclk)
   );
   
-  draw_background my_background(
+  start_screen my_screen(
     .vga_in(vga_bus[-1]),
     .pclk(pclk),
     .vga_out(vga_bus[0])
