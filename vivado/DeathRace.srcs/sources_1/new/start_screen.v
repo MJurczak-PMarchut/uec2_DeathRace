@@ -33,7 +33,6 @@ initial $readmemh("image_rom.data", rom);
 
 always @*
     rgb <= rom[address];
-                   
 
 
 endmodule
