@@ -22,12 +22,12 @@
 
 module start_screen(
     input wire clk ,
-    input wire [21:0] address,  // address = {addry[5:0], addrx[5:0]}
+    input wire [18:0] address,  // address = {addry[5:0], addrx[5:0]}
     output reg [3:0] rgb
 );
 
 
-reg [3:0] rom [0:120000];
+reg [3:0] rom [0:11999];
 
 initial $readmemh("image_rom.data", rom); 
 

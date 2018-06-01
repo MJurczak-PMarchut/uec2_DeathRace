@@ -48,15 +48,17 @@ module draw_background(
       hcount_out <= hcount_in;
       vcount_out <= vcount_in;
       
-      rgb_temp = rgb;
-      rgb_merge = {rgb_temp,rgb_temp,rgb_temp};
+      rgb_temp <= rgb;
+      rgb_merge <= {rgb_temp,rgb_temp,rgb_temp};
       if((hblnk_in == 0)&&(vblnk_in == 0))
-        rgb_out = rgb_merge;
+        rgb_out <= rgb_merge;
       else 
-        rgb_out = 0 ;
+        rgb_out <= 0 ;
+      if (vcount_in  == hcount_in )
+        rgb_out = 12'hfff;
       
     end
-assign address = hcount_in[10:1]+vcount_in[10:1]*400;
+assign address = hcount_in[10:1]+(vcount_in[10:1]*400);
 endmodule
 
 
