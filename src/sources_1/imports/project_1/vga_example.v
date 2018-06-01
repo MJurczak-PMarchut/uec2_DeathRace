@@ -5,7 +5,7 @@
 // simulation time units are (1 ns here) and what
 // the simulator time step should be (1 ps here).
 
-`timescale 1 ns / 100 ps
+`timescale 1 ns / 1 ps
 
 // Declare the module and its ports. This is
 // using Verilog-2001 syntax.
@@ -82,6 +82,14 @@ wire [3:0] rgb_back;
     .rgb(rgb_back)
     );
   
+  draw_rect my_rect(
+    .vga_in(vga_bus[0]),
+    .pclk(pclk),
+    .vga_out(vga_bus[1])
+//    .address(address),
+//    .rgb_rom(rgb_back)
+    ); 
+  
   start_screen my_screen(
     .address(address),
     .clk(pclk),
@@ -89,7 +97,7 @@ wire [3:0] rgb_back;
   );
 
        
- `VGA_SPLIT_INPUT(vga_bus[0])
+ `VGA_SPLIT_INPUT(vga_bus[1])
   
   always @(posedge pclk)
   begin

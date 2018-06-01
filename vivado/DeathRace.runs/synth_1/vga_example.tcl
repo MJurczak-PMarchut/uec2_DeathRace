@@ -16,6 +16,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -31,16 +32,11 @@ set_property ip_output_repo c:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivad
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/verilog_macro_bus.vh
 read_verilog -library xil_defaultlib {
-  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/MouseCtlVeri.v
-  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/MouseDisplayVeri.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_background.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/start_screen.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_timing.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v
-}
-read_vhdl -library xil_defaultlib {
-  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/MouseCtl.vhd
-  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/MouseDisplay.vhd
-  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/Ps2Interface.vhd
 }
 read_ip -quiet C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
