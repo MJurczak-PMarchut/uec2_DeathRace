@@ -43,21 +43,21 @@ module char_rom_16x16(
             8'h09: code = 7'h61;//a
             8'h0A: code = 7'h79;//y
             8'h0B: code = 7'h65;//e
-            8'h0B: code = 7'h72;//r
-            8'h0C: code = 7'h20;//
-            8'h0D: code = 7'h4D;//M
-            8'h0E: code = 7'h75;//u
-            8'h0F: code = 7'h6C;//l
-            8'h10: code = 7'h74;//t
-            8'h11: code = 7'h69;//i
-            8'h12: code = 7'h20;//
-            8'h13: code = 7'h50;//P
-            8'h14: code = 7'h6C;//l
-            8'h15: code = 7'h61;//a
-            8'h16: code = 7'h79;//y
-            8'h17: code = 7'h65;//e
-            8'h18: code = 7'h72;//r            
-//            default code = char_xy[6:0];
+            8'h0C: code = 7'h72;//r
+            
+            8'h20: code = 7'h4D;//M
+            8'h21: code = 7'h75;//u
+            8'h22: code = 7'h6C;//l
+            8'h23: code = 7'h74;//t
+            8'h24: code = 7'h69;//i
+            8'h25: code = 7'h20;//
+            8'h26: code = 7'h50;//P
+            8'h27: code = 7'h6C;//l
+            8'h28: code = 7'h61;//a
+            8'h29: code = 7'h79;//y
+            8'h2A: code = 7'h65;//e
+            8'h2B: code = 7'h72;//r            
+            default code = 7'h20;
 
          endcase
     

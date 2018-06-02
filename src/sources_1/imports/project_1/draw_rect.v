@@ -31,10 +31,10 @@ module draw_rect(
     );
     
     localparam x_pos = 50;
-    localparam y_pos = 100;
-    localparam width = 100;
-    localparam height = 50;
-    localparam color = 12'hf_f_f;
+    localparam y_pos = 600;
+    localparam width = 160;
+    localparam height = 80;
+    localparam color = 12'hf0f;
     localparam color2 = 12'h0_0_f;
     
 //    wire [11:0] addres,rgb_rom;

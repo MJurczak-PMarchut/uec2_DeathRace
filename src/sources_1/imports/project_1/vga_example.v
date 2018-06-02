@@ -67,7 +67,11 @@ clk_wiz_0 myClk(
 wire [21:0] address;
 wire [3:0] rgb_back; 
   
-  
+//wire [11:0] rgb_pixel, pixel_addr, rect_xpos, rect_ypos;
+//wire left;
+
+wire [7:0] char_line_pixels, char_xy;
+wire [6:0] char_line, char_code;  
 
   vga_timing my_timing (
     .vga_out(vga_bus[-1]),
@@ -81,23 +85,46 @@ wire [3:0] rgb_back;
     .address(address),
     .rgb(rgb_back)
     );
-  
-  draw_rect my_rect(
-    .vga_in(vga_bus[0]),
-    .pclk(pclk),
-    .vga_out(vga_bus[1])
-//    .address(address),
-//    .rgb_rom(rgb_back)
-    ); 
+    
+    
+   draw_rect my_rect(
+          .pclk(pclk),
+          .vga_in(vga_bus[0]),
+          .vga_out(vga_bus[1])
+      ); 
+
+  draw_rect_char my_rect_char_single(
+        .pclk(pclk),
+        .vga_in(vga_bus[1]),
+        .char_pixels(char_line_pixels),
+        .char_xy(char_xy),
+        .char_line(char_line),
+        .vga_out(vga_bus[2])
+    );
+    
+    font_rom my_font_rom_single(
+        .clk(!pclk),
+        .addr1(char_code),
+        .addr2(char_line),
+        .char_line_pixels(char_line_pixels)
+    );
+    
+    char_rom_16x16 my_char_rom_single(
+        .clk(pclk),
+        .char_xy(char_xy),
+        .code(char_code)
+    );
   
   start_screen my_screen(
     .address(address),
     .clk(pclk),
     .rgb(rgb_back)
   );
+  
+  
 
        
- `VGA_SPLIT_INPUT(vga_bus[1])
+ `VGA_SPLIT_INPUT(vga_bus[2])
   
   always @(posedge pclk)
   begin

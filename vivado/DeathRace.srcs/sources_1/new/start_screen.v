@@ -27,12 +27,13 @@ module start_screen(
 );
 
 
-reg [3:0] rom [0:80000];
+reg [15:0] rom [0:120000];
 
 initial $readmemh("image_rom.data", rom); 
 
 always @*
     rgb <= rom[address];
+//    rgb <= 0;
 
 
 endmodule
