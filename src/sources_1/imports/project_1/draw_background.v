@@ -24,13 +24,19 @@
 module draw_background(
     input wire [`VGA_BUS_SIZE-1:0] vga_in,
     input wire pclk,
-    output wire [`VGA_BUS_SIZE-1:0] vga_out
+    input [3:0] rgb,
+    output wire [`VGA_BUS_SIZE-1:0] vga_out,
+    output wire [21:0] address
     );
+  
+  reg  count = 0;
+  reg [3:0] rgb_temp;
+  reg [21:0] address_next;
+  reg [11:0] rgb_merge;
   
     `VGA_SPLIT_INPUT(vga_in)
     `VGA_OUT_REG
     `VGA_MERGE_AT_OUTPUT(vga_out)
-  
   
   
   always @(posedge pclk)
@@ -41,27 +47,19 @@ module draw_background(
       vblnk_out <= vblnk_in;
       hcount_out <= hcount_in;
       vcount_out <= vcount_in;
-      if ((hblnk_in == 1) || (vblnk_in == 1)) rgb_out <= 12'b0_0_0;
-      else
-        begin
-            if (vcount_in == 0) rgb_out <= 12'hf_f_0; 
-            else if (vcount_in == 599) rgb_out <= 12'hf_0_0;
-            else if (hcount_in == 0) rgb_out <= 12'h0_f_0;
-            else if (hcount_in == 799) rgb_out <= 12'h0_0_f;
-            //M
-            else if (((hcount_in >= 50 && hcount_in <= 55) && (vcount_in >= 10 & vcount_in <= 60)) || ((hcount_in >= 95 && hcount_in <= 100) && (vcount_in >= 10 && vcount_in <= 60))) rgb_out <= 12'hf_f_0; 
-            else if (((((hcount_in + vcount_in >= 105)  && ( hcount_in + vcount_in <= 110))  && (hcount_in >= 75)) || (((hcount_in - vcount_in <= 45) && ( hcount_in - vcount_in >= 40  ))) && (hcount_in <= 75) ) && (vcount_in >= 10 && vcount_in <= 35 )) rgb_out <= 12'hf_f_0;
-            //J
-            else if ((vcount_in >= 10 && vcount_in <= 15) && (hcount_in >= 140 && hcount_in <= 170))  rgb_out <= 12'hf_f_0;
-            else if ((vcount_in >= 10 && vcount_in <= 80) && (hcount_in >= 165 && hcount_in <=170))  rgb_out <= 12'hf_f_0;
-            else if ((vcount_in >= 75 && vcount_in <= 80) && (hcount_in >= 140 && hcount_in <= 170))  rgb_out <= 12'hf_f_0;
-            else if ((hcount_in + vcount_in >= 215 && hcount_in + vcount_in <= 220) && (vcount_in <= 80 && hcount_in <= 185))  rgb_out <= 12'hf_f_0;
-            else rgb_out <= 12'h8_8_8;
-        end
-  end
-
+      
+      rgb_temp <= rgb;
+      rgb_merge <= {rgb_temp,rgb_temp,rgb_temp};
+      if((hblnk_in == 0)&&(vblnk_in == 0))
+        rgb_out <= rgb_merge;
+      else 
+        rgb_out <= 0 ;
+      if (vcount_in  == hcount_in )
+        rgb_out = 12'hfff;
+      
+    end
+assign address = hcount_in[10:1]+(vcount_in[10:1]*400);
 endmodule
-
 
 
 
