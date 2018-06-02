@@ -36,6 +36,7 @@ set_property ip_cache_permissions {read write} [current_project]
 read_verilog C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/verilog_macro_bus.vh
 read_verilog -library xil_defaultlib {
   C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_background.v
+  C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect.v
   C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/start_screen.v
   C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_timing.v
   C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v

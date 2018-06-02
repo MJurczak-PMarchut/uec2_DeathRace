@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Fri Jun  1 14:49:27 2018
+| Date         : Fri Jun  1 21:48:29 2018
 | Host         : DESKTOP-N4TGOPP running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file vga_example_control_sets_placed.rpt
 | Design       : vga_example
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     4 |
-| Unused register locations in slices containing registers |    18 |
+| Number of unique control sets                            |     6 |
+| Unused register locations in slices containing registers |    22 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,8 +34,10 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      4 |            2 |
-|      9 |            1 |
+|      4 |            1 |
+|      8 |            1 |
+|     12 |            2 |
+|     13 |            1 |
 |    16+ |            1 |
 +--------+--------------+
 
@@ -46,25 +48,27 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              29 |           11 |
+| No           | No                    | No                     |              57 |           22 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |               4 |            1 |
-| Yes          | No                    | No                     |               4 |            3 |
+| No           | Yes                   | No                     |              36 |           14 |
+| Yes          | No                    | No                     |              13 |            7 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |               9 |            4 |
+| Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------------+---------------------+----------------------------------+------------------+----------------+
-|     Clock Signal     |    Enable Signal    |         Set/Reset Signal         | Slice Load Count | Bel Load Count |
-+----------------------+---------------------+----------------------------------+------------------+----------------+
-|  myClk/inst/clk_out2 |                     | my_timing/SR[0]                  |                1 |              4 |
-|  myClk/inst/clk_out2 | my_timing/hblnk_out |                                  |                3 |              4 |
-|  myClk/inst/clk_out2 | my_timing/hblnk_out | my_timing/vcount_out[10]_i_1_n_0 |                4 |              9 |
-|  myClk/inst/clk_out2 |                     |                                  |               11 |             29 |
-+----------------------+---------------------+----------------------------------+------------------+----------------+
++----------------------+---------------------+-----------------------------+------------------+----------------+
+|     Clock Signal     |    Enable Signal    |       Set/Reset Signal      | Slice Load Count | Bel Load Count |
++----------------------+---------------------+-----------------------------+------------------+----------------+
+|  myClk/inst/clk_out2 |                     | my_timing/SS[0]             |                1 |              4 |
+|  myClk/inst/clk_out2 |                     | my_timing/SS[1]             |                4 |              8 |
+|  myClk/inst/clk_out2 |                     | my_rect/rgb_out[11]_i_1_n_0 |                5 |             12 |
+|  myClk/inst/clk_out2 |                     | my_timing/SR[0]             |                4 |             12 |
+|  myClk/inst/clk_out2 | my_timing/hblnk_out |                             |                7 |             13 |
+|  myClk/inst/clk_out2 |                     |                             |               24 |             59 |
++----------------------+---------------------+-----------------------------+------------------+----------------+
 
 
