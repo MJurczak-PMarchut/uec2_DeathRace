@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/sources_1/new/psx_controller_clk_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module psx_controller_clk_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/sim_1/imports/project_1/psx_clk_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module psx_clk_test

@@ -1,0 +1,4 @@
+Running: xsim.dir/psx_clk_test_behav/xsimk.exe -simmode gui -wdb psx_clk_test_behav.wdb -simrunnum 0 -socket 60561
+Design successfully loaded
+Design Loading Memory Usage: 4948 KB (Peak: 4948 KB)
+Design Loading CPU Usage: 0 ms
