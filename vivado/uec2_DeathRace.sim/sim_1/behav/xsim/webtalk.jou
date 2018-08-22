@@ -2,11 +2,11 @@
 # Webtalk v2018.1 (64-bit)
 # SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
 # IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
-# Start of session at: Sat Jun  2 14:36:19 2018
-# Process ID: 16328
-# Current directory: C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.sim/sim_1/behav/xsim/xsim.dir/psx_clk_test_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.sim/sim_1/behav/xsim\webtalk.jou
+# Start of session at: Mon Aug 20 14:28:21 2018
+# Process ID: 12908
+# Current directory: C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.sim/sim_1/behav/xsim/xsim.dir/psx_clk_test_behav/webtalk/xsim_webtalk.tcl -notrace
+source C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace

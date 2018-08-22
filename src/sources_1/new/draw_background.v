@@ -23,6 +23,7 @@
 
 module draw_background(
     input wire [`VGA_BUS_SIZE-1:0] vga_in,
+    input wire rst,
     input wire pclk,
     input [3:0] rgb,
     output wire [`VGA_BUS_SIZE-1:0] vga_out,

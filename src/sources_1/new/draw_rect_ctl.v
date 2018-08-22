@@ -63,8 +63,7 @@ module draw_rect_ctl(
     always @(posedge clk)
         begin
             if ((vsync == 1) && (en == 1) )
-                begin
-                
+                begin             
                     en <= 0;
                     st <= 1; 
                 end
@@ -74,8 +73,7 @@ module draw_rect_ctl(
                 begin
                     en <= 0;
                     st <= 0;
-                end
-        
+                end        
         end 
     
     

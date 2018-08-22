@@ -29,6 +29,7 @@ module psx_controller_clk_gen(
     output reg err_f,
     output reg c_clk,
     output wire [3:0] c_counter,
+    output wire [3:0] state_out,
     output reg READY
     );
     localparam IDLE = 0;
@@ -61,15 +62,16 @@ module psx_controller_clk_gen(
 
     
     
-    
-    
-    
-    
-    
     always @*
         begin
             if(rst)
-                next_state = RESET;
+                fork
+                    next_state = RESET;
+                    _ack = 0;
+                join
+                
+            else if (state == RESET)
+                next_state = IDLE;
             else if (state == DELAY)
                 if (delay_count < DELAY_CLK)
                     if(ack == 0)
@@ -99,16 +101,7 @@ module psx_controller_clk_gen(
            else 
                 next_state = state;
          end
-                 
-                
-                
-                
-                
-                
-                
-                
-                
-                
+                          
                 
                 
          always @(posedge clk)
@@ -164,4 +157,5 @@ module psx_controller_clk_gen(
  
  
     assign c_counter = data_count;
+    assign state_out = state;
 endmodule

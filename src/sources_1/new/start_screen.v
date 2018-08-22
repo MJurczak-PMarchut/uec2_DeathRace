@@ -27,7 +27,7 @@ module start_screen(
 );
 
 
-reg [3:0] rom [0:11999];
+reg [15:0] rom [0:11999];
 
 initial $readmemh("image_rom.data", rom); 
 

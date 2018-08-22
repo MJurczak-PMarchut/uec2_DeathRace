@@ -73,23 +73,50 @@ wire [3:0] rgb_back;
     .vga_out(vga_bus[-1]),
     .pclk(pclk)
   );
+  wire Title_Sel,Wait_for_Game,Time_out,GameOn,Highscore,dual,single;
   
-  draw_background my_background(
-    .vga_in(vga_bus[-1]),
-    .pclk(pclk),
-    .vga_out(vga_bus[0]),
-    .address(address),
-    .rgb(rgb_back)
-    );
   
-  start_screen my_screen(
-    .address(address),
-    .clk(pclk),
-    .rgb(rgb_back)
+  State_Master MasterFSM(
+    .rst(ps2_data),
+    .START(ps2_data),
+    .UP(ps2_data),
+    .DOWN(ps2_data),
+    .Controller_burst(ps2_data),
+    .Timer(ps2_data),
+    .state_burst(ps2_data),
+    .Single_player(single),
+    .Dual_player(dual),
+    .title_screen(Title_Sel),
+    .wait_for_start(Wait_for_Game),
+    .time_out(Time_out),
+    .highscore(Highscore),
+    .GameOn(GameOn),
+    .restart()
   );
+  
+  Title_Screen MyTitle(
+  
+    .pclk(pclk),
+    .vga_in(vga_bus[-1]),
+    .vga_out(vga_bus[0]),
+    .single_player(single),
+    .dual_player(dual)
+  
+  );
+  
+  
+  Screen_mux Screen_Mux(
+    .TitleScreen(vga_bus[0]),
+    .vga_out(vga_bus[1]),
+    .TitleScreen_sel(Title_Sel)
+  
+  );
+  
+  
+
 
        
- `VGA_SPLIT_INPUT(vga_bus[0])
+ `VGA_SPLIT_INPUT(vga_bus[1])
   
   always @(posedge pclk)
   begin

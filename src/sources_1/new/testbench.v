@@ -24,7 +24,7 @@ module testbench;
 
   // Instantiate the vga_example module.
   
-  vga_example my_example (
+  vga my_example (
     .clk(clk),
     .vs(vs),
     .hs(hs),
