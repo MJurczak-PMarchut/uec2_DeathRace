@@ -17,7 +17,13 @@ Compiling module xil_defaultlib.clk_wiz_0
 Compiling module unisims_ver.ODDR
 Compiling module xil_defaultlib.vga_timing
 Compiling module xil_defaultlib.cardata
-Compiling module xil_defaultlib.Car_display
+Compiling module xil_defaultlib.Car_display(X=500,Color=3'b010)
+Compiling module xil_defaultlib.Car_display(Color=3'b100)
+Compiling module xil_defaultlib.char_rom
+Compiling module xil_defaultlib.drawNumber(xpos=11'b0101)
+Compiling module xil_defaultlib.drawNumber(xpos=11'b0101101111)
+Compiling module xil_defaultlib.drawNumber(xpos=11'b01011100000)
+Compiling module xil_defaultlib.game_bg
 Compiling module xil_defaultlib.vga
 Compiling module xil_defaultlib.tiff_writer
 Compiling module xil_defaultlib.testbench

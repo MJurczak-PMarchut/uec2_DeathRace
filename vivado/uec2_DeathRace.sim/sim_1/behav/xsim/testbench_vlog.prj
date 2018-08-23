@@ -4,6 +4,9 @@ verilog xil_defaultlib "C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/source
 "../../../../../src/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
 "../../../../uec2_DeathRace.srcs/sources_1/new/Car_display.v" \
 "../../../../uec2_DeathRace.srcs/sources_1/new/cardata.v" \
+"../../../../uec2_DeathRace.srcs/sources_1/new/char_rom.v" \
+"../../../../uec2_DeathRace.srcs/sources_1/new/drawNumber.v" \
+"../../../../uec2_DeathRace.srcs/sources_1/new/game_bg.v" \
 "../../../../../src/sources_1/new/tiff_writer.v" \
 "../../../../uec2_DeathRace.srcs/sources_1/new/vga.v" \
 "../../../../../src/sources_1/new/vga_timing.v" \

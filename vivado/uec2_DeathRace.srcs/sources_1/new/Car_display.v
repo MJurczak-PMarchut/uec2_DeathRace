@@ -125,10 +125,10 @@ module Car_display(
                         (direction == 15)? ypos - 2:
                         ypos;
                         
-                        xpos = (xpos >= 769)? 769 :
-                        (xpos <= 3)? 3: xpos;
+                        xpos = (xpos >= 704)? 704 :
+                        (xpos <= 65)? 65: xpos;
                         ypos = (ypos >= 569)? 569 :
-                        (ypos <= 3)? 3: ypos;              
+                        (ypos <= 105)? 105: ypos;              
                         frame_count =  frame_count + 1;
                 end
         

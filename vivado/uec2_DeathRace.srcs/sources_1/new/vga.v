@@ -69,7 +69,7 @@ clk_wiz_0 myClk(
 wire [21:0] address;
 wire [11:0] rgb;
 
-  
+wire TimeOut;  
   
 
   vga_timing my_timing (
@@ -78,14 +78,14 @@ wire [11:0] rgb;
     .rst(!rst)
   );
   
- `VGA_SPLIT_INPUT(vga_bus[1])
+ `VGA_SPLIT_INPUT(vga_bus[2])
   wire Title_Sel,Wait_for_Game,Time_out,GameOn,Highscore,dual,single;
   
   
-Car_display #(.Color(3'b010),.X(500),.Y(500)) MyCar(
+Car_display #(.Color(3'b110),.X(500),.Y(500)) MyCar(
     .clk(pclk),
     .direction(sw[3:0]),
-    .enable(sw[4]),
+    .enable(TimeOut),
     .go(sw[5]),
     .vga_in(vga_bus[-1]),
     .vga_out(vga_bus[0]),
@@ -95,13 +95,23 @@ Car_display #(.X(300),.Y(500),.Color(3'b100)) MyCar2(
     
     .clk(pclk),
     .direction(sw[9:6]),
-    .enable(sw[10]),
+    .enable(!TimeOut),
     .go(sw[11]),
     .vga_in(vga_bus[0]),
     .vga_out(vga_bus[1]),
     .rst(!rst)
 );
-       
+
+     
+game_bg Game_bg(
+    .clk(pclk),
+    .Player1Score(8'hf),
+    .Player2Score({4'b0,sw[15:12]}),
+    .vga_in(vga_bus[1]),
+    .vga_out(vga_bus[2]),
+    .rst(!rst),
+    .TimeOut(TimeOut)
+);  
 
   
   always @(posedge pclk)

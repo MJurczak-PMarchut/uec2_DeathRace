@@ -38,7 +38,7 @@ localparam subs = 5'b11111;
 reg [3:0] rom [0:4095];
 reg [3:0] rgb_out;
 
-initial $readmemh("C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/datacar.data", rom); 
+initial $readmemh("./datacar.data", rom); 
       
                 
     assign rgb = 12'h111*((direction == 0)?rom[{UP,{ypos,xpos}}]:

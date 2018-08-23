@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1602684000000fs"></ZoomStartTime>
-      <ZoomEndTime time="1677084000001fs"></ZoomEndTime>
-      <Cursor1Time time="1647584000000fs"></Cursor1Time>
+      <ZoomStartTime time="886666667fs"></ZoomStartTime>
+      <ZoomEndTime time="4686666668fs"></ZoomEndTime>
+      <Cursor1Time time="1520000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="174"></NameColumnWidth>
+      <NameColumnWidth column_width="158"></NameColumnWidth>
       <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="19" />
    <wvobject fp_name="/testbench/my_example/hblnk_in" type="logic">
       <obj_property name="ElementShortName">hblnk_in</obj_property>
       <obj_property name="ObjectShortName">hblnk_in</obj_property>
@@ -36,14 +36,6 @@
       <obj_property name="ElementShortName">hsync_in</obj_property>
       <obj_property name="ObjectShortName">hsync_in</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/my_example/hcount_in" type="array">
-      <obj_property name="ElementShortName">hcount_in[10:0]</obj_property>
-      <obj_property name="ObjectShortName">hcount_in[10:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/my_example/vcount_in" type="array">
-      <obj_property name="ElementShortName">vcount_in[10:0]</obj_property>
-      <obj_property name="ObjectShortName">vcount_in[10:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench/my_example/my_timing/pclk" type="logic">
       <obj_property name="ElementShortName">pclk</obj_property>
       <obj_property name="ObjectShortName">pclk</obj_property>
@@ -59,5 +51,49 @@
    <wvobject fp_name="/testbench/b" type="array">
       <obj_property name="ElementShortName">b[3:0]</obj_property>
       <obj_property name="ObjectShortName">b[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/my_example/Game_bg/Player1ScoreDisp/Number" type="array">
+      <obj_property name="ElementShortName">Number[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Number[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/my_example/Game_bg/Player1ScoreDisp/Addr1" type="array">
+      <obj_property name="ElementShortName">Addr1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Addr1[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/my_example/Game_bg/Player1ScoreDisp/Line" type="array">
+      <obj_property name="ElementShortName">Line[3:0]</obj_property>
+      <obj_property name="ObjectShortName">Line[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/my_example/Game_bg/Player1ScoreDisp/Pixel" type="logic">
+      <obj_property name="ElementShortName">Pixel</obj_property>
+      <obj_property name="ObjectShortName">Pixel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/my_example/Game_bg/TimerDisp/Pixel" type="logic">
+      <obj_property name="ElementShortName">Pixel</obj_property>
+      <obj_property name="ObjectShortName">Pixel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/my_example/Game_bg/Player2ScoreDisp/Pixel" type="logic">
+      <obj_property name="ElementShortName">Pixel</obj_property>
+      <obj_property name="ObjectShortName">Pixel</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/my_example/Game_bg/Player1ScoreDisp/Pixels" type="array">
+      <obj_property name="ElementShortName">Pixels[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Pixels[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/my_example/Game_bg/TimerDisp/Pixels" type="array">
+      <obj_property name="ElementShortName">Pixels[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Pixels[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/my_example/Game_bg/Player2ScoreDisp/Pixels" type="array">
+      <obj_property name="ElementShortName">Pixels[7:0]</obj_property>
+      <obj_property name="ObjectShortName">Pixels[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/my_example/Game_bg/Player1ScoreDisp/hcount" type="array">
+      <obj_property name="ElementShortName">hcount[10:0]</obj_property>
+      <obj_property name="ObjectShortName">hcount[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/my_example/Game_bg/TimerDisp/hcount" type="array">
+      <obj_property name="ElementShortName">hcount[10:0]</obj_property>
+      <obj_property name="ObjectShortName">hcount[10:0]</obj_property>
    </wvobject>
 </wave_config>
