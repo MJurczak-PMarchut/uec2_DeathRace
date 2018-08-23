@@ -1,7 +1,15 @@
+2018.1:
+ * Version 6.0
+ * Bug Fix: Bug fixes in Dynamic Reconfiguration feature and Write DRP feature
+ * Bug Fix: Bug fixes for connection issue for s_axi_aresetn pin in IPI
+ * Feature Enhancement: The default value of USE_PHASE_ALIGMENT is updated to false for UltraScale and UltraScale+ devices. Phase Alignment feature uses extra clock routes in UltraScale and UltraScale+ designs when MMCMs are used. These routing resources are wasted when user do not understand when phase alignment is really needed. Now, implementation tools can use these extra clock routing resources for high fanout signals.
+ * Feature Enhancement: A column "Max. freq of buffer" is added in the Output Clock table which shows the maximum frequency that the selected output buffer can support
+ * Other: DRCs added for invalid input values in Override mode
+
 2017.4:
  * Version 5.4 (Rev. 3)
  * Bug Fix: Internal GUI issues are fixed for COMPENSATION mode as INTERNAL
- * Bug Fix: Fixed issue in dynamic reconfiguration of fractional values of M in MMCME3, MMCME4 CR-991054
+ * Bug Fix: Fixed issue in dynamic reconfiguration of fractional values of M in MMCME3, MMCME4
 
 2017.3:
  * Version 5.4 (Rev. 2)
@@ -120,7 +128,7 @@
  * Lower case ports for Verilog
  * Added Safe Clock Startup and Clock Sequencing
 
-(c) Copyright 2008 - 2017 Xilinx, Inc. All rights reserved.
+(c) Copyright 2008 - 2018 Xilinx, Inc. All rights reserved.
 
 This file contains confidential and proprietary information
 of Xilinx, Inc. and is protected under U.S. and

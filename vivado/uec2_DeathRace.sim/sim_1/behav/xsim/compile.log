@@ -1,4 +1,25 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/sources_1/new/psx_controller_clk_gen.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module psx_controller_clk_gen
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Mateusz/Documents/GitHub/uec2_DeathRace/src/sim_1/imports/project_1/psx_clk_test.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module psx_clk_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/new/verilog_macro_bus.vh" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0_clk_wiz
+INFO: [VRFC 10-2458] undeclared symbol clk_out1_clk_wiz_0_en_clk, assumed default net type wire [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:215]
+INFO: [VRFC 10-2458] undeclared symbol clk_out2_clk_wiz_0_en_clk, assumed default net type wire [C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:234]
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_wiz_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/Car_display.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Car_display
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/cardata.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cardata
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/char_rom.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module char_rom
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/drawNumber.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module drawNumber
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/game_bg.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module game_bg
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/new/tiff_writer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tiff_writer
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/new/vga_timing.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_timing
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/new/testbench.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module testbench

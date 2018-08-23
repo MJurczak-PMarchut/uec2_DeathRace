@@ -1,13 +1,31 @@
 Vivado Simulator 2018.1
 Copyright 1986-1999, 2001-2017 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 11f527c1c01d45b0bdb451f656e56ad7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot psx_clk_test_behav xil_defaultlib.psx_clk_test xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Xilinx/Vivado/2018.1/bin/unwrapped/win64.o/xelab.exe -wto 11f527c1c01d45b0bdb451f656e56ad7 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot testbench_behav xil_defaultlib.testbench xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.psx_controller_clk_gen
-Compiling module xil_defaultlib.psx_clk_test
+Compiling module unisims_ver.IBUF
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=10.0,...
+Compiling module unisims_ver.BUFG
+Compiling module unisims_ver.BUFGCE_default
+Compiling module unisims_ver.BUFH
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module unisims_ver.ODDR
+Compiling module xil_defaultlib.vga_timing
+Compiling module xil_defaultlib.cardata
+Compiling module xil_defaultlib.Car_display(X=500,Color=3'b010)
+Compiling module xil_defaultlib.Car_display(Color=3'b100)
+Compiling module xil_defaultlib.char_rom
+Compiling module xil_defaultlib.drawNumber(xpos=11'b0101)
+Compiling module xil_defaultlib.drawNumber(xpos=11'b0101101111)
+Compiling module xil_defaultlib.drawNumber(xpos=11'b01011100000)
+Compiling module xil_defaultlib.game_bg
+Compiling module xil_defaultlib.vga
+Compiling module xil_defaultlib.tiff_writer
+Compiling module xil_defaultlib.testbench
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot psx_clk_test_behav
+Built simulation snapshot testbench_behav
