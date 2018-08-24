@@ -37,8 +37,8 @@ reg [11:0] rgb_nxt;
 reg [10:0] hcount_char, vcount_char;
 reg choose = 1;
 
-localparam HCOUNT = 50;
-localparam VCOUNT = 500;
+localparam HCOUNT = 100;
+localparam VCOUNT = 250;
 localparam color = 12'hfff;
 localparam color_c = 12'h0ff;
     

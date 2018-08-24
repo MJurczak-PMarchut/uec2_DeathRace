@@ -17,6 +17,8 @@ module vga_example (
   inout wire ps2_data,
   inout wire ps2_clk,
   input wire clk,
+  input wire single_player,
+  input wire multi_player,
   output reg vs,
   output reg hs,
   output reg [3:0] r,
@@ -72,6 +74,11 @@ wire [3:0] rgb_back;
 
 wire [7:0] char_line_pixels, char_xy;
 wire [6:0] char_line, char_code;  
+wire [23:0] grem0_0, grem0_1, grem1_0, grem1_1;
+wire [2:0] addr1, addr1_1;
+wire [4:0] addr2, addr2_1;
+wire [15:0] char_line_pix, char_line_pix_1;
+wire [2:0] dir0, dir1, dir2, dir3, dir4, dir5, dir6, dir7;
 
   vga_timing my_timing (
     .vga_out(vga_bus[-1]),
@@ -81,25 +88,27 @@ wire [6:0] char_line, char_code;
   draw_background my_background(
     .vga_in(vga_bus[-1]),
     .pclk(pclk),
+    .single_player(single_player),
+    .multi_player(multi_player),
     .vga_out(vga_bus[0]),
     .address(address),
     .rgb(rgb_back)
     );
     
     
-   draw_rect my_rect(
-          .pclk(pclk),
-          .vga_in(vga_bus[0]),
-          .vga_out(vga_bus[1])
-      ); 
+//   draw_rect my_rect(
+//          .pclk(pclk),
+//          .vga_in(vga_bus[0]),
+//          .vga_out(vga_bus[1])
+//      ); 
 
   draw_rect_char my_rect_char_single(
         .pclk(pclk),
-        .vga_in(vga_bus[1]),
+        .vga_in(vga_bus[0]),
         .char_pixels(char_line_pixels),
         .char_xy(char_xy),
         .char_line(char_line),
-        .vga_out(vga_bus[2])
+        .vga_out(vga_bus[1])
     );
     
     font_rom my_font_rom_single(
@@ -121,8 +130,51 @@ wire [6:0] char_line, char_code;
     .rgb(rgb_back)
   );
   
+  gremlins_position my_gremlins(
+    .vga_in(vga_bus[1]),
+    .vga_out(vga_bus[2]),
+    .pclk(pclk),
+    .grem0_in(grem0_0),
+    .grem0_out(grem0_1),
+    .grem1_in(grem1_0),
+    .grem1_out(grem1_1)
+  );
   
+  gremlin #(.I(217),.J(0),.XPOS_INIT(200),.YPOS_INIT(300)) my_gremlin0 (
+    .clk(pclk),
+    .vga_in(vga_bus[1]),
+    .char_pixels(char_line_pix),
+    .char_xy(addr1),
+    .char_line(addr2),
+    .xpos(grem0_0[22:12]),
+    .ypos(grem0_0[11:1]),
+    .color(grem0_0[23])
+  );
+  
+  gremlin_rom my_gremlin0_rom(
+    .clk(pclk),
+    .addr1(addr1),
+    .addr2(addr2),
+    .char_line_pixels(char_line_pix)
+  );
 
+  gremlin #(.I(263),.J(3),.XPOS_INIT(600),.YPOS_INIT(300)) my_gremlin1(
+    .clk(pclk),
+    .vga_in(vga_bus[1]),
+    .char_pixels(char_line_pix_1),
+    .char_xy(addr1_1),
+    .char_line(addr2_1),
+    .xpos(grem1_0[22:12]),
+    .ypos(grem1_0[11:1]),
+    .color(grem1_0[23])
+  );
+  
+  gremlin_rom my_gremlin1_rom(
+    .clk(pclk),
+    .addr1(addr1_1),
+    .addr2(addr2_1),
+    .char_line_pixels(char_line_pix_1)
+  );
        
  `VGA_SPLIT_INPUT(vga_bus[2])
   

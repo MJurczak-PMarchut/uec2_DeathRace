@@ -1,0 +1,86 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Fri Aug 24 00:43:13 2018
+| Host         : DESKTOP-6F3MM83 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file vga_example_control_sets_placed.rpt
+| Design       : vga_example
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    16 |
+| Unused register locations in slices containing registers |    56 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      4 |            1 |
+|      8 |            3 |
+|     10 |            2 |
+|     11 |            4 |
+|     12 |            3 |
+|     13 |            1 |
+|    16+ |            2 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             123 |           59 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              68 |           22 |
+| Yes          | No                    | No                     |              57 |           20 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------+-------------------------------------+------------------------------------+------------------+----------------+
+|              Clock Signal             |            Enable Signal            |          Set/Reset Signal          | Slice Load Count | Bel Load Count |
++---------------------------------------+-------------------------------------+------------------------------------+------------------+----------------+
+|  myClk/inst/clk_out2                  |                                     | my_timing/rgb_next_reg[4][0]       |                1 |              4 |
+|  myClk/inst/clk_out2_clk_wiz_0_en_clk |                                     |                                    |                1 |              8 |
+|  myClk/inst/clk_out2                  |                                     | my_timing/rgb_next_reg[4][1]       |                3 |              8 |
+| ~myClk/inst/clk_out2                  |                                     |                                    |                6 |              8 |
+|  vga_bus[1][35]                       |                                     | my_gremlin0/i[9]_i_1_n_0           |                3 |             10 |
+|  vga_bus[1][35]                       |                                     | my_gremlin1/i[9]_i_1__0_n_0        |                3 |             10 |
+|  vga_bus[1][35]                       | my_gremlin0/xpos_nxt[10]_i_1_n_0    |                                    |                3 |             11 |
+|  vga_bus[1][35]                       | my_gremlin0/ypos_nxt[10]_i_1_n_0    |                                    |                4 |             11 |
+|  vga_bus[1][35]                       | my_gremlin1/xpos_nxt[10]_i_1__0_n_0 |                                    |                4 |             11 |
+|  vga_bus[1][35]                       | my_gremlin1/ypos_nxt[10]_i_1__0_n_0 |                                    |                4 |             11 |
+|  myClk/inst/clk_out2                  |                                     | my_gremlins/rgb_out[11]_i_1__1_n_0 |                4 |             12 |
+|  myClk/inst/clk_out2                  |                                     | my_background/SS[0]                |                4 |             12 |
+|  myClk/inst/clk_out2                  |                                     | my_timing/SR[0]                    |                4 |             12 |
+|  myClk/inst/clk_out2                  | my_timing/hblnk_out                 |                                    |                5 |             13 |
+|  vga_bus[1][35]                       |                                     |                                    |                7 |             16 |
+|  myClk/inst/clk_out2                  |                                     |                                    |               46 |             92 |
++---------------------------------------+-------------------------------------+------------------------------------+------------------+----------------+
+
+

@@ -25,6 +25,8 @@ module draw_background(
     input wire [`VGA_BUS_SIZE-1:0] vga_in,
     input wire pclk,
     input [3:0] rgb,
+    input wire single_player,
+    input wire multi_player,
     output wire [`VGA_BUS_SIZE-1:0] vga_out,
     output wire [19:0] address
     );
@@ -35,6 +37,11 @@ module draw_background(
   reg [11:0] rgb_merge;
   reg [11:0] rgb_next;
   reg [19:0] hc_tmp, vc_tmp;
+  
+  localparam HCOUNT = 50;
+  localparam VCOUNT = 500;
+  localparam HIGHT = 7;
+  localparam LENGHT = 128;
   
     `VGA_SPLIT_INPUT(vga_in)
     `VGA_OUT_REG
@@ -59,6 +66,16 @@ module draw_background(
       
       rgb_temp <= rgb;
       rgb_merge <= {rgb_temp,rgb_temp,rgb_temp};
+      
+//      if((vcount_in = VCOUNT) && (hcount_in = HCOUNT) && (vcount_in = VCOUNT + HIGHT) && (hcount_in = HCOUNT + LENGHT)) rgb_next <= 12'h444;
+//      else if((vcount_in = VCOUNT + 8) && (hcount_in = HCOUNT) && (vcount_in = VCOUNT + HIGHT + 8) && (hcount_in = HCOUNT + LENGHT)) rgb_next <= 12'h444;
+      if(single_player == 1)
+        if((vcount_in > VCOUNT) && (hcount_in > HCOUNT) && (vcount_in < VCOUNT + HIGHT) && (hcount_in < HCOUNT + LENGHT)) rgb_next <= 12'haaa;
+        else rgb_next <= rgb_merge;
+      else if(multi_player == 1)
+        if((vcount_in > VCOUNT + 8) && (hcount_in > HCOUNT) && (vcount_in < VCOUNT + HIGHT + 8) && (hcount_in < HCOUNT + LENGHT)) rgb_next <= 12'haaa;
+        else rgb_next <= rgb_merge;
+      
       if (vcount_in  == hcount_in )
         if(vcount_in < 100)rgb_next <= 12'hfff;
         else if(vcount_in < 200)rgb_next <= 12'h00f;

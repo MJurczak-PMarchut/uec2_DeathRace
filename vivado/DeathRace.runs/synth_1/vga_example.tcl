@@ -16,11 +16,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache C:/Users/pauli/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-9800-DESKTOP-6F3MM83/incrSyn
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -38,9 +34,11 @@ read_verilog C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/import
 read_verilog -library xil_defaultlib {
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/char_rom_16x16.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_background.v
-  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/draw_rect_char.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/font_rom.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/gremlin.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/gremlin_rom.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/gremlins_position.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.srcs/sources_1/new/start_screen.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_timing.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/imports/project_1/vga_example.v
