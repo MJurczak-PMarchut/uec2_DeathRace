@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1535399864">
+=======
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1535218586">
+>>>>>>> 72a9c09496c9655231dbe6bae6bd74e5e203793e
   <File Type="PA-TCL" Name="vga.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="vga_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="vga_reports.tcl"/>
@@ -74,8 +78,32 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+<<<<<<< HEAD
     <File Path="$PSRCDIR/sources_1/new/game_bg.v">
+=======
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/gremlin.v">
+>>>>>>> 72a9c09496c9655231dbe6bae6bd74e5e203793e
       <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Desktop/gremlin.v"/>
+        <Attr Name="ImportTime" Val="1535063906"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/gremlin_rom.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Desktop/gremlin_rom.v"/>
+        <Attr Name="ImportTime" Val="1534935426"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/Desktop/gremlins_position.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../Desktop/gremlins_position.v"/>
+        <Attr Name="ImportTime" Val="1535029037"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>

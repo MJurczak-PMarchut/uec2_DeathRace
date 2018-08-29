@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 set_property SRC_FILE_INFO {cfile:c:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc rfile:../../../../src/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc id:1 order:EARLY scoped_inst:myClk/inst} [current_design]
 set_property SRC_FILE_INFO {cfile:C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc rfile:../../../../src/constrs_1/imports/project_1/vga_example.xdc id:2} [current_design]
+=======
+set_property SRC_FILE_INFO {cfile:c:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc rfile:../../../../src/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc id:1 order:EARLY scoped_inst:myClk/inst} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/constrs_1/imports/project_1/vga_example.xdc rfile:../../../../src/constrs_1/imports/project_1/vga_example.xdc id:2} [current_design]
+>>>>>>> 72a9c09496c9655231dbe6bae6bd74e5e203793e
 set_property src_info {type:SCOPED_XDC file:1 line:57 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.1
 set_property src_info {type:XDC file:2 line:2 export:INPUT save:INPUT read:READ} [current_design]
@@ -34,6 +39,13 @@ set_property src_info {type:XDC file:2 line:39 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN J18 [get_ports {b[3]}]
 set_property src_info {type:XDC file:2 line:43 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN J1 [get_ports {pclk_mirror}]
+<<<<<<< HEAD
+=======
+set_property src_info {type:XDC file:2 line:51 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN C17 [get_ports ps2_clk]
+set_property src_info {type:XDC file:2 line:53 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN B17 [get_ports ps2_data]
+>>>>>>> 72a9c09496c9655231dbe6bae6bd74e5e203793e
 set_property src_info {type:XDC file:2 line:59 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN V17 [get_ports {sw[0]}]
 set_property src_info {type:XDC file:2 line:61 export:INPUT save:INPUT read:READ} [current_design]

@@ -27,7 +27,7 @@ module vga (
   input wire rst
     );
 
-wire [`VGA_BUS_SIZE - 1 : 0] vga_bus [3:-1];
+wire [`VGA_BUS_SIZE - 1 : 0] vga_bus [3:-2];
 wire [`MOUSE_BUS_SIZE - 1 : 0] mouse_bus [1:0] ;
 
 
@@ -72,22 +72,33 @@ wire [11:0] rgb;
 wire Car1Enable,Car2Enable;
 
 wire TimeOut;  
-  
+ 
+//wire [23:0] grem0, grem1; 
 
   vga_timing my_timing (
-    .vga_out(vga_bus[-1]),
+    .vga_out(vga_bus[-2]),
     .pclk(pclk),
     .rst(!rst)
   );
   
  `VGA_SPLIT_INPUT(vga_bus[3])
   wire Title_Sel,Wait_for_Game,Time_out,GameOn,Highscore,dual,single;
+
+  gremlins_position my_gremlins(
+    .vga_in(vga_bus[-2]),
+    .vga_out(vga_bus[-1]),
+    .pclk(pclk)
+  );
   
   
 Car_display #(.Color(3'b110),.X(500),.Y(500)) MyCar(
     .clk(pclk),
     .direction(sw[3:0]),
+<<<<<<< HEAD
     .enable(Car1Enable),
+=======
+    .enable(!TimeOut),
+>>>>>>> 72a9c09496c9655231dbe6bae6bd74e5e203793e
     .go(sw[5]),
     .vga_in(vga_bus[-1]),
     .vga_out(vga_bus[0]),

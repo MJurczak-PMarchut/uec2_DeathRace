@@ -1,8 +1,13 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+<<<<<<< HEAD
 | Date             : Mon Aug 27 22:01:01 2018
 | Host             : LAPTOP-G7PT2HG2 running 64-bit major release  (build 9200)
+=======
+| Date             : Sat Aug 25 19:39:56 2018
+| Host             : DESKTOP-6F3MM83 running 64-bit major release  (build 9200)
+>>>>>>> 72a9c09496c9655231dbe6bae6bd74e5e203793e
 | Command          : report_power -file vga_power_routed.rpt -pb vga_power_summary_routed.pb -rpx vga_power_routed.rpx
 | Design           : vga
 | Device           : xc7a35tcpg236-1
@@ -30,6 +35,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
+<<<<<<< HEAD
 | Total On-Chip Power (W)  | 0.185        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
@@ -38,6 +44,16 @@ Table of Contents
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.1         |
 | Junction Temperature (C) | 25.9         |
+=======
+| Total On-Chip Power (W)  | 0.190        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 0.118        |
+| Device Static (W)        | 0.072        |
+| Effective TJA (C/W)      | 5.0          |
+| Max Ambient (C)          | 84.0         |
+| Junction Temperature (C) | 26.0         |
+>>>>>>> 72a9c09496c9655231dbe6bae6bd74e5e203793e
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,6 +68,7 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
+<<<<<<< HEAD
 | Clocks         |    <0.001 |        5 |       --- |             --- |
 | Slice Logic    |    <0.001 |     3980 |       --- |             --- |
 |   LUT as Logic |    <0.001 |     2736 |     20800 |           13.15 |
@@ -64,6 +81,21 @@ Table of Contents
 | I/O            |     0.005 |       32 |       106 |           30.19 |
 | Static Power   |     0.072 |          |           |                 |
 | Total          |     0.185 |          |           |                 |
+=======
+| Clocks         |     0.001 |        5 |       --- |             --- |
+| Slice Logic    |     0.003 |     3955 |       --- |             --- |
+|   LUT as Logic |     0.003 |     2651 |     20800 |           12.75 |
+|   CARRY4       |    <0.001 |       44 |      8150 |            0.54 |
+|   Register     |    <0.001 |      223 |     41600 |            0.54 |
+|   F7/F8 Muxes  |    <0.001 |      837 |     32600 |            2.57 |
+|   Others       |     0.000 |       19 |       --- |             --- |
+|   BUFG         |     0.000 |        1 |        32 |            3.13 |
+| Signals        |     0.002 |     2031 |       --- |             --- |
+| MMCM           |     0.106 |        1 |         5 |           20.00 |
+| I/O            |     0.006 |       31 |       106 |           29.25 |
+| Static Power   |     0.072 |          |           |                 |
+| Total          |     0.190 |          |           |                 |
+>>>>>>> 72a9c09496c9655231dbe6bae6bd74e5e203793e
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +105,15 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
+<<<<<<< HEAD
 | Vccint    |       1.000 |     0.012 |       0.003 |      0.010 |
 | Vccaux    |       1.800 |     0.071 |       0.059 |      0.013 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
+=======
+| Vccint    |       1.000 |     0.016 |       0.007 |      0.010 |
+| Vccaux    |       1.800 |     0.071 |       0.059 |      0.013 |
+| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
+>>>>>>> 72a9c09496c9655231dbe6bae6bd74e5e203793e
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -92,6 +130,7 @@ Table of Contents
 1.3 Confidence Level
 --------------------
 
+<<<<<<< HEAD
 +-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
 | User Input Data             | Confidence | Details                                                | Action                                                                                                     |
 +-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
@@ -103,6 +142,19 @@ Table of Contents
 |                             |            |                                                        |                                                                                                            |
 | Overall confidence level    | Low        |                                                        |                                                                                                            |
 +-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+=======
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                             |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                                    |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
+| Device models               | High       | Device models are Production                           |                                                                                                                    |
+|                             |            |                                                        |                                                                                                                    |
+| Overall confidence level    | Low        |                                                        |                                                                                                                    |
++-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
+>>>>>>> 72a9c09496c9655231dbe6bae6bd74e5e203793e
 
 
 2. Settings
@@ -144,8 +196,12 @@ Table of Contents
 +----------------------+-----------+
 | Name                 | Power (W) |
 +----------------------+-----------+
+<<<<<<< HEAD
 | vga                  |     0.113 |
 |   GOSC               |    <0.001 |
+=======
+| vga                  |     0.118 |
+>>>>>>> 72a9c09496c9655231dbe6bae6bd74e5e203793e
 |   Game_bg            |    <0.001 |
 |     Player1ScoreDisp |    <0.001 |
 |       MyChar         |    <0.001 |
@@ -159,6 +215,12 @@ Table of Contents
 |     mycar            |    <0.001 |
 |   myClk              |     0.106 |
 |     inst             |     0.106 |
+<<<<<<< HEAD
+=======
+|   my_gremlins        |     0.004 |
+|     my_gremlin0      |     0.002 |
+|     my_gremlin1      |     0.002 |
+>>>>>>> 72a9c09496c9655231dbe6bae6bd74e5e203793e
 |   my_timing          |    <0.001 |
 +----------------------+-----------+
 

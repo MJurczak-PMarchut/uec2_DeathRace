@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.runs/synth_1'
+HD_PWD='C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
