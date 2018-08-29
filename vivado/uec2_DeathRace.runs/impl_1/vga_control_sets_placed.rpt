@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Sat Aug 25 19:39:13 2018
+| Date         : Thu Aug 30 00:34:02 2018
 | Host         : DESKTOP-6F3MM83 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file vga_control_sets_placed.rpt
 | Design       : vga
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    16 |
-| Unused register locations in slices containing registers |    49 |
+| Number of unique control sets                            |    18 |
+| Unused register locations in slices containing registers |    62 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,13 +34,14 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
+|      5 |            1 |
 |      6 |            1 |
 |      8 |            2 |
 |     10 |            2 |
 |     11 |            4 |
 |     12 |            1 |
 |     13 |            2 |
-|    16+ |            4 |
+|    16+ |            5 |
 +--------+--------------+
 
 
@@ -50,11 +51,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              53 |           22 |
-| No           | No                    | Yes                    |              21 |           10 |
-| No           | Yes                   | No                     |              32 |           14 |
+| No           | No                    | No                     |              99 |           46 |
+| No           | No                    | Yes                    |              21 |            7 |
+| No           | Yes                   | No                     |              37 |           11 |
 | Yes          | No                    | No                     |              44 |           16 |
-| Yes          | No                    | Yes                    |              73 |           33 |
+| Yes          | No                    | Yes                    |              73 |           34 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -62,25 +63,27 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+---------------------------------------+-------------------------------------------------+---------------------------+------------------+----------------+
-|              Clock Signal             |                  Enable Signal                  |      Set/Reset Signal     | Slice Load Count | Bel Load Count |
-+---------------------------------------+-------------------------------------------------+---------------------------+------------------+----------------+
-|  myClk/inst/clk_out2                  | Game_bg/en_reg_n_0                              | rst_IBUF                  |                2 |              6 |
-|  myClk/inst/clk_out2                  | Game_bg/Timer                                   | rst_IBUF                  |                3 |              8 |
-|  myClk/inst/clk_out2_clk_wiz_0_en_clk |                                                 | rst_IBUF                  |                1 |              8 |
-|  vga_bus[-2][35]                      |                                                 | my_gremlins/my_gremlin1/i |                4 |             10 |
-|  vga_bus[-2][35]                      |                                                 | my_gremlins/my_gremlin0/i |                3 |             10 |
-|  vga_bus[-2][35]                      | my_gremlins/my_gremlin1/xpos_nxt[10]_i_1__0_n_0 |                           |                4 |             11 |
-|  vga_bus[-2][35]                      | my_gremlins/my_gremlin1/ypos_nxt[10]_i_1__0_n_0 |                           |                4 |             11 |
-|  vga_bus[-2][35]                      | my_gremlins/my_gremlin0/ypos_nxt[10]_i_1_n_0    |                           |                4 |             11 |
-|  vga_bus[-2][35]                      | my_gremlins/my_gremlin0/xpos_nxt[10]_i_1_n_0    |                           |                4 |             11 |
-|  myClk/inst/clk_out2                  |                                                 | my_gremlins/r_reg[3]_9    |                7 |             12 |
-|  myClk/inst/clk_out2                  |                                                 | rst_IBUF                  |                9 |             13 |
-|  myClk/inst/clk_out2                  | my_timing/vcount_out                            | rst_IBUF                  |                4 |             13 |
-|  vga_bus[-2][35]                      |                                                 |                           |                7 |             16 |
-|  myClk/inst/clk_out2                  | MyCar/xpos0                                     | rst_IBUF                  |               12 |             23 |
-|  myClk/inst/clk_out2                  | MyCar2/xpos0                                    | rst_IBUF                  |               12 |             23 |
-|  myClk/inst/clk_out2                  |                                                 |                           |               15 |             37 |
-+---------------------------------------+-------------------------------------------------+---------------------------+------------------+----------------+
++---------------------------------------+-------------------------------------------------+----------------------------+------------------+----------------+
+|              Clock Signal             |                  Enable Signal                  |      Set/Reset Signal      | Slice Load Count | Bel Load Count |
++---------------------------------------+-------------------------------------------------+----------------------------+------------------+----------------+
+|  myClk/inst/clk_out2                  |                                                 | my_gremlins/rgb_out_reg[7] |                1 |              5 |
+|  myClk/inst/clk_out2                  | Game_bg/en_reg_n_0                              | rst_IBUF                   |                2 |              6 |
+|  myClk/inst/clk_out2                  | Game_bg/Timer                                   | rst_IBUF                   |                3 |              8 |
+|  myClk/inst/clk_out2_clk_wiz_0_en_clk |                                                 | rst_IBUF                   |                1 |              8 |
+|  vga_bus[-2][35]                      |                                                 | my_gremlins/my_gremlin0/i  |                4 |             10 |
+|  vga_bus[-2][35]                      |                                                 | my_gremlins/my_gremlin1/i  |                3 |             10 |
+|  vga_bus[-2][35]                      | my_gremlins/my_gremlin0/ypos_nxt[10]_i_1_n_0    |                            |                4 |             11 |
+|  vga_bus[-2][35]                      | my_gremlins/my_gremlin0/xpos_nxt[10]_i_1_n_0    |                            |                4 |             11 |
+|  vga_bus[-2][35]                      | my_gremlins/my_gremlin1/ypos_nxt[10]_i_1__0_n_0 |                            |                4 |             11 |
+|  vga_bus[-2][35]                      | my_gremlins/my_gremlin1/xpos_nxt[10]_i_1__0_n_0 |                            |                4 |             11 |
+|  myClk/inst/clk_out2                  |                                                 | my_collisions/r_reg[3]_4   |                3 |             12 |
+|  myClk/inst/clk_out2                  |                                                 | rst_IBUF                   |                6 |             13 |
+|  myClk/inst/clk_out2                  | my_timing/vcount_out                            | rst_IBUF                   |                4 |             13 |
+|  my_gremlins/hblnk_out_reg_0[22]      |                                                 |                            |                7 |             18 |
+|  vga_bus[-2][35]                      |                                                 |                            |               10 |             18 |
+|  myClk/inst/clk_out2                  | MyCar/xpos0                                     | rst_IBUF                   |               15 |             23 |
+|  myClk/inst/clk_out2                  | MyCar2/xpos0                                    | rst_IBUF                   |               10 |             23 |
+|  myClk/inst/clk_out2                  |                                                 |                            |               30 |             64 |
++---------------------------------------+-------------------------------------------------+----------------------------+------------------+----------------+
 
 

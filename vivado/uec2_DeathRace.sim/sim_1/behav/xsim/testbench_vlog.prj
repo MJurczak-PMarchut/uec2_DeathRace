@@ -1,16 +1,38 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib "C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/new/verilog_macro_bus.vh" --include "../../../../../src/sources_1/new" --include "../../../../../src/sources_1/ip/clk_wiz_0" \
+verilog xil_defaultlib "C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/verilog_macro_bus.vh" --include "../../../../../src/sources_1/new" --include "../../../../../src/sources_1/ip/clk_wiz_0" \
 "../../../../../src/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
 "../../../../../src/sources_1/ip/clk_wiz_0/clk_wiz_0.v" \
 "../../../../uec2_DeathRace.srcs/sources_1/new/Car_display.v" \
+"../../../../uec2_DeathRace.srcs/sources_1/new/Controller_status_decode.v" \
+"../../../../../src/sources_1/new/Klawiatura_ps2.v" \
+"../../../../../src/sources_1/new/MouseCtlVeri.v" \
+"../../../../../src/sources_1/new/MouseDisplayVeri.v" \
+"../../../../uec2_DeathRace.srcs/sources_1/new/Screen_mux.v" \
+"../../../../uec2_DeathRace.srcs/sources_1/new/State_Master.v" \
+"../../../../uec2_DeathRace.srcs/sources_1/new/Title_Screen.v" \
 "../../../../uec2_DeathRace.srcs/sources_1/new/cardata.v" \
 "../../../../uec2_DeathRace.srcs/sources_1/new/char_rom.v" \
+"../../../../uec2_DeathRace.srcs/sources_1/new/collision.v" \
 "../../../../uec2_DeathRace.srcs/sources_1/new/drawNumber.v" \
+"../../../../../src/sources_1/new/draw_background.v" \
+"../../../../../src/sources_1/new/draw_rect.v" \
+"../../../../../src/sources_1/new/draw_rect_ctl.v" \
 "../../../../uec2_DeathRace.srcs/sources_1/new/game_bg.v" \
+"../../../../uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlin.v" \
+"../../../../uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlin_rom.v" \
+"../../../../uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlins_position.v" \
+"../../../../../src/sources_1/new/image_rom.v" \
+"../../../../../src/sources_1/new/psx_controller_clk_gen.v" \
+"../../../../../src/sources_1/new/psx_controller_module.v" \
+"../../../../../src/sources_1/new/start_screen.v" \
 "../../../../../src/sources_1/new/tiff_writer.v" \
-"../../../../uec2_DeathRace.srcs/sources_1/new/vga.v" \
+"../../../../../src/sources_1/new/vga_example.v" \
 "../../../../../src/sources_1/new/vga_timing.v" \
+"../../../../uec2_DeathRace.srcs/sources_1/new/vga.v" \
 "../../../../../src/sources_1/new/testbench.v" \
+"../../../../uec2_DeathRace.srcs/sim_1/new/psx_controller_module_test.v" \
+"../../../../../src/sim_1/imports/project_1/psx_clk_test.v" \
+"../../../../uec2_DeathRace.srcs/sim_1/new/psx_module.v" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

@@ -16,8 +16,10 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache C:/Users/pauli/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-848-DESKTOP-6F3MM83/incrSyn
+set_param synth.incrementalSynthesisCache C:/Users/pauli/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-15752-DESKTOP-6F3MM83/incrSyn
 set_param xicom.use_bs_reader 1
+set_msg_config -id {HDL 9-1061} -limit 100000
+set_msg_config -id {HDL 9-1654} -limit 100000
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
@@ -37,15 +39,38 @@ read_verilog C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/ve
 set_property is_global_include true [get_files C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/verilog_macro_bus.vh]
 read_verilog -library xil_defaultlib {
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/Car_display.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/Controller_status_decode.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/Klawiatura_ps2.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/MouseCtlVeri.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/MouseDisplayVeri.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/Screen_mux.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/State_Master.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/Title_Screen.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/cardata.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/char_rom.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/collision.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/drawNumber.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/draw_background.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/draw_rect.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/draw_rect_ctl.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/game_bg.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlin.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlin_rom.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlins_position.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/image_rom.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/psx_controller_clk_gen.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/psx_controller_module.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/start_screen.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/tiff_writer.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/vga_example.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/vga_timing.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/vga.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v
+}
+read_vhdl -library xil_defaultlib {
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/MouseCtl.vhd
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/MouseDisplay.vhd
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/Ps2Interface.vhd
 }
 read_ip -quiet C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]

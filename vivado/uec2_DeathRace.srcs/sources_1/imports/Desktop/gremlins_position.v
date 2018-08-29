@@ -26,9 +26,10 @@
 
 module gremlins_position(
     input wire pclk,
+    input wire grem0_enable, grem1_enable,
     input wire [`VGA_BUS_SIZE-1:0] vga_in,
     output wire [`VGA_BUS_SIZE-1:0] vga_out,
-    output reg [23:0] grem0_out, grem1_out //23 color, 22:12 xpos, 11:1 ypos, 0 aktywny/nieaktywny
+    output wire [23:0] grem0_out, grem1_out //23 color, 22:12 xpos, 11:1 ypos, 0 aktywny/nieaktywny
     );
     
     `VGA_SPLIT_INPUT(vga_in)
@@ -37,24 +38,24 @@ module gremlins_position(
 
 wire [2:0] addr1, addr1_1;
 wire [4:0] addr2, addr2_1;
-wire [23:0] grem0_0, grem0_1, grem1_0, grem1_1;
 wire [15:0] char_line_pix, char_line_pix_1; 
     
 localparam GREMH = 32;
 localparam GREMW = 16;
 
-reg [23:0] grem0_nxt, grem1_nxt;
 reg [11:0] rgb_nxt;
 
   gremlin #(.I(217),.J(0),.XPOS_INIT(200),.YPOS_INIT(300)) my_gremlin0 (
     .clk(pclk),
+    .grem_enable(grem0_enable),
     .vga_in(vga_in),
     .char_pixels(char_line_pix),
     .char_xy(addr1),
     .char_line(addr2),
-    .xpos(grem0_0[22:12]),
-    .ypos(grem0_0[11:1]),
-    .color(grem0_0[23])
+    .xpos(grem0_out[22:12]),
+    .ypos(grem0_out[11:1]),
+    .color(grem0_out[23]),
+    .grem_out(grem0_out[0])
   );
   
   gremlin_rom my_gremlin0_rom(
@@ -66,13 +67,15 @@ reg [11:0] rgb_nxt;
 
   gremlin #(.I(263),.J(3),.XPOS_INIT(600),.YPOS_INIT(300)) my_gremlin1(
     .clk(pclk),
+    .grem_enable(grem1_enable),
     .vga_in(vga_in),
     .char_pixels(char_line_pix_1),
     .char_xy(addr1_1),
     .char_line(addr2_1),
-    .xpos(grem1_0[22:12]),
-    .ypos(grem1_0[11:1]),
-    .color(grem1_0[23])
+    .xpos(grem1_out[22:12]),
+    .ypos(grem1_out[11:1]),
+    .color(grem1_out[23]),
+    .grem_out(grem1_out[0])
   );
   
   gremlin_rom my_gremlin1_rom(
@@ -83,21 +86,16 @@ reg [11:0] rgb_nxt;
   );  
 
 
-always @(posedge pclk)
-begin
-    grem0_nxt[23:1] = grem0_0[23:1];
-    grem1_nxt[23:1] = grem1_0[23:1];
-end
-
 always @*
-if((grem0_nxt[0] & grem0_nxt[23]) || (grem1_nxt[0] & grem1_nxt[23]))
-    rgb_nxt <= 12'hfff;
-else 
-    rgb_nxt <= rgb_in;
+    if((grem0_out[0] & grem0_out[23]) || (grem1_out[0] & grem1_out[23]))
+        rgb_nxt <= 12'hfff;
+    else 
+        rgb_nxt <= rgb_in;
 
-always @(posedge vsync_in)
-    if(grem0_nxt[0] == 0) grem0_nxt[0] = ~grem0_nxt[0];
-    else if (grem1_nxt[0] == 0) grem1_nxt[0] = ~grem1_nxt[0];
+
+//always @(posedge vsync_in)
+//    if(grem0_nxt[0] == 0) grem0_nxt[0] = ~grem0_nxt[0];
+//    else if (grem1_nxt[0] == 0) grem1_nxt[0] = ~grem1_nxt[0];
 
 
 always @(posedge pclk)
@@ -110,11 +108,5 @@ always @(posedge pclk)
      vblnk_out = vblnk_in;
      rgb_out = rgb_nxt;
  end  
-   
-//always @*
-//begin
-//grem0_1 = grem0_nxt;
-//grem1_1 = grem1_nxt;
-//end 
     
 endmodule

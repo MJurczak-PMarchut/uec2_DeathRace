@@ -68,6 +68,10 @@ clk_wiz_0 myClk(
 
 wire [21:0] address;
 wire [11:0] rgb;
+wire [23:0] gremlin0, gremlin1;
+wire gremlin0_enable, gremlin1_enable;
+wire [21:0] car0_address, car1_address;
+wire [7:0] Player1Score, Player2Score;
 
 wire TimeOut;  
  
@@ -79,13 +83,32 @@ wire TimeOut;
     .rst(!rst)
   );
   
- `VGA_SPLIT_INPUT(vga_bus[2])
+ `VGA_SPLIT_INPUT(vga_bus[3])
   wire Title_Sel,Wait_for_Game,Time_out,GameOn,Highscore,dual,single;
+  
+  collision my_collisions(
+    .clk(pclk),
+    .rst(!rst),
+    .vga_in(vga_bus[1]),
+    .vga_out(vga_bus[2]),
+    .grem0(gremlin0),
+    .grem1(gremlin1),
+    .car0(car0_address),
+    .car1(car1_address),
+    .grem0_out(gremlin0_enable),
+    .grem1_out(gremlin1_enable),
+    .points0_out(Player1Score),
+    .points1_out(Player2Score)
+  );
 
   gremlins_position my_gremlins(
     .vga_in(vga_bus[-2]),
     .vga_out(vga_bus[-1]),
-    .pclk(pclk)
+    .pclk(pclk),
+    .grem0_enable(gremlin0_enable),
+    .grem1_enable(gremlin1_enable),
+    .grem0_out(gremlin0),
+    .grem1_out(gremlin1)
   );
   
   
@@ -96,7 +119,9 @@ Car_display #(.Color(3'b110),.X(500),.Y(500)) MyCar(
     .go(sw[5]),
     .vga_in(vga_bus[-1]),
     .vga_out(vga_bus[0]),
-    .rst(!rst)
+    .rst(!rst),
+    .xpos(car0_address[21:11]),
+    .ypos(car0_address[10:0])
 );
 Car_display #(.X(300),.Y(500),.Color(3'b100)) MyCar2(
     
@@ -106,16 +131,18 @@ Car_display #(.X(300),.Y(500),.Color(3'b100)) MyCar2(
     .go(sw[11]),
     .vga_in(vga_bus[0]),
     .vga_out(vga_bus[1]),
-    .rst(!rst)
+    .rst(!rst),
+    .xpos(car1_address[21:11]),
+    .ypos(car1_address[10:0])
 );
 
      
 game_bg Game_bg(
     .clk(pclk),
-    .Player1Score(8'hf),
-    .Player2Score({4'b0,sw[15:12]}),
-    .vga_in(vga_bus[1]),
-    .vga_out(vga_bus[2]),
+    .Player1Score(Player1Score),
+    .Player2Score(Player2Score),
+    .vga_in(vga_bus[2]),
+    .vga_out(vga_bus[3]),
     .rst(!rst),
     .TimeOut(TimeOut)
 );  
