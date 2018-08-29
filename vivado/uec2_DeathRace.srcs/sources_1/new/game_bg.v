@@ -83,6 +83,8 @@ module game_bg(
 
     );
     
+    reg TimeOut_r = 0;
+    
     always @(posedge clk or negedge rst)
         if (!rst) 
             begin
@@ -96,14 +98,15 @@ module game_bg(
                 Timer;
                 Prescaler = (Prescaler <= 60)? Prescaler + 1:0;
             end
+            
+      always @(posedge clk or negedge rst)
+        if(!rst) 
+            TimeOut_r =0;
+        else if(TimeOut)
+            TimeOut_r =1;
     
-    
-    
- assign TimeOut = (Timer == 0)? 1:0;
- 
- 
- 
-
+ assign TimeOut = ((Timer == 0) && ((Player2Score != Player1Score ) || !NoOfPlayers ))? 1:
+  (TimeOut_r)?1:0;
  
  assign rgb_out = ((hblnk_in == 1) || (vblnk_in == 1))?12'h0:
         (vcount_in >= 595)? 12'hfff:

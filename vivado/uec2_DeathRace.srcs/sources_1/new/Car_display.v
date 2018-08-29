@@ -52,10 +52,10 @@ module Car_display(
     
     reg en,st;
     initial 
-        fork
-            xpos = X;
-            ypos = Y;
-        join
+        begin
+            xpos <= X;
+            ypos <= Y;
+        end
     
     reg frame_count = 0;
     
@@ -131,7 +131,7 @@ module Car_display(
                         (ypos <= 105)? 105: ypos;              
                         frame_count =  frame_count + 1;
                 end
-        
+       
     
     assign hcount_out = hcount_in;
     assign vcount_out = vcount_in;

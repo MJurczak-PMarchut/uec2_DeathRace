@@ -17,8 +17,6 @@ proc create_report { reportName command } {
   }
 }
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -36,10 +34,14 @@ read_verilog C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/new/ver
 set_property is_global_include true [get_files C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/new/verilog_macro_bus.vh]
 read_verilog -library xil_defaultlib {
   C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/Car_display.v
+  C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/Game_Over_Text_Rom.v
+  C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/Game_over_scr_ctl.v
   C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/cardata.v
   C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/char_rom.v
   C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/drawNumber.v
+  C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/font_rom.v
   C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/game_bg.v
+  C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/new/vga_timing.v
   C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/vga.v
 }
 read_ip -quiet C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0.xci

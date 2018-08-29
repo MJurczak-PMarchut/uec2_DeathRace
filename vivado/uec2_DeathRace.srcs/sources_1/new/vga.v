@@ -14,8 +14,8 @@
 `include "verilog_macro_bus.vh"
 
 module vga (
-  inout wire ps2_data,
-  inout wire ps2_clk,
+//  inout wire ps2_data,
+//  inout wire ps2_clk,
   input wire clk,
   input wire [15:0] sw,
   output reg vs,
@@ -42,6 +42,7 @@ wire [`MOUSE_BUS_SIZE - 1 : 0] mouse_bus [1:0] ;
   wire clk_out;
   wire pclk;
   wire pclk100;
+  wire NoOfPlayers;
   (* KEEP = "TRUE" *) 
   (* ASYNC_REG = "TRUE" *)
   reg [7:0] safe_start = 0;
@@ -68,6 +69,7 @@ clk_wiz_0 myClk(
 
 wire [21:0] address;
 wire [11:0] rgb;
+wire Car1Enable,Car2Enable;
 
 wire TimeOut;  
   
@@ -78,14 +80,14 @@ wire TimeOut;
     .rst(!rst)
   );
   
- `VGA_SPLIT_INPUT(vga_bus[2])
+ `VGA_SPLIT_INPUT(vga_bus[3])
   wire Title_Sel,Wait_for_Game,Time_out,GameOn,Highscore,dual,single;
   
   
 Car_display #(.Color(3'b110),.X(500),.Y(500)) MyCar(
     .clk(pclk),
     .direction(sw[3:0]),
-    .enable(TimeOut),
+    .enable(Car1Enable),
     .go(sw[5]),
     .vga_in(vga_bus[-1]),
     .vga_out(vga_bus[0]),
@@ -95,7 +97,7 @@ Car_display #(.X(300),.Y(500),.Color(3'b100)) MyCar2(
     
     .clk(pclk),
     .direction(sw[9:6]),
-    .enable(!TimeOut),
+    .enable(Car2Enable),
     .go(sw[11]),
     .vga_in(vga_bus[0]),
     .vga_out(vga_bus[1]),
@@ -110,10 +112,23 @@ game_bg Game_bg(
     .vga_in(vga_bus[1]),
     .vga_out(vga_bus[2]),
     .rst(!rst),
-    .TimeOut(TimeOut)
+    .TimeOut(TimeOut),
+    .NoOfPlayers(NoOfPlayers)
+    
 );  
 
-  
+Game_over_scr_ctl GOSC(
+    .TimeOut(TimeOut),
+    .NoOfPlayers(NoOfPlayers),
+    .Player1Score(8'hf),
+    .Player2Score({4'b0,sw[15:12]}),
+    .vga_in(vga_bus[2]),
+    .GremlinsEnable(),
+    .Car1Enable(Car1Enable),
+    .Car2Enable(Car2Enable),
+    .vga_out(vga_bus[3])
+);
+
   always @(posedge pclk)
   begin
     vs <= vsync_in;
@@ -122,4 +137,6 @@ game_bg Game_bg(
     {r,g,b} <= ((vblnk_in == 0) && (hblnk_in == 0))?rgb_in:12'h000;
   end
 
+
+assign NoOfPlayers =  sw[4];
 endmodule
