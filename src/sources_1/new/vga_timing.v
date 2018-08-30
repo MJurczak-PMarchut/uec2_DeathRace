@@ -14,8 +14,8 @@
 module vga_timing (
   output wire [`VGA_BUS_SIZE-1:0] vga_out,
   input wire pclk,
-  input wire rst,
-  output wire pclk_out
+  input wire rst
+//  output wire pclk_out
   );
   
     `VGA_OUT_REG
@@ -75,7 +75,8 @@ module vga_timing (
         
   //end
   
-assign pclk_out = !(pclk);
+//assign pclk_out = !(pclk);
+
   // Describe the actual circuit for the assignment.
   // Video timing controller set for 800x600@60fps
   // using a 40 MHz pixel clock per VESA spec.

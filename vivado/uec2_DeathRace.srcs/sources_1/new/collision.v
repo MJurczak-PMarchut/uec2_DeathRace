@@ -68,7 +68,7 @@ always @(posedge vsync_in) //or negedge rst)
 //                    f_nxt = 1'b0;
 //                    grem0_nxt = 1'b1;
 //                end
-            if((car0[21:11] >= grem1[22:12] - CARW) && (car0[21:11] <= grem1[22:12] + GREMW) && (car0[10:0] >= grem1[11:1] - GREMCARH) && (car0[10:0] <= grem1[11:1] + GREMCARH) && (grem1[0] == 1'b1)) begin
+            else if((car0[21:11] >= grem1[22:12] - CARW) && (car0[21:11] <= grem1[22:12] + GREMW) && (car0[10:0] >= grem1[11:1] - GREMCARH) && (car0[10:0] <= grem1[11:1] + GREMCARH) && (grem1[0] == 1'b1)) begin
 //                address_nxt <= grem1[22:1];
 //                f_nxt = 1'b1;
                 grem1_nxt = 1'b0;
@@ -78,7 +78,7 @@ always @(posedge vsync_in) //or negedge rst)
 //                    f_nxt = 1'b0;
 //                    grem1_nxt = 1'b1;
 //                end
-            if((car1[21:11] >= grem0[22:12] - CARW) && (car1[21:11] <= grem0[22:12] + GREMW) && (car1[10:0] >= grem0[11:1] - GREMCARH) && (car1[10:0] <= grem0[11:1] + GREMCARH) && (grem0[0] == 1'b1)) begin
+            else if((car1[21:11] >= grem0[22:12] - CARW) && (car1[21:11] <= grem0[22:12] + GREMW) && (car1[10:0] >= grem0[11:1] - GREMCARH) && (car1[10:0] <= grem0[11:1] + GREMCARH) && (grem0[0] == 1'b1)) begin
 //                address_nxt <= grem0[22:1];
 //                f_nxt = 1'b1;
                 grem0_nxt = 1'b0;
@@ -88,16 +88,17 @@ always @(posedge vsync_in) //or negedge rst)
 //                    f_nxt = 1'b0;
 //                    grem0_nxt = 1'b1;
 //                end
-            if((car1[21:11] >= grem1[22:12] - CARW) && (car1[21:11] <= grem1[22:12] + GREMW) && (car1[10:0] >= grem1[11:1] - GREMCARH) && (car1[10:0] <= grem1[11:1] + GREMCARH) && (grem1[0] == 1'b1)) begin
+            else if((car1[21:11] >= grem1[22:12] - CARW) && (car1[21:11] <= grem1[22:12] + GREMW) && (car1[10:0] >= grem1[11:1] - GREMCARH) && (car1[10:0] <= grem1[11:1] + GREMCARH) && (grem1[0] == 1'b1)) begin
 //                address_nxt <= grem1[22:1];
 //                f_nxt = 1'b1;
                 grem1_nxt = 1'b0;
                 points1 = 8'b00000001 + points1;
             end
-//            else begin
+            else begin
 //                f_nxt = 1'b0;
-//                grem1_nxt = 1'b1;
-//            end
+                grem1_nxt = 1'b1;
+                grem0_nxt = 1'b1;
+            end
         end
         
 //assign f_out = f_nxt;

@@ -39,19 +39,19 @@ parameter J = 0;
 parameter XPOS_INIT = 400;
 parameter YPOS_INIT = 300;
 
+localparam LEFT_EDGE = 5;
+localparam RIGHT_EDGE = 795 - 16;
+localparam UP_EDGE = 105;
+localparam DOWN_EDGE = 595 - 32;
+
 reg [2:0] direction = J;
 reg [10:0] xpos_nxt = XPOS_INIT;
 reg [10:0] ypos_nxt = YPOS_INIT;
 reg [9:0] i = 0; 
 reg [2:0] j = J, char_xy_nxt;
-reg [10:0] hcount_char, vcount_char, n, m;
+reg [10:0] hcount_char, vcount_char, n = LEFT_EDGE , m = UP_EDGE;
 reg color_nxt;
 reg edge_f, grem;
-
-localparam LEFT_EDGE = 5;
-localparam RIGHT_EDGE = 795 - 16;
-localparam UP_EDGE = 105;
-localparam DOWN_EDGE = 595 - 32;
 
 
 always @(posedge clk)
@@ -78,15 +78,15 @@ end
 
 always @(posedge vsync_in)// or negedge grem_enable)
 begin
-grem = grem_enable;
-    //if(grem == 0)
-    //begin
-    //    xpos_nxt <= n;
-    //    ypos_nxt <= m;
-    //    direction <= j;
-    ////    grem = 1'b1;
-    //end
-    //else
+//grem <= grem_enable;
+    if(grem_enable == 1'b0)
+    begin
+        xpos_nxt <= n;
+        ypos_nxt <= m;
+        direction <= j;
+//        grem <= 1'b1;
+    end
+    else
     begin
     i = i + 1;
     j = j + 1;
@@ -172,6 +172,6 @@ assign ypos = ypos_nxt;
 assign color = color_nxt;
 assign char_xy = char_xy_nxt;
 assign char_line = vcount_char[4:0];
-assign grem_out = grem;
+assign grem_out = grem_enable;
     
 endmodule
