@@ -25,11 +25,10 @@ module collision(
     input wire rst,
     input wire [23:0] grem0, grem1,
     input wire [21:0] car0, car1,
+    input wire car1_enable, car0_enable,
     input wire [`VGA_BUS_SIZE-1:0] vga_in,
     output wire [`VGA_BUS_SIZE-1:0] vga_out,
     output wire [7:0] points0_out, points1_out,
-//    output reg [21:0] address,
-//    output wire f_out,
     output wire grem0_out, grem1_out
     );
 
@@ -37,71 +36,94 @@ module collision(
     `VGA_OUT_REG
     `VGA_MERGE_AT_OUTPUT(vga_out)
 
-//reg f_nxt = 0;
-//reg [21:0] address_nxt = 0;
+wire color, f0, f1;
+wire [21:0] address;
+wire [2:0] addr1;
+wire [4:0] addr2;
+wire [15:0] char_line_pix;
+
+reg f_nxt = 0;
+reg [21:0] address_nxt = 0;
 reg grem0_nxt = 1'b1, grem1_nxt = 1'b1;
 reg [7:0] points0 = 0, points1 = 0;
+reg [11:0] rgb_nxt;
 
 localparam CARW = 32;    
 localparam GREMCARH = 32;
 localparam GREMW = 16;
 
-always @(posedge vsync_in) //or negedge rst)
-//    if(!rst)
-//        fork
-//            f_nxt = 1'b0;
-//            points0 = 8'b0;
-//            points1 = 8'b0;
-//            grem0_nxt = 1'b1;
-//            grem1_nxt = 1'b1;
-//        join
-//    else
+
+
+headstones my_headstones(
+    .clk(clk),
+    .reset(rst),
+    .vga_in(vga_in),
+    .f_in(f0),
+    .address(address),
+    .char_pixels(char_line_pix),
+    .color(color),
+    .char_xy(addr1),
+    .char_line(addr2),
+    .f_out(f1)
+);
+
+  gremlin_rom my_headstone_rom(
+    .addr1(addr1),
+    .addr2(addr2),
+    .char_line_pixels(char_line_pix)
+  );
+
+always @(posedge vsync_in or negedge rst)
+    if(!rst)
+        fork
+            f_nxt = 1'b0;
+            points0 = 8'b0;
+            points1 = 8'b0;
+            grem0_nxt = 1'b1;
+            grem1_nxt = 1'b1;
+        join
+    else
         begin
-    
-            if((car0[21:11] >= grem0[22:12] - CARW) && (car0[21:11] <= grem0[22:12] + GREMW) && (car0[10:0] >= grem0[11:1] - GREMCARH) && (car0[10:0] <= grem0[11:1] + GREMCARH) && (grem0[0] == 1'b1)) begin
-//                address_nxt <= grem0[22:1];
-//                f_nxt = 1'b1;
+            f_nxt = f1;
+            if((car0[21:11] >= grem0[22:12] - CARW) && (car0[21:11] <= grem0[22:12] + GREMW) && (car0[10:0] >= grem0[11:1] - GREMCARH) && (car0[10:0] <= grem0[11:1] + GREMCARH) && (grem0[0] == 1'b1) && (car0_enable == 1'b1)) begin
+                address_nxt <= grem0[22:1];
+                f_nxt = 1'b1;
                 grem0_nxt = 1'b0;
                 points0 = 8'b00000001 + points0;
             end
-//            else begin
-//                    f_nxt = 1'b0;
-//                    grem0_nxt = 1'b1;
-//                end
-            else if((car0[21:11] >= grem1[22:12] - CARW) && (car0[21:11] <= grem1[22:12] + GREMW) && (car0[10:0] >= grem1[11:1] - GREMCARH) && (car0[10:0] <= grem1[11:1] + GREMCARH) && (grem1[0] == 1'b1)) begin
-//                address_nxt <= grem1[22:1];
-//                f_nxt = 1'b1;
+            else if((car0[21:11] >= grem1[22:12] - CARW) && (car0[21:11] <= grem1[22:12] + GREMW) && (car0[10:0] >= grem1[11:1] - GREMCARH) && (car0[10:0] <= grem1[11:1] + GREMCARH) && (grem1[0] == 1'b1) && (car0_enable == 1'b1)) begin
+                address_nxt <= grem1[22:1];
+                f_nxt = 1'b1;
                 grem1_nxt = 1'b0;
                 points0 = 8'b00000001 + points0;
             end
-//            else begin
-//                    f_nxt = 1'b0;
-//                    grem1_nxt = 1'b1;
-//                end
-            else if((car1[21:11] >= grem0[22:12] - CARW) && (car1[21:11] <= grem0[22:12] + GREMW) && (car1[10:0] >= grem0[11:1] - GREMCARH) && (car1[10:0] <= grem0[11:1] + GREMCARH) && (grem0[0] == 1'b1)) begin
-//                address_nxt <= grem0[22:1];
-//                f_nxt = 1'b1;
+            else if((car1[21:11] >= grem0[22:12] - CARW) && (car1[21:11] <= grem0[22:12] + GREMW) && (car1[10:0] >= grem0[11:1] - GREMCARH) && (car1[10:0] <= grem0[11:1] + GREMCARH) && (grem0[0] == 1'b1) && (car1_enable == 1'b1)) begin
+                address_nxt <= grem0[22:1];
+                f_nxt = 1'b1;
                 grem0_nxt = 1'b0;
                 points1 = 8'b00000001 + points1;
             end
-//            else begin
-//                    f_nxt = 1'b0;
-//                    grem0_nxt = 1'b1;
-//                end
-            else if((car1[21:11] >= grem1[22:12] - CARW) && (car1[21:11] <= grem1[22:12] + GREMW) && (car1[10:0] >= grem1[11:1] - GREMCARH) && (car1[10:0] <= grem1[11:1] + GREMCARH) && (grem1[0] == 1'b1)) begin
-//                address_nxt <= grem1[22:1];
-//                f_nxt = 1'b1;
+            else if((car1[21:11] >= grem1[22:12] - CARW) && (car1[21:11] <= grem1[22:12] + GREMW) && (car1[10:0] >= grem1[11:1] - GREMCARH) && (car1[10:0] <= grem1[11:1] + GREMCARH) && (grem1[0] == 1'b1) && (car1_enable == 1'b1)) begin
+                address_nxt <= grem1[22:1];
+                f_nxt = 1'b1;
                 grem1_nxt = 1'b0;
                 points1 = 8'b00000001 + points1;
             end
             else begin
-//                f_nxt = 1'b0;
+                f_nxt = 1'b0;
                 grem1_nxt = 1'b1;
                 grem0_nxt = 1'b1;
             end
         end
         
-//assign f_out = f_nxt;
+always @*
+    if(color)
+        rgb_nxt <= 12'hfff;
+    else 
+        rgb_nxt <= rgb_in;
+
+assign address = address_nxt;        
+assign f0 = f_nxt;
 assign grem0_out = grem0_nxt;
 assign grem1_out = grem1_nxt;
 assign points0_out = points0;
@@ -115,7 +137,7 @@ always @(posedge clk)
      vcount_out = vcount_in;
      vsync_out = vsync_in;
      vblnk_out = vblnk_in;
-     rgb_out = rgb_in;
+     rgb_out = rgb_nxt;
  end 
    
 endmodule

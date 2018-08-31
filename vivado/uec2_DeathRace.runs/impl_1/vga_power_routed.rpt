@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date             : Thu Aug 30 02:29:21 2018
+| Date             : Fri Aug 31 18:31:43 2018
 | Host             : DESKTOP-6F3MM83 running 64-bit major release  (build 9200)
 | Command          : report_power -file vga_power_routed.rpt -pb vga_power_summary_routed.pb -rpx vga_power_routed.rpx
 | Design           : vga
@@ -52,18 +52,18 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.001 |        5 |       --- |             --- |
-| Slice Logic             |     0.002 |     4558 |       --- |             --- |
-|   LUT as Logic          |     0.002 |     2979 |     20800 |           14.32 |
-|   CARRY4                |    <0.001 |       92 |      8150 |            1.13 |
-|   Register              |    <0.001 |      312 |     41600 |            0.75 |
+| Clocks                  |     0.002 |        5 |       --- |             --- |
+| Slice Logic             |     0.002 |     5350 |       --- |             --- |
+|   LUT as Logic          |     0.002 |     3484 |     20800 |           16.75 |
+|   CARRY4                |    <0.001 |      140 |      8150 |            1.72 |
+|   Register              |    <0.001 |      529 |     41600 |            1.27 |
 |   F7/F8 Muxes           |    <0.001 |      833 |     32600 |            2.56 |
 |   LUT as Shift Register |    <0.001 |        1 |      9600 |            0.01 |
-|   BUFG                  |    <0.001 |        1 |        32 |            3.13 |
-|   Others                |     0.000 |       21 |       --- |             --- |
-| Signals                 |     0.002 |     2285 |       --- |             --- |
+|   BUFG                  |    <0.001 |        2 |        32 |            6.25 |
+|   Others                |     0.000 |       23 |       --- |             --- |
+| Signals                 |     0.002 |     2951 |       --- |             --- |
 | MMCM                    |     0.106 |        1 |         5 |           20.00 |
-| I/O                     |     0.006 |       27 |       106 |           25.47 |
+| I/O                     |     0.005 |       27 |       106 |           25.47 |
 | Static Power            |     0.072 |          |           |                 |
 | Total                   |     0.189 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
@@ -75,9 +75,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.016 |       0.006 |      0.010 |
+| Vccint    |       1.000 |     0.016 |       0.007 |      0.010 |
 | Vccaux    |       1.800 |     0.071 |       0.059 |      0.013 |
-| Vcco33    |       3.300 |     0.003 |       0.002 |      0.001 |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -98,7 +98,7 @@ Table of Contents
 | User Input Data             | Confidence | Details                                                | Action                                                                                                             |
 +-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | Design implementation state | High       | Design is routed                                       |                                                                                                                    |
-| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification  | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
 | I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
 | Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
 | Device models               | High       | Device models are Production                           |                                                                                                                    |
@@ -160,7 +160,8 @@ Table of Contents
 |     mycar            |    <0.001 |
 |   myClk              |     0.106 |
 |     inst             |     0.106 |
-|   my_collisions      |    <0.001 |
+|   my_collisions      |     0.001 |
+|     my_headstones    |     0.001 |
 |   my_gremlins        |     0.003 |
 |     my_gremlin0      |     0.001 |
 |     my_gremlin1      |     0.001 |

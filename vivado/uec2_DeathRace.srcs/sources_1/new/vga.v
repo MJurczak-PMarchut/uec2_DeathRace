@@ -89,6 +89,8 @@ wire TimeOut;
   collision my_collisions(
     .clk(pclk),
     .rst(!rst),
+    .car0_enable(!TimeOut),
+    .car1_enable(!TimeOut),
     .vga_in(vga_bus[1]),
     .vga_out(vga_bus[2]),
     .grem0(gremlin0),

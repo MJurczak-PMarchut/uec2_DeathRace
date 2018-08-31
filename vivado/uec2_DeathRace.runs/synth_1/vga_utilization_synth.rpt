@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
-| Date         : Thu Aug 30 02:27:02 2018
+| Date         : Fri Aug 31 18:30:03 2018
 | Host         : DESKTOP-6F3MM83 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file vga_utilization_synth.rpt -pb vga_utilization_synth.pb
 | Design       : vga
@@ -30,13 +30,13 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 2981 |     0 |     20800 | 14.33 |
-|   LUT as Logic             | 2980 |     0 |     20800 | 14.33 |
+| Slice LUTs*                | 3487 |     0 |     20800 | 16.76 |
+|   LUT as Logic             | 3486 |     0 |     20800 | 16.76 |
 |   LUT as Memory            |    1 |     0 |      9600 |  0.01 |
 |     LUT as Distributed RAM |    0 |     0 |           |       |
 |     LUT as Shift Register  |    1 |     0 |           |       |
-| Slice Registers            |  317 |     0 |     41600 |  0.76 |
-|   Register as Flip Flop    |  317 |     0 |     41600 |  0.76 |
+| Slice Registers            |  534 |     0 |     41600 |  1.28 |
+|   Register as Flip Flop    |  534 |     0 |     41600 |  1.28 |
 |   Register as Latch        |    0 |     0 |     41600 |  0.00 |
 | F7 Muxes                   |  825 |     0 |     16300 |  5.06 |
 | F8 Muxes                   |    8 |     0 |      8150 |  0.10 |
@@ -56,10 +56,10 @@ Table of Contents
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 26    |          Yes |           - |          Set |
-| 76    |          Yes |           - |        Reset |
-| 12    |          Yes |         Set |            - |
-| 203   |          Yes |       Reset |            - |
+| 28    |          Yes |           - |          Set |
+| 270   |          Yes |           - |        Reset |
+| 21    |          Yes |         Set |            - |
+| 215   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -118,7 +118,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    4 |     0 |        32 | 12.50 |
+| BUFGCTRL   |    5 |     0 |        32 | 15.63 |
 | BUFIO      |    0 |     0 |        20 |  0.00 |
 | MMCME2_ADV |    1 |     0 |         5 | 20.00 |
 | PLLE2_ADV  |    0 |     0 |         5 |  0.00 |
@@ -152,24 +152,24 @@ Table of Contents
 +------------+------+---------------------+
 |  Ref Name  | Used | Functional Category |
 +------------+------+---------------------+
-| LUT6       | 2363 |                 LUT |
+| LUT6       | 2591 |                 LUT |
 | MUXF7      |  825 |               MuxFx |
-| LUT5       |  303 |                 LUT |
-| LUT4       |  271 |                 LUT |
-| LUT2       |  231 |                 LUT |
-| FDRE       |  203 |        Flop & Latch |
-| LUT3       |  119 |                 LUT |
-| CARRY4     |   92 |          CarryLogic |
-| FDCE       |   76 |        Flop & Latch |
-| FDPE       |   26 |        Flop & Latch |
+| LUT4       |  482 |                 LUT |
+| LUT5       |  380 |                 LUT |
+| FDCE       |  270 |        Flop & Latch |
+| LUT2       |  216 |                 LUT |
+| FDRE       |  215 |        Flop & Latch |
+| LUT3       |  142 |                 LUT |
+| CARRY4     |  140 |          CarryLogic |
+| FDPE       |   28 |        Flop & Latch |
+| FDSE       |   21 |        Flop & Latch |
 | OBUF       |   15 |                  IO |
 | IBUF       |   12 |                  IO |
-| FDSE       |   12 |        Flop & Latch |
 | LUT1       |   11 |                 LUT |
 | MUXF8      |    8 |               MuxFx |
+| BUFG       |    3 |               Clock |
 | BUFH       |    2 |               Clock |
 | BUFGCTRL   |    2 |               Clock |
-| BUFG       |    2 |               Clock |
 | SRL16E     |    1 |  Distributed Memory |
 | ODDR       |    1 |                  IO |
 | MMCME2_ADV |    1 |               Clock |

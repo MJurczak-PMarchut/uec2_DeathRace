@@ -21,7 +21,7 @@
 `include "verilog_macro_bus.vh"
 
 module gremlin(
-    input wire clk, grem_enable, reset,
+    input wire clk, grem_enable,
     input wire [`VGA_BUS_SIZE-1:0] vga_in,
     input wire [15:0] char_pixels,
     output wire [2:0] char_xy,
@@ -51,7 +51,7 @@ reg [9:0] i = 0;
 reg [2:0] j = J, char_xy_nxt;
 reg [10:0] hcount_char, vcount_char, n = LEFT_EDGE , m = UP_EDGE;
 reg color_nxt;
-reg edge_f, grem;
+reg edge_f;
 
 
 always @(posedge clk)
@@ -62,29 +62,14 @@ begin
     else m = UP_EDGE;
 end
 
-//always @(posedge reset)
-//begin
-//    xpos_nxt <= XPOS_INIT;
-//    ypos_nxt <= YPOS_INIT;
-//    direction <= j;
-//end
 
-//always @(posedge grem_enable)
-//begin
-//    xpos_nxt <= n;
-//    ypos_nxt <= m;
-//    direction <= j;
-//end
-
-always @(posedge vsync_in)// or negedge grem_enable)
+always @(posedge vsync_in)
 begin
-//grem <= grem_enable;
     if(grem_enable == 1'b0)
     begin
         xpos_nxt <= n;
         ypos_nxt <= m;
         direction <= j;
-//        grem <= 1'b1;
     end
     else
     begin

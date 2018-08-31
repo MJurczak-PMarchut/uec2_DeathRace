@@ -2,7 +2,6 @@
 
 module gremlin_rom
     (
-        input  wire        clk,
         input  wire [2:0] addr1,
         input wire [4:0] addr2,            // {char_code[6:0], char_line[3:0]}
         output wire  [15:0]  char_line_pixels // pixels of the character line

@@ -19,9 +19,6 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-//obecnoœæ gremlina
-//obrys 16na32
-//pozycja piksela na ludziku
 `include "verilog_macro_bus.vh"
 
 module gremlins_position(
@@ -59,7 +56,6 @@ reg [11:0] rgb_nxt;
   );
   
   gremlin_rom my_gremlin0_rom(
-    .clk(pclk),
     .addr1(addr1),
     .addr2(addr2),
     .char_line_pixels(char_line_pix)
@@ -79,24 +75,16 @@ reg [11:0] rgb_nxt;
   );
   
   gremlin_rom my_gremlin1_rom(
-    .clk(pclk),
     .addr1(addr1_1),
     .addr2(addr2_1),
     .char_line_pixels(char_line_pix_1)
   );  
-
 
 always @*
     if((grem0_out[0] & grem0_out[23]) || (grem1_out[0] & grem1_out[23]))
         rgb_nxt <= 12'hfff;
     else 
         rgb_nxt <= rgb_in;
-
-
-//always @(posedge vsync_in)
-//    if(grem0_nxt[0] == 0) grem0_nxt[0] = ~grem0_nxt[0];
-//    else if (grem1_nxt[0] == 0) grem1_nxt[0] = ~grem1_nxt[0];
-
 
 always @(posedge pclk)
  begin
