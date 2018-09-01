@@ -16,8 +16,9 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param synth.incrementalSynthesisCache C:/Users/pauli/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-9428-DESKTOP-6F3MM83/incrSyn
+set_param synth.incrementalSynthesisCache C:/Users/pauli/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-12208-DESKTOP-6F3MM83/incrSyn
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 set_msg_config -id {Synth 8-256} -limit 10000
@@ -66,6 +67,7 @@ read_verilog -library xil_defaultlib {
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/vga_timing.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/vga.v
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v
+  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstone_rom.v
 }
 read_vhdl -library xil_defaultlib {
   C:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/new/MouseCtl.vhd

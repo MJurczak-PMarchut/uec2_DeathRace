@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1535732891">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1535830026">
   <File Type="PWROPT-DCP" Name="vga_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="vga_power_routed.rpt"/>
   <File Type="PA-TCL" Name="vga.tcl"/>
@@ -293,6 +293,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/headstones.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/headstone_rom.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

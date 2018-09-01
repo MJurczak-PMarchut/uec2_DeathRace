@@ -38,14 +38,14 @@ module vga_timing (
   always @(posedge pclk or negedge rst) 
 //  begin 
   if(!rst)
-    fork
-      hblnk_out = 0;
-      hcount_out = 0;  
-      vcount_out = 0;
-      vblnk_out = 0;
-      vsync_out = 0;
-      hsync_out = 0;
-    join
+    begin
+      hblnk_out <= 0;
+      hcount_out <= 0;  
+      vcount_out <= 0;
+      vblnk_out <= 0;
+      vsync_out <= 0;
+      hsync_out <= 0;
+    end
     else
         if (hcount_out == 1055)
             begin

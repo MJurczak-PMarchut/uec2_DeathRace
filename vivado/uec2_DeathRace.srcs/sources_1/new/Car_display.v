@@ -40,7 +40,7 @@ module Car_display(
     `VGA_OUT_WIRE
     `VGA_MERGE_AT_OUTPUT(vga_out)
     
-    wire [4:0] Car_xpixel,Car_ypixel;
+    wire [4:0] Car_xpixel, Car_ypixel;
     wire [11:0] rgb;
     
      cardata mycar(
@@ -53,8 +53,8 @@ module Car_display(
     reg en,st;
     initial 
         fork
-            xpos = X;
-            ypos = Y;
+            xpos <= X;
+            ypos <= Y;
         join
     
     reg frame_count = 0;
@@ -79,9 +79,9 @@ module Car_display(
     always @(posedge clk or negedge rst)
         if(!rst)
             fork
-                xpos = X;
-                ypos = Y;
-                frame_count = 0;
+                xpos <= X;
+                ypos <= Y;
+                frame_count <= 0;
              join
         else
             if(en && go)

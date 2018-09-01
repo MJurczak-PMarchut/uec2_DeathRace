@@ -29,7 +29,8 @@ module collision(
     input wire [`VGA_BUS_SIZE-1:0] vga_in,
     output wire [`VGA_BUS_SIZE-1:0] vga_out,
     output wire [7:0] points0_out, points1_out,
-    output wire grem0_out, grem1_out
+    output wire grem0_out, grem1_out,
+    output wire [2:0] i
     );
 
     `VGA_SPLIT_INPUT(vga_in)
@@ -38,21 +39,16 @@ module collision(
 
 wire color, f0, f1;
 wire [21:0] address;
-wire [2:0] addr1;
-wire [4:0] addr2;
-wire [15:0] char_line_pix;
 
 reg f_nxt = 0;
 reg [21:0] address_nxt = 0;
 reg grem0_nxt = 1'b1, grem1_nxt = 1'b1;
 reg [7:0] points0 = 0, points1 = 0;
-reg [11:0] rgb_nxt;
+reg [11:0] rgb_nxt = 0;
 
 localparam CARW = 32;    
 localparam GREMCARH = 32;
 localparam GREMW = 16;
-
-
 
 headstones my_headstones(
     .clk(clk),
@@ -60,27 +56,19 @@ headstones my_headstones(
     .vga_in(vga_in),
     .f_in(f0),
     .address(address),
-    .char_pixels(char_line_pix),
-    .color(color),
-    .char_xy(addr1),
-    .char_line(addr2),
-    .f_out(f1)
+    .color_out(color),
+    .f_out(f1),
+    .i_out(i)
 );
-
-  gremlin_rom my_headstone_rom(
-    .addr1(addr1),
-    .addr2(addr2),
-    .char_line_pixels(char_line_pix)
-  );
 
 always @(posedge vsync_in or negedge rst)
     if(!rst)
         fork
-            f_nxt = 1'b0;
-            points0 = 8'b0;
-            points1 = 8'b0;
-            grem0_nxt = 1'b1;
-            grem1_nxt = 1'b1;
+            f_nxt <= 1'b0;
+            points0 <= 8'b0;
+            points1 <= 8'b0;
+            grem0_nxt <= 1'b1;
+            grem1_nxt <= 1'b1;
         join
     else
         begin

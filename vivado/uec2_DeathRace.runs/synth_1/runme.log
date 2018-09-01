@@ -14,13 +14,13 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 8908 
+INFO: Helper process launched with PID 14696 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 389.012 ; gain = 99.441
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 389.082 ; gain = 100.156
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'vga' [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/vga.v:16]
-INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/vga.v:47]
-INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/vga.v:47]
+INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/vga.v:48]
+INFO: [Synth 8-5534] Detected attribute (* ASYNC_REG = "TRUE" *) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/vga.v:48]
 INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [c:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0.v:71]
 INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0_clk_wiz' [c:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:69]
 INFO: [Synth 8-5534] Detected attribute (* KEEP = "TRUE" *) [c:/Users/pauli/Documents/GitHub/uec2_DeathRace/src/sources_1/ip/clk_wiz_0/clk_wiz_0_clk_wiz.v:127]
@@ -111,26 +111,31 @@ INFO: [Synth 8-6157] synthesizing module 'collision' [C:/Users/pauli/Documents/G
 	Parameter GREMCARH bound to: 32 - type: integer 
 	Parameter GREMW bound to: 16 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'headstones' [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:23]
-WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:44]
-WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:55]
-WARNING: [Synth 8-6014] Unused sequential element hcount_char_reg was removed.  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:74]
-WARNING: [Synth 8-5788] Register f_nxt_reg in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:57]
-WARNING: [Synth 8-5788] Register i_reg in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:58]
-WARNING: [Synth 8-5788] Register vcount_char_reg in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:73]
-WARNING: [Synth 8-5788] Register color0_reg in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:77]
-WARNING: [Synth 8-5788] Register color1_reg in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:88]
-WARNING: [Synth 8-5788] Register color2_reg in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:98]
-WARNING: [Synth 8-5788] Register color3_reg in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:108]
-WARNING: [Synth 8-5788] Register color4_reg in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:118]
-WARNING: [Synth 8-5788] Register color5_reg in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:128]
-WARNING: [Synth 8-5788] Register color6_reg in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:138]
-WARNING: [Synth 8-5788] Register color7_reg in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:148]
-INFO: [Synth 8-6155] done synthesizing module 'headstones' (10#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:23]
-INFO: [Synth 8-6157] synthesizing module 'gremlin_rom' [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlin_rom.v:3]
-INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlin_rom.v:18]
-INFO: [Synth 8-6155] done synthesizing module 'gremlin_rom' (11#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlin_rom.v:3]
-WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/collision.v:78]
-WARNING: [Synth 8-5788] Register address_nxt_reg in module collision is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/collision.v:89]
+INFO: [Synth 8-6157] synthesizing module 'headstone_rom' [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstone_rom.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'headstone_rom' (10#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstone_rom.v:3]
+WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:89]
+WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:100]
+WARNING: [Synth 8-5788] Register f_nxt_reg in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:104]
+WARNING: [Synth 8-5788] Register vcount_char_reg[7] in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:117]
+WARNING: [Synth 8-5788] Register vcount_char_reg[6] in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:117]
+WARNING: [Synth 8-5788] Register vcount_char_reg[5] in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:117]
+WARNING: [Synth 8-5788] Register vcount_char_reg[4] in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:117]
+WARNING: [Synth 8-5788] Register vcount_char_reg[3] in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:117]
+WARNING: [Synth 8-5788] Register vcount_char_reg[2] in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:117]
+WARNING: [Synth 8-5788] Register vcount_char_reg[1] in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:117]
+WARNING: [Synth 8-5788] Register vcount_char_reg[0] in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:117]
+WARNING: [Synth 8-5788] Register hcount_char_reg[7] in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:118]
+WARNING: [Synth 8-5788] Register hcount_char_reg[6] in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:118]
+WARNING: [Synth 8-5788] Register hcount_char_reg[5] in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:118]
+WARNING: [Synth 8-5788] Register hcount_char_reg[4] in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:118]
+WARNING: [Synth 8-5788] Register hcount_char_reg[3] in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:118]
+WARNING: [Synth 8-5788] Register hcount_char_reg[2] in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:118]
+WARNING: [Synth 8-5788] Register hcount_char_reg[1] in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:118]
+WARNING: [Synth 8-5788] Register hcount_char_reg[0] in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:118]
+WARNING: [Synth 8-5788] Register color_reg in module headstones is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:119]
+INFO: [Synth 8-6155] done synthesizing module 'headstones' (11#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/headstones.v:23]
+WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/collision.v:66]
+WARNING: [Synth 8-5788] Register address_nxt_reg in module collision is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/collision.v:77]
 INFO: [Synth 8-6155] done synthesizing module 'collision' (12#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/collision.v:23]
 INFO: [Synth 8-6157] synthesizing module 'gremlins_position' [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlins_position.v:24]
 	Parameter GREMH bound to: 32 - type: integer 
@@ -145,6 +150,9 @@ INFO: [Synth 8-6157] synthesizing module 'gremlin' [C:/Users/pauli/Documents/Git
 	Parameter UP_EDGE bound to: 105 - type: integer 
 	Parameter DOWN_EDGE bound to: 563 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'gremlin' (13#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlin.v:23]
+INFO: [Synth 8-6157] synthesizing module 'gremlin_rom' [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlin_rom.v:3]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlin_rom.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'gremlin_rom' (14#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlin_rom.v:3]
 INFO: [Synth 8-6157] synthesizing module 'gremlin__parameterized0' [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlin.v:23]
 	Parameter I bound to: 263 - type: integer 
 	Parameter J bound to: 3 - type: integer 
@@ -154,8 +162,8 @@ INFO: [Synth 8-6157] synthesizing module 'gremlin__parameterized0' [C:/Users/pau
 	Parameter RIGHT_EDGE bound to: 779 - type: integer 
 	Parameter UP_EDGE bound to: 105 - type: integer 
 	Parameter DOWN_EDGE bound to: 563 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'gremlin__parameterized0' (13#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlin.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'gremlins_position' (14#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlins_position.v:24]
+INFO: [Synth 8-6155] done synthesizing module 'gremlin__parameterized0' (14#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlin.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'gremlins_position' (15#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlins_position.v:24]
 INFO: [Synth 8-6157] synthesizing module 'Car_display' [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/Car_display.v:23]
 	Parameter X bound to: 500 - type: integer 
 	Parameter Y bound to: 500 - type: integer 
@@ -168,35 +176,35 @@ INFO: [Synth 8-6157] synthesizing module 'cardata' [C:/Users/pauli/Documents/Git
 	Parameter lefthdeg bound to: 2'b11 
 	Parameter subs bound to: 5'b11111 
 INFO: [Synth 8-3876] $readmem data file './datacar.data' is read successfully [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/cardata.v:41]
-INFO: [Synth 8-6155] done synthesizing module 'cardata' (15#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/cardata.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'cardata' (16#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/cardata.v:23]
 WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/Car_display.v:81]
-INFO: [Synth 8-6155] done synthesizing module 'Car_display' (16#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/Car_display.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Car_display' (17#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/Car_display.v:23]
 INFO: [Synth 8-6157] synthesizing module 'Car_display__parameterized0' [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/Car_display.v:23]
 	Parameter X bound to: 300 - type: integer 
 	Parameter Y bound to: 500 - type: integer 
 	Parameter Color bound to: 3'b100 
 WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/Car_display.v:55]
 WARNING: [Synth 8-290] fork/join block will be implemented as sequential block [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/Car_display.v:81]
-INFO: [Synth 8-6155] done synthesizing module 'Car_display__parameterized0' (16#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/Car_display.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Car_display__parameterized0' (17#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/Car_display.v:23]
 INFO: [Synth 8-6157] synthesizing module 'game_bg' [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/game_bg.v:23]
 INFO: [Synth 8-6157] synthesizing module 'drawNumber' [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/drawNumber.v:23]
 	Parameter xpos bound to: 11'b00000000000 
 	Parameter ypos bound to: 11'b00000000000 
 INFO: [Synth 8-6157] synthesizing module 'char_rom' [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/char_rom.v:9]
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/char_rom.v:21]
-INFO: [Synth 8-6155] done synthesizing module 'char_rom' (17#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/char_rom.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'drawNumber' (18#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/drawNumber.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'char_rom' (18#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/char_rom.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'drawNumber' (19#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/drawNumber.v:23]
 INFO: [Synth 8-6157] synthesizing module 'drawNumber__parameterized0' [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/drawNumber.v:23]
 	Parameter xpos bound to: 11'b00101010000 
 	Parameter ypos bound to: 11'b00000000000 
-INFO: [Synth 8-6155] done synthesizing module 'drawNumber__parameterized0' (18#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/drawNumber.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'drawNumber__parameterized0' (19#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/drawNumber.v:23]
 INFO: [Synth 8-6157] synthesizing module 'drawNumber__parameterized1' [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/drawNumber.v:23]
 	Parameter xpos bound to: 11'b01010100000 
 	Parameter ypos bound to: 11'b00000000000 
-INFO: [Synth 8-6155] done synthesizing module 'drawNumber__parameterized1' (18#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/drawNumber.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'game_bg' (19#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/game_bg.v:23]
-WARNING: [Synth 8-350] instance 'Game_bg' of module 'game_bg' requires 8 connections, but only 7 given [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/vga.v:142]
-INFO: [Synth 8-6155] done synthesizing module 'vga' (20#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/vga.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'drawNumber__parameterized1' (19#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/drawNumber.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'game_bg' (20#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/game_bg.v:23]
+WARNING: [Synth 8-350] instance 'Game_bg' of module 'game_bg' requires 8 connections, but only 7 given [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/vga.v:145]
+INFO: [Synth 8-6155] done synthesizing module 'vga' (21#1) [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/vga.v:16]
 WARNING: [Synth 8-3331] design game_bg has unconnected port NoOfPlayers
 WARNING: [Synth 8-3331] design gremlin__parameterized0 has unconnected port vga_in[34]
 WARNING: [Synth 8-3331] design gremlin__parameterized0 has unconnected port vga_in[33]
@@ -224,6 +232,8 @@ WARNING: [Synth 8-3331] design gremlin has unconnected port vga_in[25]
 WARNING: [Synth 8-3331] design gremlin has unconnected port vga_in[24]
 WARNING: [Synth 8-3331] design gremlin has unconnected port vga_in[23]
 WARNING: [Synth 8-3331] design gremlin has unconnected port vga_in[22]
+WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[37]
+WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[36]
 WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[35]
 WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[34]
 WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[33]
@@ -249,7 +259,7 @@ WARNING: [Synth 8-3331] design vga has unconnected port sw[12]
 WARNING: [Synth 8-3331] design vga has unconnected port sw[10]
 WARNING: [Synth 8-3331] design vga has unconnected port sw[4]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 499.840 ; gain = 210.270
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 500.188 ; gain = 211.262
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -262,10 +272,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 499.840 ; gain = 210.270
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 500.188 ; gain = 211.262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 499.840 ; gain = 210.270
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 500.188 ; gain = 211.262
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -297,16 +307,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   BUFGCE => BUFGCTRL: 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 827.297 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 827.730 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 827.297 ; gain = 537.727
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 827.730 ; gain = 538.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 827.297 ; gain = 537.727
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 827.730 ; gain = 538.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -314,17 +324,25 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for myClk. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for myClk/inst. (constraint file  C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.runs/synth_1/dont_touch.xdc, line 10).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 827.297 ; gain = 537.727
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 827.730 ; gain = 538.805
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "vcount_out" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "hsync_out" won't be mapped to RAM because it is too sparse
-INFO: [Synth 8-5545] ROM "data" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5544] ROM "addr_reg[7]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_reg[6]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_reg[5]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_reg[4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_reg[3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_reg[2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_reg[1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "addr_reg[0]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlin.v:78]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlin.v:78]
 INFO: [Synth 8-5546] ROM "i" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "i" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5544] ROM "xpos_nxt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "ypos_nxt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "data" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlin.v:78]
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlin.v:78]
 INFO: [Synth 8-5546] ROM "i" won't be mapped to RAM because it is too sparse
@@ -338,7 +356,7 @@ INFO: [Synth 8-5546] ROM "Timer1" won't be mapped to RAM because it is too spars
 WARNING: [Synth 8-327] inferring latch for variable 'data_reg' [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/imports/Desktop/gremlin_rom.v:14]
 WARNING: [Synth 8-327] inferring latch for variable 'data_reg' [C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.srcs/sources_1/new/char_rom.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 827.297 ; gain = 537.727
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 827.730 ; gain = 538.805
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -367,20 +385,21 @@ Detailed RTL Component Info :
 +---Registers : 
 	               22 Bit    Registers := 9     
 	               12 Bit    Registers := 2     
-	               11 Bit    Registers := 19    
+	               11 Bit    Registers := 34    
 	               10 Bit    Registers := 2     
-	                8 Bit    Registers := 5     
+	                8 Bit    Registers := 6     
 	                6 Bit    Registers := 1     
 	                4 Bit    Registers := 3     
-	                3 Bit    Registers := 7     
-	                1 Bit    Registers := 36    
+	                3 Bit    Registers := 8     
+	                1 Bit    Registers := 28    
 +---Muxes : 
-	   2 Input     22 Bit        Muxes := 35    
-	   8 Input     22 Bit        Muxes := 32    
-	  97 Input     16 Bit        Muxes := 3     
+	   2 Input     22 Bit        Muxes := 3     
+	  32 Input     16 Bit        Muxes := 8     
+	  97 Input     16 Bit        Muxes := 2     
 	   2 Input     12 Bit        Muxes := 10    
-	   2 Input     11 Bit        Muxes := 38    
+	   2 Input     11 Bit        Muxes := 28    
 	   5 Input     10 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
 	   2 Input      6 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 4     
 	  17 Input      4 Bit        Muxes := 2     
@@ -388,8 +407,7 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 20    
 	   8 Input      2 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 45    
-	   8 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 52    
 	   9 Input      1 Bit        Muxes := 4     
 	 161 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
@@ -403,6 +421,7 @@ Module vga
 Detailed RTL Component Info : 
 +---Registers : 
 	                4 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
 	                1 Bit    Registers := 2     
 Module clk_wiz_0_clk_wiz 
 Detailed RTL Component Info : 
@@ -418,6 +437,10 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     11 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 3     
+Module headstone_rom 
+Detailed RTL Component Info : 
++---Muxes : 
+	  32 Input     16 Bit        Muxes := 1     
 Module headstones 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -425,18 +448,13 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
 	               22 Bit    Registers := 8     
-	               11 Bit    Registers := 1     
+	               11 Bit    Registers := 16    
+	                8 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 9     
+	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     22 Bit        Muxes := 32    
-	   8 Input     22 Bit        Muxes := 32    
-	   8 Input      1 Bit        Muxes := 1     
-Module gremlin_rom 
-Detailed RTL Component Info : 
-+---Muxes : 
-	  97 Input     16 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
 Module collision 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -472,6 +490,11 @@ Detailed RTL Component Info :
 	   8 Input      2 Bit        Muxes := 1     
 	   9 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 11    
+Module gremlin_rom 
+Detailed RTL Component Info : 
++---Muxes : 
+	  97 Input     16 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 Module gremlin__parameterized0 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -514,7 +537,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 4     
-	   2 Input     11 Bit        Muxes := 17    
+	   2 Input     11 Bit        Muxes := 12    
 	   2 Input      5 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 2     
 Module Car_display__parameterized0 
@@ -529,7 +552,7 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 3     
 +---Muxes : 
 	   2 Input     12 Bit        Muxes := 4     
-	   2 Input     11 Bit        Muxes := 17    
+	   2 Input     11 Bit        Muxes := 12    
 	   2 Input      5 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 2     
 Module char_rom 
@@ -597,6 +620,22 @@ INFO: [Synth 8-5546] ROM "my_gremlin0/i" won't be mapped to RAM because it is to
 INFO: [Synth 8-5546] ROM "my_gremlin1/i" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "TimeOut" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-3331] design game_bg has unconnected port NoOfPlayers
+WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[37]
+WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[36]
+WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[35]
+WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[34]
+WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[33]
+WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[32]
+WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[31]
+WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[30]
+WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[29]
+WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[28]
+WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[27]
+WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[26]
+WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[25]
+WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[24]
+WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[23]
+WARNING: [Synth 8-3331] design headstones has unconnected port vga_in[22]
 WARNING: [Synth 8-3331] design collision has unconnected port grem0[23]
 WARNING: [Synth 8-3331] design collision has unconnected port grem1[23]
 WARNING: [Synth 8-3331] design vga has unconnected port ps2_data
@@ -607,26 +646,12 @@ WARNING: [Synth 8-3331] design vga has unconnected port sw[13]
 WARNING: [Synth 8-3331] design vga has unconnected port sw[12]
 WARNING: [Synth 8-3331] design vga has unconnected port sw[10]
 WARNING: [Synth 8-3331] design vga has unconnected port sw[4]
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_gremlins/my_gremlin0/n_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_gremlins/my_gremlin0/m_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_gremlins/my_gremlin1/n_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\my_gremlins/my_gremlin1/m_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_gremlins/\my_gremlin0/n_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_gremlins/\my_gremlin0/m_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_gremlins/\my_gremlin1/n_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (my_gremlins/\my_gremlin1/m_reg[10] )
 INFO: [Synth 8-3886] merging instance 'my_gremlins/my_gremlin0_rom/data_reg[8]' (LD) to 'my_gremlins/my_gremlin0_rom/data_reg[7]'
 INFO: [Synth 8-3886] merging instance 'my_gremlins/my_gremlin1_rom/data_reg[8]' (LD) to 'my_gremlins/my_gremlin1_rom/data_reg[7]'
-INFO: [Synth 8-3886] merging instance 'my_collisions/my_headstone_rom/data_reg[15]' (LD) to 'my_collisions/my_headstone_rom/data_reg[14]'
-INFO: [Synth 8-3886] merging instance 'my_collisions/my_headstone_rom/data_reg[14]' (LD) to 'my_collisions/my_headstone_rom/data_reg[13]'
-INFO: [Synth 8-3886] merging instance 'my_collisions/my_headstone_rom/data_reg[13]' (LD) to 'my_collisions/my_headstone_rom/data_reg[12]'
-INFO: [Synth 8-3886] merging instance 'my_collisions/my_headstone_rom/data_reg[12]' (LD) to 'my_collisions/my_headstone_rom/data_reg[11]'
-INFO: [Synth 8-3886] merging instance 'my_collisions/my_headstone_rom/data_reg[11]' (LD) to 'my_collisions/my_headstone_rom/data_reg[10]'
-INFO: [Synth 8-3886] merging instance 'my_collisions/my_headstone_rom/data_reg[10]' (LD) to 'my_collisions/my_headstone_rom/data_reg[5]'
-INFO: [Synth 8-3886] merging instance 'my_collisions/my_headstone_rom/data_reg[9]' (LD) to 'my_collisions/my_headstone_rom/data_reg[8]'
-INFO: [Synth 8-3886] merging instance 'my_collisions/my_headstone_rom/data_reg[8]' (LD) to 'my_collisions/my_headstone_rom/data_reg[7]'
-INFO: [Synth 8-3886] merging instance 'my_collisions/my_headstone_rom/data_reg[7]' (LD) to 'my_collisions/my_headstone_rom/data_reg[6]'
-INFO: [Synth 8-3886] merging instance 'my_collisions/my_headstone_rom/data_reg[5]' (LD) to 'my_collisions/my_headstone_rom/data_reg[4]'
-INFO: [Synth 8-3886] merging instance 'my_collisions/my_headstone_rom/data_reg[4]' (LD) to 'my_collisions/my_headstone_rom/data_reg[3]'
-INFO: [Synth 8-3886] merging instance 'my_collisions/my_headstone_rom/data_reg[3]' (LD) to 'my_collisions/my_headstone_rom/data_reg[2]'
-INFO: [Synth 8-3886] merging instance 'my_collisions/my_headstone_rom/data_reg[2]' (LD) to 'my_collisions/my_headstone_rom/data_reg[1]'
-INFO: [Synth 8-3886] merging instance 'my_collisions/my_headstone_rom/data_reg[1]' (LD) to 'my_collisions/my_headstone_rom/data_reg[0]'
 INFO: [Synth 8-3886] merging instance 'my_gremlins/rgb_out_reg[0]' (FDS) to 'my_gremlins/rgb_out_reg[11]'
 INFO: [Synth 8-3886] merging instance 'my_gremlins/rgb_out_reg[1]' (FDS) to 'my_gremlins/rgb_out_reg[11]'
 INFO: [Synth 8-3886] merging instance 'my_gremlins/rgb_out_reg[2]' (FDS) to 'my_gremlins/rgb_out_reg[11]'
@@ -638,85 +663,92 @@ INFO: [Synth 8-3886] merging instance 'my_gremlins/rgb_out_reg[7]' (FDS) to 'my_
 INFO: [Synth 8-3886] merging instance 'my_gremlins/rgb_out_reg[8]' (FDS) to 'my_gremlins/rgb_out_reg[11]'
 INFO: [Synth 8-3886] merging instance 'my_gremlins/rgb_out_reg[9]' (FDS) to 'my_gremlins/rgb_out_reg[11]'
 INFO: [Synth 8-3886] merging instance 'my_gremlins/rgb_out_reg[10]' (FDS) to 'my_gremlins/rgb_out_reg[11]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Game_bg/Player1ScoreDisp/MyChar/data_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Game_bg/TimerDisp/MyChar/data_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Game_bg/Player2ScoreDisp/MyChar/data_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Game_bg/\Player1ScoreDisp/MyChar/data_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Game_bg/\TimerDisp/MyChar/data_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (Game_bg/\Player2ScoreDisp/MyChar/data_reg[0] )
 INFO: [Synth 8-3886] merging instance 'my_collisions/rgb_out_reg[0]' (FDS) to 'my_collisions/rgb_out_reg[1]'
 INFO: [Synth 8-3886] merging instance 'my_collisions/rgb_out_reg[1]' (FDS) to 'my_collisions/rgb_out_reg[2]'
 INFO: [Synth 8-3886] merging instance 'my_collisions/rgb_out_reg[2]' (FDS) to 'my_collisions/rgb_out_reg[3]'
 INFO: [Synth 8-3886] merging instance 'b_reg[0]' (FD) to 'b_reg[1]'
 INFO: [Synth 8-3886] merging instance 'b_reg[1]' (FD) to 'b_reg[2]'
 INFO: [Synth 8-3886] merging instance 'b_reg[2]' (FD) to 'b_reg[3]'
-WARNING: [Synth 8-3332] Sequential element (vcount_char_reg[10]) is unused and will be removed from module headstones.
-WARNING: [Synth 8-3332] Sequential element (vcount_char_reg[9]) is unused and will be removed from module headstones.
-WARNING: [Synth 8-3332] Sequential element (vcount_char_reg[8]) is unused and will be removed from module headstones.
-WARNING: [Synth 8-3332] Sequential element (vcount_char_reg[7]) is unused and will be removed from module headstones.
-WARNING: [Synth 8-3332] Sequential element (vcount_char_reg[6]) is unused and will be removed from module headstones.
-WARNING: [Synth 8-3332] Sequential element (vcount_char_reg[5]) is unused and will be removed from module headstones.
-WARNING: [Synth 8-3332] Sequential element (vcount_char_reg[0]) is unused and will be removed from module headstones.
-WARNING: [Synth 8-3332] Sequential element (f_nxt_reg) is unused and will be removed from module headstones.
-WARNING: [Synth 8-3332] Sequential element (my_headstone_rom/data_reg[6]) is unused and will be removed from module collision.
-WARNING: [Synth 8-3332] Sequential element (my_headstone_rom/data_reg[0]) is unused and will be removed from module collision.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin0_rom/data_reg[15]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin0_rom/data_reg[14]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin0_rom/data_reg[13]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin0_rom/data_reg[12]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin0_rom/data_reg[11]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin0_rom/data_reg[10]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin0_rom/data_reg[9]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin0_rom/data_reg[7]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin0_rom/data_reg[6]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin0_rom/data_reg[5]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin0_rom/data_reg[4]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin0_rom/data_reg[3]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin0_rom/data_reg[2]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin0_rom/data_reg[1]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin0_rom/data_reg[0]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin1_rom/data_reg[15]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin1_rom/data_reg[14]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin1_rom/data_reg[13]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin1_rom/data_reg[12]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin1_rom/data_reg[11]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin1_rom/data_reg[10]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin1_rom/data_reg[9]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin1_rom/data_reg[7]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin1_rom/data_reg[6]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin1_rom/data_reg[5]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin1_rom/data_reg[4]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin1_rom/data_reg[3]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin1_rom/data_reg[2]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin1_rom/data_reg[1]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin1_rom/data_reg[0]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin0/m_reg[10]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin0/n_reg[10]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin1/m_reg[10]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (my_gremlins/my_gremlin1/n_reg[10]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/Player1ScoreDisp/MyChar/data_reg[0]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/TimerDisp/MyChar/data_reg[0]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/Player2ScoreDisp/MyChar/data_reg[0]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/Player1ScoreDisp/MyChar/data_reg[7]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/Player1ScoreDisp/MyChar/data_reg[6]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/Player1ScoreDisp/MyChar/data_reg[5]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/Player1ScoreDisp/MyChar/data_reg[4]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/Player1ScoreDisp/MyChar/data_reg[3]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/Player1ScoreDisp/MyChar/data_reg[2]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/Player1ScoreDisp/MyChar/data_reg[1]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/TimerDisp/MyChar/data_reg[7]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/TimerDisp/MyChar/data_reg[6]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/TimerDisp/MyChar/data_reg[5]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/TimerDisp/MyChar/data_reg[4]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/TimerDisp/MyChar/data_reg[3]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/TimerDisp/MyChar/data_reg[2]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/TimerDisp/MyChar/data_reg[1]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/Player2ScoreDisp/MyChar/data_reg[7]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/Player2ScoreDisp/MyChar/data_reg[6]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/Player2ScoreDisp/MyChar/data_reg[5]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/Player2ScoreDisp/MyChar/data_reg[4]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/Player2ScoreDisp/MyChar/data_reg[3]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/Player2ScoreDisp/MyChar/data_reg[2]) is unused and will be removed from module vga.
-WARNING: [Synth 8-3332] Sequential element (Game_bg/Player2ScoreDisp/MyChar/data_reg[1]) is unused and will be removed from module vga.
+WARNING: [Synth 8-3332] Sequential element (my_headstones/vcount_char_reg[0][0]) is unused and will be removed from module collision.
+WARNING: [Synth 8-3332] Sequential element (my_headstones/vcount_char_reg[1][0]) is unused and will be removed from module collision.
+WARNING: [Synth 8-3332] Sequential element (my_headstones/vcount_char_reg[2][0]) is unused and will be removed from module collision.
+WARNING: [Synth 8-3332] Sequential element (my_headstones/vcount_char_reg[3][0]) is unused and will be removed from module collision.
+WARNING: [Synth 8-3332] Sequential element (my_headstones/vcount_char_reg[4][0]) is unused and will be removed from module collision.
+WARNING: [Synth 8-3332] Sequential element (my_headstones/vcount_char_reg[5][0]) is unused and will be removed from module collision.
+WARNING: [Synth 8-3332] Sequential element (my_headstones/vcount_char_reg[6][0]) is unused and will be removed from module collision.
+WARNING: [Synth 8-3332] Sequential element (my_headstones/vcount_char_reg[7][0]) is unused and will be removed from module collision.
+WARNING: [Synth 8-3332] Sequential element (my_headstones/hcount_char_reg[0][0]) is unused and will be removed from module collision.
+WARNING: [Synth 8-3332] Sequential element (my_headstones/hcount_char_reg[1][0]) is unused and will be removed from module collision.
+WARNING: [Synth 8-3332] Sequential element (my_headstones/hcount_char_reg[2][0]) is unused and will be removed from module collision.
+WARNING: [Synth 8-3332] Sequential element (my_headstones/hcount_char_reg[3][0]) is unused and will be removed from module collision.
+WARNING: [Synth 8-3332] Sequential element (my_headstones/hcount_char_reg[4][0]) is unused and will be removed from module collision.
+WARNING: [Synth 8-3332] Sequential element (my_headstones/hcount_char_reg[5][0]) is unused and will be removed from module collision.
+WARNING: [Synth 8-3332] Sequential element (my_headstones/hcount_char_reg[6][0]) is unused and will be removed from module collision.
+WARNING: [Synth 8-3332] Sequential element (my_headstones/hcount_char_reg[7][0]) is unused and will be removed from module collision.
+WARNING: [Synth 8-3332] Sequential element (my_headstones/f_nxt_reg) is unused and will be removed from module collision.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin0_rom/data_reg[15]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin0_rom/data_reg[14]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin0_rom/data_reg[13]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin0_rom/data_reg[12]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin0_rom/data_reg[11]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin0_rom/data_reg[10]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin0_rom/data_reg[9]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin0_rom/data_reg[7]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin0_rom/data_reg[6]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin0_rom/data_reg[5]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin0_rom/data_reg[4]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin0_rom/data_reg[3]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin0_rom/data_reg[2]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin0_rom/data_reg[1]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin0_rom/data_reg[0]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin1_rom/data_reg[15]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin1_rom/data_reg[14]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin1_rom/data_reg[13]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin1_rom/data_reg[12]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin1_rom/data_reg[11]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin1_rom/data_reg[10]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin1_rom/data_reg[9]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin1_rom/data_reg[7]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin1_rom/data_reg[6]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin1_rom/data_reg[5]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin1_rom/data_reg[4]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin1_rom/data_reg[3]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin1_rom/data_reg[2]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin1_rom/data_reg[1]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin1_rom/data_reg[0]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin0/m_reg[10]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin0/n_reg[10]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin1/m_reg[10]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (my_gremlin1/n_reg[10]) is unused and will be removed from module gremlins_position.
+WARNING: [Synth 8-3332] Sequential element (Player1ScoreDisp/MyChar/data_reg[0]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (TimerDisp/MyChar/data_reg[0]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (Player2ScoreDisp/MyChar/data_reg[0]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (Player1ScoreDisp/MyChar/data_reg[7]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (Player1ScoreDisp/MyChar/data_reg[6]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (Player1ScoreDisp/MyChar/data_reg[5]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (Player1ScoreDisp/MyChar/data_reg[4]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (Player1ScoreDisp/MyChar/data_reg[3]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (Player1ScoreDisp/MyChar/data_reg[2]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (Player1ScoreDisp/MyChar/data_reg[1]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (TimerDisp/MyChar/data_reg[7]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (TimerDisp/MyChar/data_reg[6]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (TimerDisp/MyChar/data_reg[5]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (TimerDisp/MyChar/data_reg[4]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (TimerDisp/MyChar/data_reg[3]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (TimerDisp/MyChar/data_reg[2]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (TimerDisp/MyChar/data_reg[1]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (Player2ScoreDisp/MyChar/data_reg[7]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (Player2ScoreDisp/MyChar/data_reg[6]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (Player2ScoreDisp/MyChar/data_reg[5]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (Player2ScoreDisp/MyChar/data_reg[4]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (Player2ScoreDisp/MyChar/data_reg[3]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (Player2ScoreDisp/MyChar/data_reg[2]) is unused and will be removed from module game_bg.
+WARNING: [Synth 8-3332] Sequential element (Player2ScoreDisp/MyChar/data_reg[1]) is unused and will be removed from module game_bg.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:09 ; elapsed = 00:01:15 . Memory (MB): peak = 842.711 ; gain = 553.141
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:01 ; elapsed = 00:01:05 . Memory (MB): peak = 827.730 ; gain = 538.805
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -743,9 +775,9 @@ ROM:
 |cardata           | p_0_out                      | 4096x4        | LUT            | 
 |cardata           | p_0_out                      | 4096x4        | LUT            | 
 |char_rom          | data                         | 256x8         | LUT            | 
-|collision         | my_headstone_rom/data        | 128x16        | LUT            | 
 |gremlins_position | my_gremlin0_rom/data         | 128x16        | LUT            | 
 |gremlins_position | my_gremlin1_rom/data         | 128x16        | LUT            | 
+|cardata           | p_0_out                      | 4096x4        | LUT            | 
 |cardata           | p_0_out                      | 4096x4        | LUT            | 
 |cardata           | p_0_out                      | 4096x4        | LUT            | 
 |cardata           | p_0_out                      | 4096x4        | LUT            | 
@@ -793,13 +825,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:20 ; elapsed = 00:01:27 . Memory (MB): peak = 897.973 ; gain = 608.402
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:12 ; elapsed = 00:01:17 . Memory (MB): peak = 904.797 ; gain = 615.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:29 . Memory (MB): peak = 903.367 ; gain = 613.797
+Finished Timing Optimization : Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 910.633 ; gain = 621.707
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -811,7 +843,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:26 ; elapsed = 00:01:34 . Memory (MB): peak = 922.984 ; gain = 633.414
+Finished Technology Mapping : Time (s): cpu = 00:01:18 ; elapsed = 00:01:24 . Memory (MB): peak = 930.734 ; gain = 641.809
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -835,7 +867,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:28 ; elapsed = 00:01:35 . Memory (MB): peak = 922.984 ; gain = 633.414
+Finished IO Insertion : Time (s): cpu = 00:01:19 ; elapsed = 00:01:25 . Memory (MB): peak = 930.734 ; gain = 641.809
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -848,7 +880,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:28 ; elapsed = 00:01:35 . Memory (MB): peak = 922.984 ; gain = 633.414
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:19 ; elapsed = 00:01:25 . Memory (MB): peak = 930.734 ; gain = 641.809
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -860,25 +892,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:28 ; elapsed = 00:01:36 . Memory (MB): peak = 922.984 ; gain = 633.414
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:20 ; elapsed = 00:01:26 . Memory (MB): peak = 930.734 ; gain = 641.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:29 ; elapsed = 00:01:36 . Memory (MB): peak = 922.984 ; gain = 633.414
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:20 ; elapsed = 00:01:26 . Memory (MB): peak = 930.734 ; gain = 641.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:29 ; elapsed = 00:01:37 . Memory (MB): peak = 922.984 ; gain = 633.414
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:20 ; elapsed = 00:01:26 . Memory (MB): peak = 930.734 ; gain = 641.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:29 ; elapsed = 00:01:37 . Memory (MB): peak = 922.984 ; gain = 633.414
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:20 ; elapsed = 00:01:26 . Memory (MB): peak = 930.734 ; gain = 641.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -912,58 +944,58 @@ Report Cell Usage:
 |2     |BUFGCE     |     2|
 |3     |BUFH       |     2|
 |4     |CARRY4     |   140|
-|5     |LUT1       |    11|
-|6     |LUT2       |   216|
-|7     |LUT3       |   142|
-|8     |LUT4       |   482|
-|9     |LUT5       |   380|
-|10    |LUT6       |  2591|
+|5     |LUT1       |    12|
+|6     |LUT2       |   392|
+|7     |LUT3       |   144|
+|8     |LUT4       |   314|
+|9     |LUT5       |   356|
+|10    |LUT6       |  2389|
 |11    |MMCME2_ADV |     1|
-|12    |MUXF7      |   825|
+|12    |MUXF7      |   822|
 |13    |MUXF8      |     8|
 |14    |ODDR       |     1|
 |15    |SRL16E     |     1|
-|16    |FDCE       |   270|
+|16    |FDCE       |   269|
 |17    |FDPE       |    28|
-|18    |FDRE       |   215|
+|18    |FDRE       |   372|
 |19    |FDSE       |    21|
 |20    |IBUF       |    12|
-|21    |OBUF       |    15|
+|21    |OBUF       |    18|
 +------+-----------+------+
 
 Report Instance Areas: 
 +------+---------------------+----------------------------+------+
 |      |Instance             |Module                      |Cells |
 +------+---------------------+----------------------------+------+
-|1     |top                  |                            |  5366|
+|1     |top                  |                            |  5307|
 |2     |  myClk              |clk_wiz_0                   |    23|
 |3     |    inst             |clk_wiz_0_clk_wiz           |    23|
-|4     |  Game_bg            |game_bg                     |   128|
+|4     |  Game_bg            |game_bg                     |   127|
 |5     |    Player1ScoreDisp |drawNumber                  |    26|
 |6     |      MyChar         |char_rom_2                  |    26|
 |7     |    Player2ScoreDisp |drawNumber__parameterized1  |    26|
 |8     |      MyChar         |char_rom_1                  |    26|
-|9     |    TimerDisp        |drawNumber__parameterized0  |    40|
-|10    |      MyChar         |char_rom                    |    40|
+|9     |    TimerDisp        |drawNumber__parameterized0  |    39|
+|10    |      MyChar         |char_rom                    |    39|
 |11    |  MyCar              |Car_display                 |   653|
 |12    |    mycar            |cardata_0                   |   416|
 |13    |  MyCar2             |Car_display__parameterized0 |   653|
 |14    |    mycar            |cardata                     |   416|
-|15    |  my_collisions      |collision                   |   868|
-|16    |    my_headstones    |headstones                  |   647|
-|17    |  my_gremlins        |gremlins_position           |  2832|
-|18    |    my_gremlin0      |gremlin                     |   355|
-|19    |    my_gremlin1      |gremlin__parameterized0     |   335|
-|20    |  my_timing          |vga_timing                  |   169|
+|15    |  my_collisions      |collision                   |   710|
+|16    |    my_headstones    |headstones                  |   488|
+|17    |  my_gremlins        |gremlins_position           |  2924|
+|18    |    my_gremlin0      |gremlin                     |   353|
+|19    |    my_gremlin1      |gremlin__parameterized0     |   333|
+|20    |  my_timing          |vga_timing                  |   171|
 +------+---------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:29 ; elapsed = 00:01:37 . Memory (MB): peak = 922.984 ; gain = 633.414
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:20 ; elapsed = 00:01:26 . Memory (MB): peak = 930.734 ; gain = 641.809
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 81 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:12 ; elapsed = 00:01:27 . Memory (MB): peak = 922.984 ; gain = 305.957
-Synthesis Optimization Complete : Time (s): cpu = 00:01:29 ; elapsed = 00:01:37 . Memory (MB): peak = 922.984 ; gain = 633.414
+Synthesis finished with 0 errors, 0 critical warnings and 104 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:04 ; elapsed = 00:01:17 . Memory (MB): peak = 930.734 ; gain = 314.266
+Synthesis Optimization Complete : Time (s): cpu = 00:01:20 ; elapsed = 00:01:26 . Memory (MB): peak = 930.734 ; gain = 641.809
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 989 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 986 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -972,10 +1004,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   BUFGCE => BUFGCTRL: 2 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-138 Infos, 154 Warnings, 0 Critical Warnings and 0 Errors encountered.
+134 Infos, 185 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:31 ; elapsed = 00:01:41 . Memory (MB): peak = 922.984 ; gain = 644.887
+synth_design: Time (s): cpu = 00:01:23 ; elapsed = 00:01:31 . Memory (MB): peak = 930.734 ; gain = 653.281
 INFO: [Common 17-1381] The checkpoint 'C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/uec2_DeathRace.runs/synth_1/vga.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file vga_utilization_synth.rpt -pb vga_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 922.984 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri Aug 31 18:30:03 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.061 . Memory (MB): peak = 930.734 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat Sep  1 21:28:48 2018...

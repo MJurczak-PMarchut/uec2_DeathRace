@@ -23,6 +23,7 @@ module vga (
   output reg [3:0] r,
   output reg [3:0] g,
   output reg [3:0] b,
+  output reg [2:0] led,
   output wire pclk_mirror,
   input wire rst
     );
@@ -72,6 +73,7 @@ wire [23:0] gremlin0, gremlin1;
 wire gremlin0_enable, gremlin1_enable;
 wire [21:0] car0_address, car1_address;
 wire [7:0] Player1Score, Player2Score;
+wire [2:0] i;
 
 wire TimeOut;  
  
@@ -100,7 +102,8 @@ wire TimeOut;
     .grem0_out(gremlin0_enable),
     .grem1_out(gremlin1_enable),
     .points0_out(Player1Score),
-    .points1_out(Player2Score)
+    .points1_out(Player2Score),
+    .i(i)
   );
 
   gremlins_position my_gremlins(
@@ -155,6 +158,7 @@ game_bg Game_bg(
     vs <= vsync_in;
     hs <= hsync_in;
     
+    led <= i;
     {r,g,b} <= ((vblnk_in == 0) && (hblnk_in == 0))?rgb_in:12'h000;
   end
 
