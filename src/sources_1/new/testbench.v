@@ -24,7 +24,7 @@ module testbench;
 
   // Instantiate the vga_example module.
   
-  vga my_example (
+  vga_example my_example (
     .clk(clk),
     .vs(vs),
     .hs(hs),
@@ -36,15 +36,6 @@ module testbench;
 
   // Instantiate the tiff_writer module.
 
-  tiff_writer my_writer (
-    .pclk_mirror(pclk_mirror),
-    .r({r,r}), // fabricate an 8-bit value
-    .g({g,g}), // fabricate an 8-bit value
-    .b({b,b}), // fabricate an 8-bit value
-    .go(vs),
-    .xdim(16'd1056),
-    .ydim(16'd628)
-  );
 
   // Describe a process that generates a clock
   // signal. The clock is 100 MHz.

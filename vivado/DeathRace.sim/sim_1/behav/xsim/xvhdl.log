@@ -1,0 +1,6 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/new/MouseCtl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MouseCtl
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/new/MouseDisplay.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity MouseDisplay
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/OMEN/Documents/GitHub/uec2_DeathRace/src/sources_1/new/Ps2Interface.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Ps2Interface
