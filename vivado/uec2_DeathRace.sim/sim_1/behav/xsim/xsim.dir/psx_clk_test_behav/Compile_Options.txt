@@ -1,1 +1,0 @@
--wto "11f527c1c01d45b0bdb451f656e56ad7" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "psx_clk_test_behav" "xil_defaultlib.psx_clk_test" "xil_defaultlib.glbl" -log "elaborate.log" 

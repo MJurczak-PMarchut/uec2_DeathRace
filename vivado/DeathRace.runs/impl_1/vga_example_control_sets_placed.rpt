@@ -1,0 +1,123 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+----------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.1 (win64) Build 2188600 Wed Apr  4 18:40:38 MDT 2018
+| Date         : Fri Sep  7 04:27:51 2018
+| Host         : DESKTOP-6F3MM83 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file vga_example_control_sets_placed.rpt
+| Design       : vga_example
+| Device       : xc7a35t
+----------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    48 |
+| Unused register locations in slices containing registers |   165 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      1 |            1 |
+|      2 |            1 |
+|      3 |            1 |
+|      4 |            4 |
+|      6 |            1 |
+|      8 |            5 |
+|      9 |            1 |
+|     10 |            5 |
+|     11 |            4 |
+|     12 |            2 |
+|     15 |            1 |
+|    16+ |           22 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             123 |           52 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              67 |           25 |
+| Yes          | No                    | No                     |             278 |           85 |
+| Yes          | No                    | Yes                    |              44 |           23 |
+| Yes          | Yes                   | No                     |             243 |           63 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------+-------------------------------------------------------------+----------------------------------------------+------------------+----------------+
+|              Clock Signal             |                        Enable Signal                        |               Set/Reset Signal               | Slice Load Count | Bel Load Count |
++---------------------------------------+-------------------------------------------------------------+----------------------------------------------+------------------+----------------+
+|  MasterFSM/NoOfPlayers_reg_i_1_n_0    |                                                             |                                              |                1 |              1 |
+|  myClk/inst/clk_out1                  |                                                             |                                              |                1 |              2 |
+|  Game/my_collisions/i_reg[0]          |                                                             |                                              |                1 |              3 |
+|  myClk/inst/clk_out2                  |                                                             | MasterFSM/addr_reg[6][0]                     |                4 |              4 |
+|  myClk/inst/clk_out2                  | Game/my_gremlins/my_gremlin1/j[2]_i_1_n_0                   |                                              |                3 |              4 |
+|  myClk/inst/clk_out2                  |                                                             | my_timing/SS[0]                              |                1 |              4 |
+|  myClk/inst/clk_out2                  |                                                             | my_timing/SR[0]                              |                1 |              4 |
+|  myClk/inst/clk_out2                  | Game/Game_bg/en_reg_n_0                                     | Game/Game_bg/Prescaler[5]_i_1_n_0            |                2 |              6 |
+|  myClk/inst/clk_out2                  | Game/Game_bg/Timer                                          | MasterFSM/addr_reg[6][0]                     |                3 |              8 |
+|  myClk/inst/clk_out1_clk_wiz_0_en_clk |                                                             |                                              |                1 |              8 |
+|  myClk/inst/clk_out2_clk_wiz_0_en_clk |                                                             |                                              |                1 |              8 |
+|  myClk/inst/clk_out2                  | Game/my_gremlins/my_gremlin1/points0_reg[7][0]              | MasterFSM/addr_reg[6][0]                     |                3 |              8 |
+|  myClk/inst/clk_out2                  | Game/my_gremlins/my_gremlin0/points1_reg[7][0]              | MasterFSM/addr_reg[6][0]                     |                3 |              8 |
+|  myClk/inst/clk_out2                  | Game/my_gremlins/my_gremlin1/j[2]_i_1_n_0                   | Game/my_gremlins/my_gremlin1/i[9]_i_1_n_0    |                3 |              9 |
+|  myClk/inst/clk_out2                  |                                                             | Game/my_gremlins/my_gremlin1/n[9]_i_1__0_n_0 |                3 |             10 |
+|  myClk/inst/clk_out2                  |                                                             | Game/my_gremlins/my_gremlin0/m[9]_i_1_n_0    |                3 |             10 |
+|  myClk/inst/clk_out2                  |                                                             | Game/my_gremlins/my_gremlin0/n[9]_i_1_n_0    |                3 |             10 |
+|  myClk/inst/clk_out2                  |                                                             | Game/my_gremlins/my_gremlin1/m[9]_i_1__0_n_0 |                4 |             10 |
+|  myClk/inst/clk_out2                  | Game/my_collisions/i_reg[0]_0                               | Game/my_gremlins/my_gremlin0/i[9]_i_1__0_n_0 |                2 |             10 |
+|  myClk/inst/clk_out2                  | Game/my_gremlins/my_gremlin0/xpos_nxt[10]_i_1_n_0           |                                              |                3 |             11 |
+|  myClk/inst/clk_out2                  | Game/my_gremlins/my_gremlin0/ypos_nxt[10]_i_1_n_0           |                                              |                3 |             11 |
+|  myClk/inst/clk_out2                  | Game/my_gremlins/my_gremlin1/xpos_nxt[10]_i_1__0_n_0        |                                              |                3 |             11 |
+|  myClk/inst/clk_out2                  | Game/my_gremlins/my_gremlin1/ypos_nxt[10]_i_1__0_n_0        |                                              |                3 |             11 |
+|  my_adc/XLXI_7/drdy_out               | my_timing/E[0]                                              |                                              |                2 |             12 |
+|  my_adc/XLXI_7/drdy_out               | my_timing/data0_nxt_reg[11][0]                              |                                              |                3 |             12 |
+|  myClk/inst/clk_out2                  |                                                             | rst_IBUF                                     |                6 |             15 |
+|  myClk/inst/clk_out2                  | my_timing/hblnk_out                                         | rst_IBUF                                     |                8 |             18 |
+|  myClk/inst/clk_out2                  | Game/my_collisions/my_headstones/vcount_char[7][10]_i_1_n_0 |                                              |                6 |             20 |
+|  myClk/inst/clk_out2                  | Game/my_collisions/my_headstones/vcount_char[6][10]_i_1_n_0 |                                              |                6 |             20 |
+|  myClk/inst/clk_out2                  | Game/my_collisions/my_headstones/vcount_char[4][10]_i_1_n_0 |                                              |                6 |             20 |
+|  myClk/inst/clk_out2                  | Game/my_collisions/my_headstones/vcount_char[1][10]_i_1_n_0 |                                              |                6 |             20 |
+|  myClk/inst/clk_out2                  | Game/my_collisions/my_headstones/vcount_char[5][10]_i_1_n_0 |                                              |                6 |             20 |
+|  myClk/inst/clk_out2                  | Game/my_collisions/my_headstones/vcount_char[2][10]_i_1_n_0 |                                              |                6 |             20 |
+|  myClk/inst/clk_out2                  | Game/my_collisions/my_headstones/vcount_char[0][10]_i_1_n_0 |                                              |                6 |             20 |
+|  myClk/inst/clk_out2                  | Game/my_collisions/my_headstones/vcount_char[3][10]_i_1_n_0 |                                              |                6 |             20 |
+|  myClk/inst/clk_out2                  | Game/MyCar/xpos0                                            | MasterFSM/addr_reg[6][0]                     |               12 |             22 |
+|  myClk/inst/clk_out2                  | Game/my_collisions/my_headstones/addr                       | MasterFSM/addr_reg[6][0]                     |                5 |             22 |
+|  myClk/inst/clk_out2                  | Game/my_collisions/my_headstones/addr[4][21]_i_1_n_0        | MasterFSM/addr_reg[6][0]                     |                6 |             22 |
+|  myClk/inst/clk_out2                  | Game/my_collisions/my_headstones/addr[2][21]_i_1_n_0        | MasterFSM/addr_reg[6][0]                     |                4 |             22 |
+|  myClk/inst/clk_out2                  | Game/MyCar2/xpos0                                           | MasterFSM/addr_reg[6][0]                     |               11 |             22 |
+|  myClk/inst/clk_out2                  | Game/my_collisions/my_headstones/addr[6][21]_i_1_n_0        | MasterFSM/addr_reg[6][0]                     |                4 |             22 |
+|  myClk/inst/clk_out2                  | Game/my_gremlins/my_gremlin0/E[0]                           |                                              |                8 |             22 |
+|  myClk/inst/clk_out2                  | Game/my_collisions/my_headstones/addr[5][21]_i_1_n_0        | MasterFSM/addr_reg[6][0]                     |                6 |             22 |
+|  myClk/inst/clk_out2                  | Game/my_collisions/my_headstones/addr[0][21]_i_2_n_0        | MasterFSM/addr_reg[6][0]                     |                5 |             22 |
+|  myClk/inst/clk_out2                  | Game/my_collisions/my_headstones/addr[3][21]_i_1_n_0        | MasterFSM/addr_reg[6][0]                     |                4 |             22 |
+|  myClk/inst/clk_out2                  | Game/my_collisions/my_headstones/addr[1][21]_i_1_n_0        | MasterFSM/addr_reg[6][0]                     |                5 |             22 |
+|  myClk/inst/clk_out1                  | my_adc/en_reg_n_0                                           |                                              |                9 |             24 |
+|  myClk/inst/clk_out2                  |                                                             |                                              |               47 |            101 |
++---------------------------------------+-------------------------------------------------------------+----------------------------------------------+------------------+----------------+
+
+

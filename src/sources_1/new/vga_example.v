@@ -14,18 +14,23 @@
 `include "verilog_macro_bus.vh"
 
 module vga_example (
-  inout wire ps2_data,
-  inout wire ps2_clk,
   input wire clk,
+  input wire rst,
+  input wire LEFT,RIGHT,START,Restart,
+  input wire vauxp6,
+  input wire vauxn6,
+  input wire vauxp7,
+  input wire vauxn7,
+  input wire butt0,
+  input wire butt1,
   output reg vs,
   output reg hs,
   output reg [3:0] r,
   output reg [3:0] g,
-  output reg [3:0] b,
-  output wire pclk_mirror
+  output reg [3:0] b
     );
 
-wire [`VGA_BUS_SIZE - 1 : 0] vga_bus [3:-1];
+wire [`VGA_BUS_SIZE - 1 : 0] vga_bus [3:-2];
 wire [`MOUSE_BUS_SIZE - 1 : 0] mouse_bus [1:0] ;
 
 
@@ -38,7 +43,7 @@ wire [`MOUSE_BUS_SIZE - 1 : 0] mouse_bus [1:0] ;
   wire clk_fb;
   wire clk_ss;
   wire clk_out;
-  wire pclk;
+  wire pclk,pclk_mirror;
   wire pclk100;
   (* KEEP = "TRUE" *) 
   (* ASYNC_REG = "TRUE" *)
@@ -64,34 +69,52 @@ clk_wiz_0 myClk(
     .S(1'b0)
   );
 
-wire [21:0] address;
-wire [3:0] rgb_back; 
+wire [18:0] address;
+wire [3:0] rgb_back;
+wire playerCount;
+wire [3:0] car0_direction, car1_direction; 
+ `VGA_SPLIT_INPUT(vga_bus[2])
   
   
+// wire [`VGA_BUS_SIZE - 1 : 0] vga_bus [1:0];
+//     wire [18:0] address;
+//     wire [3:0] rgb_back;
+     
+ 
+
+
+
 
   vga_timing my_timing (
     .vga_out(vga_bus[-1]),
-    .pclk(pclk)
+    .pclk(pclk),
+    .rst(!rst)
   );
-  wire Title_Sel,Wait_for_Game,Time_out,GameOn,Highscore,dual,single;
+  wire Title_Sel,Wait_for_Game,Time_out,GameOn,dual,single,GameScreen_sel,wait_for_start;
   
+  adc my_adc(
+    .clk(pclk100),
+    .vauxp6(vauxp6),
+    .vauxn6(vauxn6),
+    .vauxp7(vauxp7),
+    .vauxn7(vauxn7),
+    .vga_in(vga_bus[-1]),
+    .direction0_out(car0_direction),
+    .direction1_out(car1_direction)
+  );
   
   State_Master MasterFSM(
-    .rst(ps2_data),
-    .START(ps2_data),
-    .UP(ps2_data),
-    .DOWN(ps2_data),
-    .Controller_burst(ps2_data),
-    .Timer(ps2_data),
-    .state_burst(ps2_data),
-    .Single_player(single),
-    .Dual_player(dual),
+    .rst(!rst),
+    .START(START),
+    .UP(LEFT),
+    .DOWN(RIGHT),
+    .Timer(Time_out),
+    .playerCount(playerCount),
     .title_screen(Title_Sel),
-    .wait_for_start(Wait_for_Game),
-    .time_out(Time_out),
-    .highscore(Highscore),
     .GameOn(GameOn),
-    .restart()
+    .restart(Restart),
+    .clk(pclk),
+    .wait_for_start(wait_for_start)
   );
   
   Title_Screen MyTitle(
@@ -99,31 +122,41 @@ wire [3:0] rgb_back;
     .pclk(pclk),
     .vga_in(vga_bus[-1]),
     .vga_out(vga_bus[0]),
-    .single_player(single),
-    .dual_player(dual)
+    .playerCount(playerCount)
   
   );
   
   
   Screen_mux Screen_Mux(
     .TitleScreen(vga_bus[0]),
+    .GameScreen(vga_bus[1]),
+    .vga_out(vga_bus[2]),
+    .TitleScreen_sel(Title_Sel),
+    .GameScreen_sel(GameOn)
+  
+  );
+  
+  vga Game(
+    .rst(rst || wait_for_start),
+    .clk(pclk),
+    .go0(butt0),
+    .go1(butt1),
+    .direction({car0_direction,car1_direction}),
+    .vga_in(vga_bus[-1]),
+    .NoOfPlayers(playerCount),
     .vga_out(vga_bus[1]),
-    .TitleScreen_sel(Title_Sel)
+    .TimeOut(Time_out)
   
   );
   
   
-
-
-       
- `VGA_SPLIT_INPUT(vga_bus[1])
-  
   always @(posedge pclk)
-  begin
-    vs <= vsync_in;
-    hs <= hsync_in;
-    
-    {r,g,b} <= rgb_in;
-  end
+ begin
+   vs <= vsync_in;
+   hs <= hsync_in;
+   
+   {r,g,b} <= ((vblnk_in == 0) && (hblnk_in == 0))?rgb_in:12'h000;
+ end
+
 
 endmodule

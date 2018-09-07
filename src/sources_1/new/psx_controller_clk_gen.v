@@ -39,7 +39,7 @@ module psx_controller_clk_gen(
     localparam STOP = 4;
     localparam ERROR = 5;
     
-    localparam DELAY_CLK = 10;
+    localparam DELAY_CLK = 120;
     localparam EDGE_COUNT = 15;
     
     
@@ -51,7 +51,7 @@ module psx_controller_clk_gen(
     
     reg [3:0] DATA_EXPECTED;
     reg [3:0] state,next_state;
-    reg [4:0] delay_count=0;
+    reg [7:0] delay_count=0;
     reg [4:0] P_count=0;
     reg [3:0] data_count;
     reg [11:0] upCounter;
@@ -157,5 +157,5 @@ module psx_controller_clk_gen(
  
  
     assign c_counter = data_count;
-    assign state_out = state;
+    assign state_out = next_state;
 endmodule

@@ -1,4 +1,0 @@
-Running: xsim.dir/psx_controller_module_test_behav/xsimk.exe -simmode gui -wdb psx_controller_module_test_behav.wdb -simrunnum 0 -socket 49983
-Design successfully loaded
-Design Loading Memory Usage: 4884 KB (Peak: 4884 KB)
-Design Loading CPU Usage: 15 ms
