@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2018.1 (64-bit)
+# SW Build 2188600 on Wed Apr  4 18:40:38 MDT 2018
+# IP Build 2185939 on Wed Apr  4 20:55:05 MDT 2018
+# Start of session at: Fri Sep  7 05:18:47 2018
+# Process ID: 8284
+# Current directory: C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15656 C:\Users\pauli\Documents\GitHub\uec2_DeathRace\vivado\DeathRace.xpr
+# Log file: C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/vivado.log
+# Journal file: C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/pauli/Documents/GitHub/uec2_DeathRace/vivado/DeathRace.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.1/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:17 . Memory (MB): peak = 798.352 ; gain = 73.359
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Sep  7 05:19:46 2018...
