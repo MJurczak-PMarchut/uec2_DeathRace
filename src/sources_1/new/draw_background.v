@@ -23,43 +23,29 @@
 
 module draw_background(
     input wire [`VGA_BUS_SIZE-1:0] vga_in,
-    input wire rst,
-    input wire pclk,
     input [3:0] rgb,
     output wire [`VGA_BUS_SIZE-1:0] vga_out,
-    output wire [21:0] address
+    output wire [18:0] address
     );
   
-  reg  count = 0;
-  reg [3:0] rgb_temp;
-  reg [21:0] address_next;
-  reg [11:0] rgb_merge;
-  
+
     `VGA_SPLIT_INPUT(vga_in)
-    `VGA_OUT_REG
+    `VGA_OUT_WIRE
     `VGA_MERGE_AT_OUTPUT(vga_out)
   
+
   
-  always @(posedge pclk)
-  begin
-      hsync_out <= hsync_in;
-      vsync_out <= vsync_in;
-      hblnk_out <= hblnk_in;
-      vblnk_out <= vblnk_in;
-      hcount_out <= hcount_in;
-      vcount_out <= vcount_in;
+
+      assign hsync_out = hsync_in;
+      assign vsync_out = vsync_in;
+      assign hblnk_out = hblnk_in;
+      assign vblnk_out = vblnk_in;
+      assign hcount_out = hcount_in;
+      assign vcount_out = vcount_in;
       
-      rgb_temp <= rgb;
-      rgb_merge <= {rgb_temp,rgb_temp,rgb_temp};
-      if((hblnk_in == 0)&&(vblnk_in == 0))
-        rgb_out <= rgb_merge;
-      else 
-        rgb_out <= 0 ;
-      if (vcount_in  == hcount_in )
-        rgb_out = 12'hfff;
-      
-    end
-assign address = hcount_in[10:1]+(vcount_in[10:1]*400);
+      assign rgb_out = ((hblnk_in == 0)&&(vblnk_in == 0))? ((rgb_in == 12'hfff)?12'hfff:({rgb,rgb,rgb})) :  0;
+
+assign address = hcount_in[10:1] + vcount_in[10:1]*400;
 endmodule
 
 

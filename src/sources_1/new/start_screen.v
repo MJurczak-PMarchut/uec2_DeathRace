@@ -21,18 +21,16 @@
 
 
 module start_screen(
-    input wire clk ,
     input wire [18:0] address,  // address = {addry[5:0], addrx[5:0]}
     output reg [3:0] rgb
 );
 
-
-reg [15:0] rom [0:11999];
+reg [15:0] rom [0:119999];
 
 initial $readmemh("image_rom.data", rom); 
 
 always @*
-    rgb <= rom[address];
+    rgb <= rom[address][3:0];
                    
 
 endmodule

@@ -14,68 +14,55 @@
 module vga_timing (
   output wire [`VGA_BUS_SIZE-1:0] vga_out,
   input wire pclk,
-  input wire rst,
-  output wire pclk_out
+  input wire rst
   );
   
     `VGA_OUT_REG
     `VGA_MERGE_AT_OUTPUT(vga_out)
  
  
- initial
-      begin 
-       hblnk_out = 0;
-       hcount_out = 0;  
-       vcount_out = 0;
-       vblnk_out = 0;
-       vsync_out = 0;
-       hsync_out = 0;
-       rgb_out = 0;
-     end
 
 
   
-  always @(posedge pclk or negedge rst) 
+  always @(posedge pclk) 
 //  begin 
   if(!rst)
-    fork
-      hblnk_out = 0;
-      hcount_out = 0;  
-      vcount_out = 0;
-      vblnk_out = 0;
-      vsync_out = 0;
-      hsync_out = 0;
-    join
+    begin
+      hblnk_out <= 0;
+      hcount_out <= 0;  
+      vcount_out <= 0;
+      vblnk_out <= 0;
+      vsync_out <= 0;
+      hsync_out <= 0;
+    end
     else
         if (hcount_out == 1055)
             begin
-                  hblnk_out = 0;
-                  hcount_out = 0;
+                  hblnk_out <= 0;
+                  hcount_out <= 0;
                 
-                  if(vcount_out == 627) vcount_out = 0;
-                  else vcount_out = vcount_out + 1;
+                  if(vcount_out == 627) vcount_out <= 0;
+                  else vcount_out <= vcount_out + 1;
                   
                   if(vcount_out > 599) vblnk_out = 1'b1;
-                  else vblnk_out = 1'b0;
+                  else vblnk_out <= 1'b0;
                  
-                  if((vcount_out >= 600) & (vcount_out <= 603)) vsync_out = 1'b1;
-                  else vsync_out = 1'b0;
+                  if((vcount_out >= 600) & (vcount_out <= 603)) vsync_out <= 1'b1;
+                  else vsync_out <= 1'b0;
             end
          else
             begin
-                hcount_out = hcount_out + 1;
-                if (hcount_out >= 800) hblnk_out = 1'b1;
-                else hblnk_out = 1'b0; 
+                hcount_out <= hcount_out + 1;
+                if (hcount_out >= 800) hblnk_out <= 1'b1;
+                else hblnk_out <= 1'b0; 
                 
-                if( (hcount_out >= 840) & ( hcount_out <= 968)) hsync_out = 1'b1;
-                else hsync_out = 1'b0;
+                if( (hcount_out >= 840) & ( hcount_out <= 968)) hsync_out <= 1'b1;
+                else hsync_out <= 1'b0;
             end 
         
         
         
   //end
-  
-assign pclk_out = !(pclk);
   // Describe the actual circuit for the assignment.
   // Video timing controller set for 800x600@60fps
   // using a 40 MHz pixel clock per VESA spec.
